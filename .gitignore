@@ -1,0 +1,23 @@
+# Virtual environments & dependencies
+.venv/
+node_modules/
+__pycache__/
+*.pyc
+
+# Checkpoints & models
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Optuna databases & logs
+*.db
+wandb/
+outputs/
+.ipynb_checkpoints/
+
+# Large raw datasets (already downloaded locally)
+research/datasets/
+
+
+.env

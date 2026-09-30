@@ -1,0 +1,14 @@
+# task2b_blur_best_config.yaml
+# Populated after training blur specialist
+task: task2b_specialist_blur
+source_notebook: task2b_specialists_optuna.ipynb
+best_trial_number: null
+best_value: null
+params:
+  lr: 0.001
+  batch_size: 32
+  latent_dim: 128
+  base_channels: 32
+  dropout: 0.1
+  alpha: 0.8
+  beta: 0.001

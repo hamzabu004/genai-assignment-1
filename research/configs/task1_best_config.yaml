@@ -1,0 +1,14 @@
+# task1_best_config.yaml
+# Populated after Optuna study completes in task1_vae_optuna.ipynb
+task: task1_universal_vae
+source_notebook: task1_vae_optuna.ipynb
+best_trial_number: null
+best_value: null
+params:
+  lr: 0.001
+  batch_size: 32
+  latent_dim: 128
+  base_channels: 32
+  dropout: 0.1
+  alpha: 0.8
+  beta: 0.001

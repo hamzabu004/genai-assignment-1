@@ -1,0 +1,15 @@
+# task4_best_config.yaml
+# Populated after Optuna study completes in task4_gan_optuna.ipynb
+task: task4_conditional_gan
+source_notebook: task4_gan_optuna.ipynb
+best_trial_number: null
+best_value: null
+params:
+  g_lr: 0.0002
+  d_lr: 0.0002
+  batch_size: 8
+  base_channels: 64
+  embed_dim: 8
+  lambda_l1: 100.0
+  beta1: 0.5
+  beta2: 0.999

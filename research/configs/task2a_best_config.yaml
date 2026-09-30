@@ -1,0 +1,12 @@
+# task2a_best_config.yaml
+# Populated after Optuna study completes in task2a_classifier_optuna.ipynb
+task: task2a_corruption_classifier
+source_notebook: task2a_classifier_optuna.ipynb
+best_trial_number: null
+best_value: null
+params:
+  lr: 0.001
+  batch_size: 64
+  base_channels: 32
+  dropout: 0.2
+  weight_decay: 0.0

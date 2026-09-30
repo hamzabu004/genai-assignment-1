@@ -1,0 +1,17 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+# --- onnxruntime: pick ONE line below for this machine, keep the rest commented ---
+# CPU only (works everywhere, no GPU acceleration):
+onnxruntime==1.19.2
+# NVIDIA CUDA GPU (Linux/Windows):
+# onnxruntime-gpu==1.19.2
+# Windows GPU, any vendor incl. AMD (DirectML — no ROCm wheel exists for onnxruntime):
+# onnxruntime-directml==1.19.2
+# AMD GPU on Linux (ROCm): official onnxruntime-rocm wheels are not on PyPI;
+# either build from source against your ROCm version, or run inference via the
+# ROCm PyTorch build instead of onnxruntime for that model (see docs/device-notes.md)
+pillow==10.4.0
+numpy==1.26.4
+python-multipart==0.0.9
+pydantic==2.9.2
+pydantic-settings==2.5.2

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family='SF+Mono',+'JetBrains+Mono',+Menlo,+monospace:wght@100..900&amp;family=-apple-system,+BlinkMacSystemFont,+'SF+Pro+Display',+system-ui,+sans-serif:wght@100..900&amp;family=-apple-system,+BlinkMacSystemFont,+'SF+Pro+Text',+system-ui,+sans-serif:wght@100..900&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-background":"#1a1c1d","on-primary-container":"#fcfbff","surface-variant":"#e2e2e4","inverse-surface":"#2f3132","on-secondary-fixed":"#1b1b1d","on-secondary-fixed-variant":"#474649","surface":"#f9f9fb","on-secondary-container":"#636264","on-tertiary-fixed-variant":"#46464b","surface-container":"#eeeef0","inverse-primary":"#abc7ff","secondary-fixed-dim":"#c8c6c8","surface-container-low":"#f3f3f5","on-primary-fixed-variant":"#00458f","on-secondary":"#ffffff","on-surface-variant":"#414753","secondary":"#5f5e60","tertiary-fixed":"#e3e2e7","background":"#f9f9fb","on-tertiary":"#ffffff","surface-container-highest":"#e2e2e4","surface-tint":"#005cbb","surface-bright":"#f9f9fb","outline":"#717785","primary-fixed-dim":"#abc7ff","secondary-fixed":"#e4e2e4","on-tertiary-fixed":"#1a1b1f","on-primary":"#ffffff","tertiary":"#5a5b5f","on-error":"#ffffff","primary-container":"#0071e3","primary-fixed":"#d7e2ff","tertiary-container":"#737378","secondary-container":"#e2dfe1","surface-container-high":"#e8e8ea","primary":"#0059b5","surface-dim":"#d9dadc","error-container":"#ffdad6","on-primary-fixed":"#001b3f","surface-container-lowest":"#ffffff","on-surface":"#1a1c1d","tertiary-fixed-dim":"#c7c6cb","error":"#ba1a1a","on-tertiary-container":"#fcfaff","on-error-container":"#93000a","outline-variant":"#c1c6d6","inverse-on-surface":"#f0f0f2"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin-mobile":"12px","space-md":"12px","space-sm":"8px","space-xl":"24px","space-2xl":"32px","space-lg":"16px",gutter:"12px",margin:"16px","space-xs":"4px","gutter-compact":"8px"},fontFamily:{"headline-sm":["-apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif"],"headline-lg-mobile":["-apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif"],"body-sm":["-apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif"],"label-caps":["-apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif"],"headline-lg":["-apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif"],"body-lg":["-apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif"],"headline-md":["-apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif"],"body-md":["-apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif"],display:["-apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif"],"label-code":["'SF Mono', 'JetBrains Mono', Menlo, monospace"]},fontSize:{"headline-sm":["16px",{lineHeight:"22px",letterSpacing:"-0.005em",fontWeight:"600"}],"headline-lg-mobile":["22px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0em",fontWeight:"400"}],"label-caps":["10px",{lineHeight:"12px",letterSpacing:"0.06em",fontWeight:"600"}],"headline-lg":["28px",{lineHeight:"34px",letterSpacing:"-0.011em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"22px",letterSpacing:"-0.003em",fontWeight:"400"}],"headline-md":["20px",{lineHeight:"26px",letterSpacing:"-0.007em",fontWeight:"500"}],"body-md":["13px",{lineHeight:"18px",letterSpacing:"-0.001em",fontWeight:"400"}],display:["36px",{lineHeight:"44px",letterSpacing:"-0.015em",fontWeight:"600"}],"label-code":["11px",{lineHeight:"14px",letterSpacing:"0.02em",fontWeight:"500"}]}}}};</script></head><body class="bg-surface-container-lowest font-body-md text-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-[240px] bg-surface-container-low border-r border-outline-variant z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="px-space-lg py-space-lg border-b border-outline-variant flex items-center gap-space-sm"><img alt="Precision Vision Studio Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VjDSstbsHeB49XOuvEEbe7jl9Vx__HzaOb-nLix7TCKsOXSLs-Z4CyJACQgZV3FCOnA_onkWc9YKDUXkMi1cUIzH7J67JC_xerJpn-igJQPLzij8pnLlfcRWpdDUiBmnWNGl2L_HkHRlQxpmtP-KGDRilg7-qozPKwaQI-rfqYy-Mqp6BNFIqkn9KnZjmCEc9srtgnsC4Bao-opWk4Oi4zb9_JCy2g50GiOJ4Sw-svDHNi0SBmiVgDaQ4"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Precision Vision</span><span class="font-label-caps text-label-caps text-secondary truncate tracking-wider uppercase">Vision Benchmark Lab</span></div></div><nav class="flex flex-col mt-space-sm" data-active-classes="border-l-[3px] border-l-primary-container bg-surface-container-high text-on-surface font-medium"><a class="flex items-center gap-space-md py-[10px] px-space-lg text-secondary border-l-[3px] border-l-transparent hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="universal-restoration" href="#"><span class="material-symbols-outlined text-[18px]">auto_fix_high</span><span class="truncate">Universal Restoration</span></a><a aria-current="page" class="flex items-center gap-space-md py-[10px] px-space-lg transition-colors border-l-[3px] border-l-primary-container bg-surface-container-high text-on-surface font-medium" data-path="hard-routed-restoration" href="#"><span class="material-symbols-outlined text-[18px]">alt_route</span><span class="truncate">Hard-Routed Restoration</span></a><a class="flex items-center gap-space-md py-[10px] px-space-lg text-secondary border-l-[3px] border-l-transparent hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="soft-mixture-of-experts" href="#"><span class="material-symbols-outlined text-[18px]">layers</span><span class="truncate">Soft Mixture-of-Experts</span></a><a class="flex items-center gap-space-md py-[10px] px-space-lg text-secondary border-l-[3px] border-l-transparent hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="face-to-sketch-generator" href="#"><span class="material-symbols-outlined text-[18px]">draw</span><span class="truncate">Face-to-Sketch Generator</span></a></nav></div><div class="p-space-md border-t border-outline-variant bg-surface-container-low"><div class="flex items-center gap-space-xs font-label-code text-label-code text-secondary leading-tight"><span class="w-2 h-2 bg-[#1F8A3B] inline-block shrink-0"></span></div></div></aside><div class="pl-[240px] w-full min-h-screen bg-surface-container-lowest"><main class="max-w-[1200px] mx-auto p-space-2xl bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Dismissible Error Banner -->
+<!-- Workspace Header -->
+<header class="flex flex-col gap-1 pb-space-lg mb-space-xl border-b border-[#D2D2D7]">
+<div class="flex items-center justify-between flex-wrap gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[26px]">alt_route</span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Hard-Routed Restoration</h1>
+</div>
+</div>
+</header><div class="mb-space-xl p-space-md bg-surface-container-low border border-[#D2D2D7] flex flex-col gap-space-md"><div class="flex items-center justify-between flex-wrap gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">Routing Architecture Mode</span><span class="font-label-code text-label-code text-secondary text-[11px]">Select inference gating policy</span></div><div class="flex items-center border border-[#D2D2D7] bg-white"><button class="h-8 px-space-md bg-primary-container text-white font-label-caps text-label-caps uppercase transition-colors flex items-center gap-1.5"><span class="">Hard Routing</span><span class="material-symbols-outlined text-[14px]">check</span></button><button class="h-8 px-space-md bg-transparent text-secondary hover:text-on-surface font-label-caps text-label-caps uppercase transition-colors flex items-center gap-1.5 border-l border-[#D2D2D7]"><span class="">Oracle Routing</span></button></div></div><div class="pt-space-sm border-t border-[#D2D2D7] flex items-center justify-between flex-wrap gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-label-caps text-label-caps text-secondary uppercase">Oracle Ground-Truth Corruption Override:</span><span class="font-label-code text-label-code text-secondary text-[11px]">(Bypasses gating classification)</span></div><div class="flex items-center gap-space-xs"><button class="h-7 px-space-sm bg-white border border-[#D2D2D7] text-secondary hover:bg-surface-container font-label-caps text-label-caps uppercase">Clean</button><button class="h-7 px-space-sm bg-[#EBF5FF] border border-[#0071E3] text-[#0071E3] font-label-caps text-label-caps uppercase font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 bg-[#0071E3] inline-block"></span><span class="">Blur</span></button><button class="h-7 px-space-sm bg-white border border-[#D2D2D7] text-secondary hover:bg-surface-container font-label-caps text-label-caps uppercase">Salt-n-Pepper</button><button class="h-7 px-space-sm bg-white border border-[#D2D2D7] text-secondary hover:bg-surface-container font-label-caps text-label-caps uppercase">Occlusion</button></div></div></div>
+<!-- Input Selection Section -->
+<section class="mb-space-2xl">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">Input Source &amp; Degradation Profiling</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Upload Zone -->
+<div class="lg:col-span-7 bg-surface-container-lowest border border-dashed border-[#D2D2D7] p-space-lg flex flex-col justify-between hover:border-primary transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 bg-surface-container flex items-center justify-center border border-[#D2D2D7]">
+<span class="material-symbols-outlined text-secondary text-[22px]">perm_media</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium truncate">cctv_frame_capture_102.png</span>
+<span class="font-label-code text-label-code text-secondary">512×512 • 24-bit sRGB • 786 KB • Uncompressed RGBA</span>
+</div>
+</div>
+<span class="font-label-caps text-label-caps text-[#1F8A3B] bg-[rgba(31,138,59,0.08)] border border-[rgba(31,138,59,0.25)] px-2 py-0.5">LOADED</span>
+</div>
+<div class="mt-space-lg pt-space-md border-t border-[#D2D2D7] flex items-center justify-between flex-wrap gap-space-sm">
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-secondary">
+<span class="material-symbols-outlined text-[16px]">file_upload</span>
+<span class="">Drag new target frame or replace from storage</span>
+</div>
+<button class="h-7 px-space-md bg-white border border-[#D2D2D7] text-on-surface hover:bg-surface-container font-label-caps text-label-caps uppercase transition-colors">
+            Browse Frame
+          </button>
+</div>
+</div>
+<!-- Quick-Load Presets & Action Trigger -->
+<div class="lg:col-span-5 bg-surface-container-low border border-[#D2D2D7] p-space-lg flex flex-col justify-between">
+<div>
+<div class="font-label-caps text-label-caps text-secondary uppercase mb-space-sm">Degradation Presets</div>
+<div class="grid grid-cols-2 gap-space-xs mb-space-md"><button class="h-8 px-space-sm bg-white border border-[#D2D2D7] text-on-surface hover:bg-surface-container font-body-sm text-body-sm transition-colors text-left truncate">Clean</button><button class="h-8 px-space-sm bg-white border border-primary text-primary font-body-sm text-body-sm font-medium flex items-center justify-between"><span class="">Blur</span><span class="material-symbols-outlined text-[14px]">check</span></button><button class="h-8 px-space-sm bg-white border border-[#D2D2D7] text-on-surface hover:bg-surface-container font-body-sm text-body-sm transition-colors text-left truncate">Salt-n-Pepper</button><button class="h-8 px-space-sm bg-white border border-[#D2D2D7] text-on-surface hover:bg-surface-container font-body-sm text-body-sm transition-colors text-left truncate">Occlusion</button></div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-sm pt-space-sm border-t border-[#D2D2D7]">
+<button class="flex-1 h-[40px] px-[20px] bg-[#0071E3] hover:bg-[#0077ED] active:bg-[#0062C4] text-white font-headline-sm text-headline-sm font-medium flex items-center justify-center gap-2 transition-colors cursor-pointer" id="classify-btn" onclick="triggerRestoreSimulation()">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span class="">Classify &amp; Restore</span>
+</button>
+<button class="h-[40px] px-space-md bg-white border border-[#D2D2D7] hover:bg-surface-container active:bg-[#E8E8ED] text-on-surface font-label-caps text-label-caps uppercase flex items-center gap-2 transition-colors cursor-pointer" id="simulate-toggle-btn" onclick="toggleFlightSimulation()" title="Simulate In-Flight Inference State">
+<span class="inline-block w-3.5 h-3.5 border-2 border-primary border-t-transparent animate-spin"></span>
+<span class="">Simulate In-Flight</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Routing Decision & Telemetry Strip -->
+<section class="mb-space-xl">
+<div class="bg-surface-container-low border border-[#D2D2D7] p-space-md flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center flex-wrap gap-space-md">
+<!-- Predicted Corruption -->
+<div class="flex items-center gap-space-xs">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Predicted Corruption:</span>
+<span class="h-6 px-space-sm bg-[#EBF5FF] text-[#0071E3] border border-[#0071E3] font-label-caps text-label-caps font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">blur_on</span>
+<span class="">Gaussian Motion Blur</span>
+</span>
+</div>
+<!-- Selected Expert Subnet -->
+<div class="flex items-center gap-space-xs">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Selected Expert:</span>
+<span class="h-6 px-space-sm bg-[rgba(31,138,59,0.08)] text-[#1F8A3B] border border-[#1F8A3B] font-label-caps text-label-caps font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">hub</span>
+<span class="">Expert 2: Wiener Deconv Net</span>
+</span>
+</div>
+</div>
+<!-- Inference Latency Badge -->
+<div class="flex items-center gap-space-xs font-label-code text-label-code bg-white border border-[#D2D2D7] px-space-md py-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">timer</span>
+<span class="text-on-surface font-semibold">42ms</span>
+<span class="text-secondary">(Gating: 6ms, Expert: 36ms)</span>
+</div>
+</div>
+</section>
+<!-- Classifier Distribution Panel -->
+<section class="mb-space-2xl bg-surface-container-lowest border border-[#D2D2D7] p-space-xl">
+<div class="flex items-center justify-between pb-space-md mb-space-lg border-b border-[#D2D2D7]">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-medium">Discrete Classifier Probabilities</h2>
+<p class="font-body-sm text-body-sm text-secondary">Argmax selector routes tensors exclusively to the single top-confidence specialized subnetwork.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-code text-label-code text-secondary">Gating Temp: τ=0.15</span>
+<span class="font-label-caps text-label-caps bg-surface-container px-2 py-0.5 border border-[#D2D2D7] text-secondary">HARD-ARGMAX</span>
+</div>
+</div>
+<!-- Horizontal Probability Bars -->
+<div class="space-y-space-md">
+<!-- 1. Motion Blur (Dominant) -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="font-medium text-on-surface">Motion Blur</span>
+<span class="font-label-caps text-label-caps bg-[#0071E3] text-white px-1.5 py-0.2">SELECTED ROUTE</span>
+</div>
+<div class="flex items-center gap-space-md font-label-code text-label-code">
+<span class="text-secondary">logit: +4.82</span>
+<span class="font-semibold text-primary">84.2%</span>
+</div>
+</div>
+<div class="w-full h-3 bg-surface-container border border-[#D2D2D7] overflow-hidden flex">
+<div class="h-full bg-[#0071E3] transition-all duration-500" style="width: 84.2%;"></div>
+</div>
+</div>
+<!-- 2. Salt-and-Pepper -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="text-on-surface">Salt-and-Pepper Impulse</span>
+<span class="font-label-code text-label-code text-secondary text-[10px]">Expert 1</span>
+</div>
+<div class="flex items-center gap-space-md font-label-code text-label-code">
+<span class="text-secondary">logit: -1.04</span>
+<span class="text-on-surface-variant">7.8%</span>
+</div>
+</div>
+<div class="w-full h-3 bg-surface-container border border-[#D2D2D7] overflow-hidden flex">
+<div class="h-full bg-[#D2D2D7] transition-all duration-500" style="width: 7.8%;"></div>
+</div>
+</div>
+<!-- 3. Random Occlusion -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="text-on-surface">Random Occlusion</span>
+<span class="font-label-code text-label-code text-secondary text-[10px]">Expert 3</span>
+</div>
+<div class="flex items-center gap-space-md font-label-code text-label-code">
+<span class="text-secondary">logit: -1.48</span>
+<span class="text-on-surface-variant">5.1%</span>
+</div>
+</div>
+<div class="w-full h-3 bg-surface-container border border-[#D2D2D7] overflow-hidden flex">
+<div class="h-full bg-[#D2D2D7] transition-all duration-500" style="width: 5.1%;"></div>
+</div>
+</div>
+<!-- 4. Clean / No Distortion -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="text-on-surface">Clean / No Distortion</span>
+<span class="font-label-code text-label-code text-secondary text-[10px]">Identity Pass</span>
+</div>
+<div class="flex items-center gap-space-md font-label-code text-label-code">
+<span class="text-secondary">logit: -2.15</span>
+<span class="text-on-surface-variant">2.9%</span>
+</div>
+</div>
+<div class="w-full h-3 bg-surface-container border border-[#D2D2D7] overflow-hidden flex">
+<div class="h-full bg-[#D2D2D7] transition-all duration-500" style="width: 2.9%;"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Side-by-Side Image Comparison Panels -->
+<section class="mb-space-2xl">
+<div class="flex items-center justify-between pb-space-sm mb-space-md border-b border-[#D2D2D7]">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary">compare</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-medium">Reconstruction Verification</h2>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="h-7 px-space-sm bg-white border border-[#D2D2D7] hover:bg-surface-container text-on-surface font-label-caps text-label-caps uppercase transition-colors" onclick="toggleInferenceOverlay()">
+          Toggle Loader Demo
+        </button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Input Panel -->
+<div class="bg-surface-container-lowest border border-[#D2D2D7] flex flex-col">
+<div class="h-9 px-space-md bg-surface-container-low border-b border-[#D2D2D7] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-[#D93025] inline-block"></span>
+<span class="font-label-caps text-label-caps text-on-surface uppercase font-semibold">Degraded Input Image</span>
+</div>
+<span class="font-label-code text-label-code text-secondary">PSNR: 18.42 dB</span>
+</div>
+<div class="relative w-full aspect-square bg-[#1A1C1D] flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover select-none" data-alt="Severely degraded CCTV security camera frame showing heavy linear directional motion blur of an urban outdoor vehicle checkpoint at dusk, technical forensic camera footage, clinical low-exposure noise and horizontal streak artifacts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBl4YpApH76p9mOXDCvpo2uydfW2gnX9oY7DdfPviaTvMy9k0lBd7ATroEAZKI0Oek1kLRwH9RnXn4oSYRTWRTFIsKRWvkZd8TED6GywXl_NyL1B7G0-4zkE8adRoL95Meisj7kc6OPBqoPMIILuP-D8-jxpItZasPZeofvuMdSdcB-EBsgFdNyvm8s6xRnSie6Y5Abwyxcdr8SLJ0xHrgPW1TkT4Hn7VLWVJpGs81N01fdlOiZ4f_iGg"/>
+<div class="absolute bottom-2 left-2 bg-black/80 text-white px-2 py-1 font-label-code text-label-code">
+            Motion Blur σ=2.4 (angle=45°)
+          </div>
+</div>
+<div class="p-space-md border-t border-[#D2D2D7] bg-surface-container-low flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-secondary truncate">Sample: synthetic_gaussian_k15</span>
+<span class="font-label-code text-label-code text-secondary">SSIM: 0.6120</span>
+</div>
+</div>
+<!-- Output Panel -->
+<div class="relative bg-surface-container-lowest border border-[#D2D2D7] flex flex-col">
+<!-- In-Flight Semi-Transparent Overlay -->
+<div class="hidden absolute inset-0 bg-white/70 z-30 flex flex-col items-center justify-center gap-space-sm" id="inference-overlay">
+<div class="w-6 h-6 border-2 border-primary border-t-transparent animate-spin"></div>
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Running inference…</span>
+<span class="font-label-code text-label-code text-secondary">Executing Expert 2: Wiener Deconv Net</span>
+</div>
+</div>
+<div class="h-9 px-space-md bg-surface-container-low border-b border-[#D2D2D7] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-[#1F8A3B] inline-block"></span>
+<span class="font-label-caps text-label-caps text-on-surface uppercase font-semibold">Hard-Routed Reconstructed Output</span>
+</div>
+<span class="font-label-code text-label-code text-[#1F8A3B] font-semibold">PSNR: 32.88 dB (+14.46)</span>
+</div>
+<div class="relative w-full aspect-square bg-[#1A1C1D] flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover select-none" data-alt="High fidelity crystal clear forensic restoration of urban surveillance camera frame at vehicle checkpoint, razor sharp license plates and edge details, high dynamic range neutral lighting, no blur artifacts, surgical resolution" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz39owBO3lpj_ls976sVijOyw56g4NZvb0RBh3arCqlplnSjR9D6w1frE541t_kndhqz4AmCbrLl5-OuqZ1YX0Kp-emLN-9CHifkd95PzExFFBYLSPdVQV3e11FDq9EfubkPAeu9WFhYbMf4Ljo0Ko-2heXgK9Nyh9Fj7XmBAOMv3wQ9xucrcy4M6ssBcdWe1_l2LEmGTLDFGFK8iE9PJ0pjV-Yg54r3YTsRaPej4zDrQWsA19BswZEA"/>
+<div class="absolute bottom-2 left-2 bg-black/80 text-white px-2 py-1 font-label-code text-label-code flex items-center gap-1">
+<span class="text-[#1F8A3B]">●</span>
+<span class="">Restored by Expert 2</span>
+</div>
+<div class="absolute top-2 right-2 bg-black/80 text-white px-2 py-0.5 font-label-code text-label-code">
+            Loss: 0.0031 MSE
+          </div>
+</div>
+<div class="p-space-md border-t border-[#D2D2D7] bg-surface-container-low flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-secondary truncate">SSIM: 0.9412 (+0.3292)</span>
+<button class="h-7 px-space-md bg-white border border-[#D2D2D7] text-on-surface hover:bg-surface-container active:bg-[#E8E8ED] font-label-caps text-label-caps uppercase flex items-center gap-1 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[14px]">download</span>
+<span class="">Download Result</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Telemetry & Execution Log -->
+<section class="bg-surface-container-low border border-[#D2D2D7] p-space-lg mb-space-2xl">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm border-b border-[#D2D2D7]">
+<span class="font-label-caps text-label-caps text-secondary uppercase font-semibold">Inference Log Trace</span>
+<span class="font-label-code text-label-code text-secondary">Session ID: 0x9F41C</span>
+</div>
+<div class="font-label-code text-label-code text-on-surface space-y-1 overflow-x-auto leading-relaxed">
+<div class="text-secondary">[00:00:00.000] Ingesting RGB frame tensor from Host buffer (512x512x3)</div>
+<div class="">[00:00:00.006] <span class="text-primary font-semibold">Gating Classifier:</span> Softmax outputs [0.842, 0.078, 0.051, 0.029]. Hard routing branch -&gt; Node 2.</div>
+<div class="">[00:00:00.007] Dispatching kernel to <span class="text-[#1F8A3B] font-semibold">subnetwork_wiener_deconv.pt</span> (Params: 14.2M, FLOPs: 48.6G)</div>
+<div class="">[00:00:00.043] Reconstruction completed in 36.12ms. Output clamped [0.0, 1.0]. Residual variance: 0.0014.</div>
+<div class="text-[#1F8A3B]">[00:00:00.044] Pipeline converged without fallback. Buffer synchronized.</div>
+</div>
+</section>
+<!-- Vanilla JS Interaction Logic -->
+<script>
+    function toggleInferenceOverlay() {
+      const overlay = document.getElementById('inference-overlay');
+      if (overlay.classList.contains('hidden')) {
+        overlay.classList.remove('hidden');
+      } else {
+        overlay.classList.add('hidden');
+      }
+    }
+
+    function toggleFlightSimulation() {
+      const overlay = document.getElementById('inference-overlay');
+      overlay.classList.toggle('hidden');
+    }
+
+    function triggerRestoreSimulation() {
+      const overlay = document.getElementById('inference-overlay');
+      const classifyBtn = document.getElementById('classify-btn');
+      
+      overlay.classList.remove('hidden');
+      classifyBtn.disabled = true;
+      classifyBtn.classList.add('opacity-75');
+
+      setTimeout(() => {
+        overlay.classList.add('hidden');
+        classifyBtn.disabled = false;
+        classifyBtn.classList.remove('opacity-75');
+      }, 950);
+    }
+  </script>
+</div></main></div>
+</body></html>

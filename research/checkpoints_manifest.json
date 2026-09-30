@@ -1,0 +1,4 @@
+{
+  "_description": "Tracks all model checkpoints across devices. Actual .pt files stored via Git LFS or Hugging Face Hub.",
+  "checkpoints": []
+}
