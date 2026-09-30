@@ -4,14 +4,49 @@ Tasks 1, 2a, 2b, 3: Oxford-IIIT Pet Dataset (Autoencoders, Classifiers, MoE)
 Task 4: FS2K Dataset (Style-Conditioned Face-to-Sketch cGAN)
 """
 
+import os
 from pathlib import Path
 
 # Paths
 RESEARCH_ROOT = Path(__file__).resolve().parent
+REPO_ROOT = RESEARCH_ROOT.parent
 DATASETS_ROOT = RESEARCH_ROOT / "datasets"
 CONFIGS_ROOT = RESEARCH_ROOT / "configs"
 NOTEBOOKS_ROOT = RESEARCH_ROOT / "notebooks"
 CHECKPOINTS_MANIFEST = RESEARCH_ROOT / "checkpoints_manifest.json"
+
+
+def load_environment():
+    """Loads environment variables from .env in repository root or research dir."""
+    for env_path in [REPO_ROOT / ".env", RESEARCH_ROOT / ".env"]:
+        if env_path.exists():
+            try:
+                from dotenv import load_dotenv
+                load_dotenv(dotenv_path=env_path)
+            except ImportError:
+                try:
+                    with open(env_path, "r") as f:
+                        for line in f:
+                            line = line.strip()
+                            if line and not line.startswith("#") and "=" in line:
+                                k, v = line.split("=", 1)
+                                k = k.strip()
+                                v = v.strip().strip("'\"")
+                                if k not in os.environ:
+                                    os.environ[k] = v
+                except Exception:
+                    pass
+            break
+
+
+load_environment()
+
+# W&B Configuration
+WANDB_API_KEY = os.getenv("WANDB_API_KEY", "")
+WANDB_PROJECT = os.getenv("WANDB_PROJECT", "genai-assignment")
+WANDB_ENTITY = os.getenv("WANDB_ENTITY") or None
+WANDB_LOG_MODEL = os.getenv("WANDB_LOG_MODEL", "true").lower() in ("true", "1", "yes")
+
 
 # Tasks 1, 2a, 2b, 3: Oxford-IIIT Pet
 PET_ROOT = DATASETS_ROOT / "oxford-iiit-pet"

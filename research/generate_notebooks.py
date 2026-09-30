@@ -80,6 +80,17 @@ This notebook implements the **Simple VAE Baseline** for Task 1 as specified in 
 """),
         code_cell("""# 1. Configuration & Hyperparameters
 import os
+import sys
+from pathlib import Path
+
+# Ensure research root is in sys.path & load environment from .env
+cwd = Path.cwd().resolve()
+RESEARCH_ROOT = cwd if (cwd / "src").exists() else (cwd / "research" if (cwd / "research" / "src").exists() else cwd.parent)
+if str(RESEARCH_ROOT) not in sys.path:
+    sys.path.insert(0, str(RESEARCH_ROOT))
+
+from constants import load_environment
+load_environment()
 
 # Set TINY_RUN=True for quick 2-epoch CPU/GPU sanity checks (Plan 4 §1)
 TINY_RUN = False
@@ -97,22 +108,15 @@ EPOCHS = 2 if TINY_RUN else 15
 SEED = 42
 
 # Experiment tracking
-USE_WANDB = False
-WANDB_PROJECT = "genai-assignment"
+# Automatically enabled if WANDB_API_KEY is set in .env, or toggle True/False manually
+USE_WANDB = bool(os.getenv("WANDB_API_KEY"))
+WANDB_PROJECT = os.getenv("WANDB_PROJECT", "genai-assignment")
 WANDB_RUN_NAME = "task1_vae_simple_baseline"
 """),
         code_cell("""# 2. Imports and Environment Setup
-import sys
-from pathlib import Path
 import torch
 from torch.utils.data import DataLoader
 import matplotlib.pyplot as plt
-
-# Ensure research root is in sys.path (works from repo root or notebooks dir)
-cwd = Path.cwd().resolve()
-RESEARCH_ROOT = cwd if (cwd / "src").exists() else (cwd / "research" if (cwd / "research" / "src").exists() else cwd.parent)
-if str(RESEARCH_ROOT) not in sys.path:
-    sys.path.insert(0, str(RESEARCH_ROOT))
 
 from constants import PET_IMAGES_DIR, CHECKPOINTS_MANIFEST
 from src.device_utils import get_device, device_report
@@ -196,6 +200,7 @@ if USE_WANDB:
     wandb.init(
         project=WANDB_PROJECT,
         name=WANDB_RUN_NAME,
+        entity=os.getenv("WANDB_ENTITY") or None,
         config={
             "task": "task1_universal_vae",
             "device": report["device_type"],
@@ -379,8 +384,8 @@ FULL_TRAIN_EPOCHS = 60  # Full schedule retrain for winner (Plan 6 §1.6)
 STUDY_NAME = "task1_universal_vae"
 STORAGE_DB = "sqlite:///task1_study.db"
 
-USE_WANDB = False
-WANDB_PROJECT = "genai-assignment"
+USE_WANDB = bool(os.getenv("WANDB_API_KEY"))
+WANDB_PROJECT = os.getenv("WANDB_PROJECT", "genai-assignment")
 SEED = 42
 """),
         code_cell("""# 2. Imports and Environment Setup
@@ -691,8 +696,9 @@ DROPOUT = 0.2
 EPOCHS = 2 if TINY_RUN else 20
 SEED = 42
 
-USE_WANDB = False
-WANDB_PROJECT = "genai-assignment"
+# Experiment tracking
+USE_WANDB = bool(os.getenv("WANDB_API_KEY"))
+WANDB_PROJECT = os.getenv("WANDB_PROJECT", "genai-assignment")
 WANDB_RUN_NAME = "task2a_classifier_simple"
 """),
         code_cell("""# 2. Imports and Environment Setup

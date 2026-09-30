@@ -19,7 +19,7 @@ import torch.nn as nn
 
 import sys
 sys.path.append(str(Path(__file__).resolve().parent.parent))
-from constants import CHECKPOINTS_MANIFEST
+from constants import CHECKPOINTS_MANIFEST, WANDB_LOG_MODEL
 
 
 def get_git_commit_hash() -> str:
@@ -102,6 +102,54 @@ def update_manifest(
         json.dump(data, f, indent=2)
 
 
+def upload_checkpoint_to_wandb(
+    checkpoint_path: Path,
+    prefix: str,
+    ckpt_dict: Dict[str, Any],
+    is_best: bool = False,
+    task_name: str = "task1",
+    phase_name: str = "simple",
+):
+    """Uploads a saved checkpoint file as a versioned artifact to Weights & Biases."""
+    try:
+        import wandb
+        if wandb.run is None:
+            return
+
+        checkpoint_path = Path(checkpoint_path)
+        if not checkpoint_path.exists():
+            return
+
+        epoch = ckpt_dict.get("epoch", 0)
+        val_loss = ckpt_dict.get("val_loss", 0.0)
+        artifact_name = f"{prefix}_{'best' if is_best else 'latest'}"
+
+        artifact = wandb.Artifact(
+            name=artifact_name,
+            type="model",
+            metadata={
+                "task": task_name,
+                "phase": phase_name,
+                "epoch": epoch,
+                "val_loss": round(float(val_loss), 6) if val_loss is not None else None,
+                "git_commit_hash": ckpt_dict.get("git_commit_hash", "unknown"),
+                "is_best": is_best,
+            },
+        )
+        artifact.add_file(str(checkpoint_path))
+
+        aliases = ["latest"]
+        if is_best:
+            aliases.append("best")
+        if epoch:
+            aliases.append(f"epoch-{epoch}")
+
+        wandb.log_artifact(artifact, aliases=aliases)
+        print(f"[W&B] Uploaded {checkpoint_path.name} as artifact '{artifact_name}'")
+    except Exception as e:
+        print(f"[W&B] Notice: Could not upload checkpoint to W&B: {e}")
+
+
 def save_checkpoint(
     checkpoint_dir: Path,
     prefix: str,
@@ -111,10 +159,12 @@ def save_checkpoint(
     phase_name: str = "simple",
     device_name: str = "cpu",
     manifest_path: Path = CHECKPOINTS_MANIFEST,
+    upload_wandb: Optional[bool] = None,
 ) -> Dict[str, Path]:
     """
     Saves latest.pt and (if is_best) best.pt.
     Updates manifest with the saved record.
+    Optionally uploads to Weights & Biases Artifacts if WANDB_LOG_MODEL is enabled or upload_wandb=True.
     """
     checkpoint_dir = Path(checkpoint_dir)
     checkpoint_dir.mkdir(parents=True, exist_ok=True)
@@ -153,6 +203,19 @@ def save_checkpoint(
             git_commit_hash=ckpt_dict["git_commit_hash"],
         )
 
+    # Automatically upload to W&B Artifacts if enabled and run is active
+    should_upload = upload_wandb if upload_wandb is not None else WANDB_LOG_MODEL
+    if should_upload:
+        target_path = saved_paths["best"] if is_best else saved_paths["latest"]
+        upload_checkpoint_to_wandb(
+            checkpoint_path=target_path,
+            prefix=prefix,
+            ckpt_dict=ckpt_dict,
+            is_best=is_best,
+            task_name=task_name,
+            phase_name=phase_name,
+        )
+
     return saved_paths
 
 
@@ -179,3 +242,26 @@ def load_checkpoint(
         f"(Epoch {ckpt.get('epoch')}, Val Loss: {ckpt.get('val_loss'):.4f})"
     )
     return ckpt
+
+
+def load_checkpoint_from_wandb(
+    artifact_name: str,
+    model: nn.Module,
+    optimizer: Optional[torch.optim.Optimizer] = None,
+    device: Optional[torch.device] = None,
+) -> Dict[str, Any]:
+    """Downloads a model checkpoint artifact from W&B and loads its weights."""
+    import wandb
+    if wandb.run is None:
+        api = wandb.Api()
+        artifact = api.artifact(artifact_name, type="model")
+    else:
+        artifact = wandb.use_artifact(artifact_name, type="model")
+
+    artifact_dir = Path(artifact.download())
+    pt_files = sorted(artifact_dir.glob("*.pt"))
+    if not pt_files:
+        raise FileNotFoundError(f"No .pt file found in W&B artifact '{artifact_name}'")
+
+    return load_checkpoint(pt_files[0], model=model, optimizer=optimizer, device=device)
+

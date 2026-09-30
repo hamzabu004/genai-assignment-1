@@ -14,3 +14,4 @@ pyyaml>=6.0.1
 tqdm>=4.66.0
 ipykernel>=6.29.0
 nbstripout>=0.7.0
+python-dotenv>=1.0.0
