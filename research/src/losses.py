@@ -101,16 +101,16 @@ def dae_loss(
 def compute_balance_loss(routing_probs: torch.Tensor) -> torch.Tensor:
     """
     Load balancing regularization for MoE gating (Task 3).
-    Penalizes variance in expert usage to prevent routing collapse.
+    Matches assignment specification:
+    L_balance = sum_{k=1}^4 (w_bar_k - 1/4)^2
+    where w_bar_k is the mean routing weight assigned to branch k across a balanced batch.
     routing_probs: (B, num_experts)
     """
-    # Mean usage per expert across the batch
     expert_usage = routing_probs.mean(dim=0)
-    # Coefficient of variation squared: std^2 / mean^2
-    variance = torch.var(expert_usage, unbiased=False)
-    mean_val = expert_usage.mean() + 1e-8
-    balance_loss = variance / (mean_val ** 2)
+    target_usage = 1.0 / routing_probs.shape[1]
+    balance_loss = torch.sum((expert_usage - target_usage) ** 2)
     return balance_loss
+
 
 
 def moe_joint_loss(

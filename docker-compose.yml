@@ -5,6 +5,11 @@ services:
       - "8000:8000"
     volumes:
       - ./backend/models:/app/models
+      - ./research/val_manifest_official.json:/app/validation/val_manifest_official.json:ro
+      - ./research/datasets/oxford-iiit-pet/images:/app/validation/images:ro
+    environment:
+      VALIDATION_MANIFEST_PATH: /app/validation/val_manifest_official.json
+      VALIDATION_IMAGE_DIR: /app/validation/images
     env_file:
       - ./backend/.env.example
 
@@ -12,7 +17,5 @@ services:
     build: ./frontend
     ports:
       - "3000:3000"
-    env_file:
-      - ./frontend/.env.example
     depends_on:
       - backend

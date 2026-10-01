@@ -4,6 +4,7 @@ import {
   SoftMixtureResponse,
   FaceToSketchResponse,
   HealthResponse,
+  ValidationSample,
 } from "./types";
 import { createGeometricFaceSvg } from "./sampleImages";
 
@@ -55,26 +56,42 @@ async function postForm<T>(path: string, form: FormData, fallbackGenerator?: () 
 }
 
 export async function universalRestoration(form: FormData): Promise<UniversalRestorationResponse> {
-  return postForm<UniversalRestorationResponse>("/universal-restoration", form, () => {
-    const corruptionType = (form.get("corruption_type") as string) || "salt_pepper";
-    const severity = (form.get("severity") as string) || "medium";
-    const sample = createGeometricFaceSvg(1);
-    return {
-      input_image: sample,
-      corrupted_image: sample,
-      output_image: sample,
-      error_map_image: sample,
-      corruption_applied: {
-        type: corruptionType,
-        severity,
-        params: {
-          intensity: severity === "high" ? 0.75 : severity === "low" ? 0.25 : 0.5,
-          sigma: 1.5,
-        },
-      },
-      inference_time_ms: 42.3,
-    };
-  });
+  return postForm<UniversalRestorationResponse>("/universal-restoration", form);
+}
+
+export async function listValidationSamples(): Promise<ValidationSample[]> {
+  const res = await fetch(`${BASE_URL}/universal-restoration/validation-samples`);
+  if (!res.ok) {
+    let detail: string | undefined;
+    try {
+      const errorJson = await res.json();
+      detail = errorJson.detail || errorJson.message;
+    } catch {
+      // Keep the status-based error message.
+    }
+    throw new ApiError(`Could not load validation samples (${res.status})`, detail);
+  }
+  return (await res.json()) as ValidationSample[];
+}
+
+export async function runValidationSample(filename: string): Promise<UniversalRestorationResponse> {
+  const response = await fetch(
+    `${BASE_URL}/universal-restoration/validation-samples/${encodeURIComponent(filename)}`,
+    { method: "POST" },
+  );
+  if (!response.ok) {
+    let message = `Validation sample request failed with status ${response.status}`;
+    let detail: string | undefined;
+    try {
+      const errorJson = await response.json();
+      message = errorJson.message || message;
+      detail = errorJson.detail;
+    } catch {
+      // Keep the status-based error message.
+    }
+    throw new ApiError(message, detail);
+  }
+  return (await response.json()) as UniversalRestorationResponse;
 }
 
 export async function hardRouting(form: FormData): Promise<HardRoutingResponse> {

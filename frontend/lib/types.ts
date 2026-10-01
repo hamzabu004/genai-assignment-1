@@ -12,9 +12,21 @@ export interface UniversalRestorationResponse {
   corruption_applied: {
     type: string;
     severity: string;
-    params: Record<string, number>;
+    params: Record<string, unknown>;
   };
   inference_time_ms: number;
+  quality_metrics: {
+    psnr_db: number;
+    ssim: number;
+  };
+  sample_filename: string | null;
+}
+
+export interface ValidationSample {
+  filename: string;
+  corruption_type: CorruptionType;
+  severity: string;
+  params: Record<string, unknown>;
 }
 
 export interface HardRoutingResponse {

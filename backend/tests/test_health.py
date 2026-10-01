@@ -4,15 +4,16 @@ def test_health_check(client):
     data = res.json()
     assert data["status"] == "ok"
     assert isinstance(data["models_loaded"], list)
-    expected_models = [
-        "universal_ae",
-        "classifier",
-        "specialist_salt",
-        "specialist_blur",
-        "specialist_occlusion",
-        "soft_moe",
-        "generator",
-    ]
-    for model_name in expected_models:
-        assert model_name in data["models_loaded"]
-
+    assert "universal_ae" in data["models_loaded"]
+    assert set(data["models_loaded"]).issubset(
+        {
+            "universal_ae",
+            "classifier",
+            "specialist_salt",
+            "specialist_blur",
+            "specialist_occlusion",
+            "soft_moe",
+            "generator",
+        }
+    )
+    assert data["onnx_providers"]

@@ -10,6 +10,8 @@ class Settings(BaseSettings):
     )
 
     model_dir: str = "./models"
+    validation_manifest_path: str = "./validation/val_manifest_official.json"
+    validation_image_dir: str = "./validation/images"
     img_size: int = 128
     allowed_origins: str = "http://localhost:3000"
     log_level: str = "info"
@@ -58,6 +60,21 @@ class Settings(BaseSettings):
 
         return self.model_dir
 
+    @property
+    def resolved_validation_manifest_path(self) -> str:
+        if os.path.isfile(self.validation_manifest_path):
+            return self.validation_manifest_path
+        backend_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        return os.path.join(os.path.dirname(backend_dir), "research", "val_manifest_official.json")
+
+    @property
+    def resolved_validation_image_dir(self) -> str:
+        if os.path.isdir(self.validation_image_dir):
+            return self.validation_image_dir
+        backend_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        return os.path.join(
+            os.path.dirname(backend_dir), "research", "datasets", "oxford-iiit-pet", "images"
+        )
+
 
 settings = Settings()
-

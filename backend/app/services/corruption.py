@@ -2,7 +2,7 @@ import random
 from typing import Optional, Tuple, Dict, Any
 import numpy as np
 from PIL import Image
-from scipy.ndimage import gaussian_filter
+from scipy.ndimage import convolve1d, gaussian_filter
 
 SEVERITY_LEVELS = ("low", "medium", "high")
 VALID_CORRUPTIONS = ("clean", "salt_pepper", "blur", "occlusion")
@@ -155,3 +155,64 @@ def apply_corruption_to_image(
     }
     return corrupted_image, applied_dict
 
+
+def apply_manifest_corruption(image: Image.Image, entry: Dict[str, Any]) -> Tuple[Image.Image, Dict[str, Any]]:
+    """Apply one fixed validation-manifest corruption to an RGB image."""
+    kind = str(entry.get("corruption_type", "")).lower()
+    seed = int(entry.get("seed", 0))
+    arr = np.asarray(image.convert("RGB"), dtype=np.float32) / 255.0
+
+    if kind == "clean":
+        corrupted = arr.copy()
+        response_kind = "clean"
+    elif kind == "salt":
+        probability = float(entry["prob"])
+        rng = np.random.default_rng(seed)
+        mask = rng.random(arr.shape) < probability
+        salt = rng.random(arr.shape) < 0.5
+        corrupted = arr.copy()
+        corrupted[mask & salt] = 1.0
+        corrupted[mask & ~salt] = 0.0
+        response_kind = "salt_pepper"
+    elif kind == "blur":
+        kernel_size = int(entry["kernel_size"])
+        sigma = float(entry["sigma"])
+        if kernel_size < 1 or kernel_size % 2 != 1 or sigma <= 0:
+            raise ValueError("Manifest blur parameters must use an odd kernel and positive sigma")
+        coords = np.arange(kernel_size, dtype=np.float32) - (kernel_size - 1) / 2
+        kernel = np.exp(-0.5 * (coords / sigma) ** 2)
+        kernel /= kernel.sum()
+        corrupted = np.empty_like(arr)
+        for channel in range(3):
+            blurred = convolve1d(arr[:, :, channel], kernel, axis=0, mode="constant", cval=0.0)
+            corrupted[:, :, channel] = convolve1d(
+                blurred, kernel, axis=1, mode="constant", cval=0.0
+            )
+        corrupted = np.clip(corrupted, 0.0, 1.0)
+        response_kind = "blur"
+    elif kind == "occlusion":
+        corrupted = arr.copy()
+        masks = entry.get("masks", [])
+        if not masks:
+            raise ValueError("Manifest occlusion entry is missing its masks")
+        height, width = corrupted.shape[:2]
+        for mask in masks:
+            top = int(mask["top"])
+            left = int(mask["left"])
+            bottom = top + int(mask["height"])
+            right = left + int(mask["width"])
+            if top < 0 or left < 0 or bottom > height or right > width:
+                raise ValueError("Manifest occlusion mask falls outside the resized image")
+            corrupted[top:bottom, left:right, :] = float(entry.get("fill_value", 0.0))
+        response_kind = "occlusion"
+    else:
+        raise ValueError(f"Unsupported validation corruption type: {kind}")
+
+    out = Image.fromarray(np.round(np.clip(corrupted, 0.0, 1.0) * 255.0).astype(np.uint8), mode="RGB")
+    params = {key: value for key, value in entry.items() if key != "corruption_type"}
+    applied = {
+        "type": response_kind,
+        "severity": str(entry.get("severity", "none")),
+        "params": params,
+    }
+    return out, applied

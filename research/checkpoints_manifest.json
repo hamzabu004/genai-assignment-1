@@ -2,44 +2,44 @@
   "_description": "Tracks all model checkpoints across devices. Actual .pt files stored via Git LFS or Hugging Face Hub.",
   "checkpoints": [
     {
-      "filename": "task1_universal_ae_best.pt",
-      "task": "task1",
-      "phase": "simple_best",
-      "val_loss": 0.308525,
-      "epoch": 4,
-      "device": "NVIDIA GeForce RTX 5060 Laptop GPU",
-      "timestamp": "2026-10-01T02:29:52.984081Z",
-      "git_commit_hash": "0d46f73"
-    },
-    {
       "filename": "task1_universal_ae_latest.pt",
       "task": "task1",
       "phase": "simple",
-      "val_loss": 0.316817,
-      "epoch": 15,
-      "device": "NVIDIA GeForce RTX 5060 Laptop GPU",
-      "timestamp": "2026-10-01T02:32:20.569376Z",
-      "git_commit_hash": "0d46f73"
+      "val_loss": 0.32436,
+      "epoch": 2,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-01T05:40:44.601223Z",
+      "git_commit_hash": "ed0686c"
     },
     {
-      "filename": "task1_universal_ae_final_latest.pt",
+      "filename": "task1_universal_ae_best.pt",
       "task": "task1",
-      "phase": "final",
-      "val_loss": 0.119711,
-      "epoch": 28,
-      "device": "NVIDIA GeForce RTX 5060 Laptop GPU",
-      "timestamp": "2026-10-01T03:44:16.464196Z",
-      "git_commit_hash": "9b7fafe"
+      "phase": "simple_best",
+      "val_loss": 0.32436,
+      "epoch": 2,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-01T05:40:44.628729Z",
+      "git_commit_hash": "ed0686c"
     },
     {
       "filename": "task1_universal_ae_final_best.pt",
       "task": "task1",
       "phase": "final_best",
-      "val_loss": 0.119711,
-      "epoch": 28,
-      "device": "NVIDIA GeForce RTX 5060 Laptop GPU",
-      "timestamp": "2026-10-01T03:44:16.658549Z",
-      "git_commit_hash": "9b7fafe"
+      "val_loss": 0.098954,
+      "epoch": 59,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-01T06:07:38.625143Z",
+      "git_commit_hash": "ed0686c"
+    },
+    {
+      "filename": "task1_universal_ae_final_latest.pt",
+      "task": "task1",
+      "phase": "final",
+      "val_loss": 0.106622,
+      "epoch": 60,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-01T06:07:52.251010Z",
+      "git_commit_hash": "ed0686c"
     }
   ]
 }

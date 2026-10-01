@@ -42,7 +42,7 @@ Tasks 1, 2, and 3 will use the Oxford-IIIT Pet Dataset. The dataset contains ima
 
 Use the official training and validation collection as the development data. Divide it into 80% training and 20% validation data using random seed 42. The official test set must remain untouched 
 
-until final evaluation. All images should be converted to RGB and resized to 128 × 128pixels. The same data split must be used throughout Tasks 1, 2, and 3. 
+until final evaluation. All images should be converted to RGB and resized to 128 × 128 pixels. The same data split must be used throughout Tasks 1, 2, and 3. 
 
 The dataset contains clean images. Therefore, the corrupted inputs must be generated programmatically. During training, corruption must be applied at runtime inside the data-loading pipeline. A new corruption type and severity should be sampled whenever an image is loaded. You should not permanently save thousands of corrupted copies of the dataset. 
 
@@ -71,17 +71,17 @@ The network must contain a convolutional encoder, a genuine compressed latent re
 
 unrestricted skip connections will not satisfy the autoencoder requirement. If limited skip connections are used, their purpose and effect must be investigated and justified in the report. 
 
-For every training example, let 𝑥 represent the clean image, 𝑥. the corrupted input, and 𝑥/ the reconstructed image: 
+For every training example, let $x$ represent the clean image, $\tilde{x}$ the corrupted input, and $\hat{x}$ the reconstructed image: 
 
+$$\hat{x} = D\big(E(\tilde{x})\big)$$
 
+Here, $E$ is the encoder and $D$ is the decoder. The model should be trained using a combination of pixel reconstruction loss and structural similarity loss: 
 
-Here, 𝐸is the encoder and 𝐷is the decoder. The model should be trained using a combination of pixel reconstruction loss and structural similarity loss: 
+$$\mathcal{L}_{AE} = \alpha\,\mathcal{L}_{L1}(x,\hat{x}) + (1-\alpha)\big(1-\mathrm{SSIM}(x,\hat{x})\big)$$
 
+The L1 component encourages accurate pixel reconstruction, while the Structural Similarity Index Measure (SSIM) component encourages the reconstructed image to preserve important structures, shapes, edges, and local contrast. A reasonable initial value is $\alpha = 0.8$, but the final value must be selected through Optuna rather than being accepted without investigation. 
 
-
-The L1 component encourages accurate pixel reconstruction, while the Structural Similarity Index Measure (SSIM) component encourages the reconstructed image to preserve important structures, shapes, edges, and local contrast. A reasonable initial value is 𝛼= 0.8, but the final value must be selected through Optuna rather than being accepted without investigation. 
-
-The Optuna study for this task must investigate at least the learning rate, batch size, bottleneck dimension, number of encoder channels, dropout rate, and loss-weight value 𝛼 . The validation objective should combine reconstruction quality and structural similarity. The complete search space, number of completed trials, best trial, and final selected configuration must be reported. 
+The Optuna study for this task must investigate at least the learning rate, batch size, bottleneck dimension, number of encoder channels, dropout rate, and loss-weight value $\alpha$. The validation objective should combine reconstruction quality and structural similarity. The complete search space, number of completed trials, best trial, and final selected configuration must be reported. 
 
 The final results for this task must separately show performance on clean images, salt-and-pepper noise, Gaussian blur, and occluded images. Results must also be separated by low, medium, and high corruption severity. Visual results must show the clean target, corrupted input, reconstructed output, and an absolute error map. At least twelve representative examples and four meaningful failure cases must be discussed. 
 
@@ -93,13 +93,13 @@ Create a hard-routing restoration system. Instead of requiring one autoencoder t
 
 First, train a convolutional classifier that predicts one of four input classes: clean, salt-and-pepper noise, Gaussian blur, or rectangular occlusion. The training labels are obtained automatically from the runtime corruption pipeline. The training batches must be balanced so that the classifier does not become biased toward one corruption class. 
 
-For a corrupted image 𝑥., the classifier should produce four class probabilities: 
+For a corrupted image $\tilde{x}$, the classifier should produce four class probabilities: 
 
-
+$$p = f(\tilde{x}) = [p_{clean},\, p_{salt},\, p_{blur},\, p_{occlusion}]$$
 
 The predicted corruption class is the class with the maximum probability: 
 
-
+$$\hat{k} = \arg\max_{k}\, p_k$$
 
 The classifier must be trained using multiclass cross-entropy loss. Optuna must be used to tune its learning rate, batch size, convolutional channel configuration, dropout rate, and weight decay. Its results must include overall accuracy, macro-averaged precision, recall and F1-score, per-class measurements, and a normalized four-class confusion matrix. 
 
@@ -109,7 +109,15 @@ The specialists may use the same basic architecture, but they must have independ
 
 During hard-routed inference, the classifier must first determine the corruption type. The selected specialist must then restore the image: 
 
-
+$$
+\hat{x} =
+\begin{cases}
+\tilde{x}, & \hat{k} = \text{clean} \\
+D_{salt}(\tilde{x}), & \hat{k} = \text{salt} \\
+D_{blur}(\tilde{x}), & \hat{k} = \text{blur} \\
+D_{occlusion}(\tilde{x}), & \hat{k} = \text{occlusion}
+\end{cases}
+$$
 
 A clean input must use an identity bypass and should not be unnecessarily processed by a restoration expert. 
 
@@ -123,15 +131,15 @@ Hard routing sends an image to only one specialist. This may fail when an image 
 
 The soft system should contain a gating network and the three specialist restoration experts developed in Task 2. It must also contain an identity branch for clean images. Instead of selecting only one branch, the gating network must assign a continuous weight to every branch. 
 
-For input 𝑥., the gating network should calculate: 
+For input $\tilde{x}$, the gating network should calculate: 
 
+$$w = \mathrm{softmax}\!\left(\frac{g(\tilde{x})}{\tau}\right)$$
 
-
-Here, 𝑤= [𝑤!, 𝑤", 𝑤#, 𝑤$]contains the weights for the clean identity branch, salt-and-pepper expert, blur expert, and occlusion expert. The temperature 𝜏controls whether the routing weights are sharp or distributed. 
+Here, $w = [w_c, w_s, w_b, w_o]$ contains the weights for the clean identity branch, salt-and-pepper expert, blur expert, and occlusion expert. The temperature $\tau$ controls whether the routing weights are sharp or distributed. 
 
 The final reconstruction should be calculated as: 
 
-
+$$\hat{x} = w_c\,\tilde{x} + w_s\,D_{salt}(\tilde{x}) + w_b\,D_{blur}(\tilde{x}) + w_o\,D_{occlusion}(\tilde{x})$$
 
 This weighted combination is differentiable. Therefore, the gate and experts can be trained jointly through the final reconstruction error. 
 
@@ -139,15 +147,15 @@ You must not begin joint training with completely random components. Initialize 
 
 The joint loss should contain reconstruction loss, structural similarity loss, corruption-classification loss, and a routing-balance regularizer: 
 
-
+$$\mathcal{L}_{joint} = \lambda_1\,\mathcal{L}_{L1} + \lambda_2\,(1-\mathrm{SSIM}) + \lambda_3\,\mathcal{L}_{CE} + \lambda_4\,\mathcal{L}_{balance}$$
 
 The cross-entropy component keeps the gate related to the known runtime corruption label. The balance component prevents the system from sending nearly every input to the same expert. One possible balance loss is: 
 
+$$\mathcal{L}_{balance} = \sum_{k=1}^{4}\left(\bar{w}_k - \frac{1}{4}\right)^{2}$$
 
+In this expression, $\bar{w}_k$ is the average routing weight assigned to branch $k$ within a balanced training batch. You may propose a different differentiable balance or entropy regularizer, but it must be supported by research and clearly justified. 
 
-In this expression, 𝑤8%is the average routing weight assigned to branch 𝑘within a balanced training batch. You may propose a different differentiable balance or entropy regularizer, but it must be supported by research and clearly justified. 
-
-You may begin with 𝜆" = 0.8, 𝜆& = 0.2, 𝜆' = 0.1, and 𝜆( = 0.01. Optuna must then be used to investigate the joint fine-tuning learning rate, temperature 𝜏, classification weight, balance weight, and the reconstruction-loss weighting. Trial pruning may be used when a configuration performs poorly or exhibits routing collapse. 
+You may begin with $\lambda_1 = 0.8$, $\lambda_2 = 0.2$, $\lambda_3 = 0.1$, and $\lambda_4 = 0.01$. Optuna must then be used to investigate the joint fine-tuning learning rate, temperature $\tau$, classification weight, balance weight, and the reconstruction-loss weighting. Trial pruning may be used when a configuration performs poorly or exhibits routing collapse. 
 
 In addition to reconstruction results, you must examine the behaviour of the gating network. Report the average expert weights for every true corruption type and severity level. Show examples in which one expert dominates and examples in which weights are distributed across multiple experts. A routing heatmap or weight-distribution diagram must be included in the technical report. You must also determine whether any expert has become inactive or whether one expert dominates unrelated inputs. 
 
@@ -157,27 +165,27 @@ The application must provide a workspace named Soft Mixture-of-Experts Restorati
 
 For the fourth task, you must build a face-to-sketch generation system using a conditional GAN. Use the <u>FS2K Facial Sketch Synthesis Dataset, which contains 2,104 paired facial photographs and</u> sketches with three sketch-style categories. 
 
-Use the official FS2K training and testing definitions. Reserve 15% of the official training portion as a validation set using random seed 42. The validation split should be stratified by sketch style. The official test set must not be used during training or hyperparameter selection. Resize the photographs and sketches to 128 × 128pixels and preserve the correct pairing between every photograph and its target sketch. 
+Use the official FS2K training and testing definitions. Reserve 15% of the official training portion as a validation set using random seed 42. The validation split should be stratified by sketch style. The official test set must not be used during training or hyperparameter selection. Resize the photographs and sketches to 128 × 128 pixels and preserve the correct pairing between every photograph and its target sketch. 
 
 The generator should follow a U-Net-style encoder-decoder architecture. It will receive a facial photograph and a selected sketch-style condition and generate a corresponding sketch. The discriminator should follow a PatchGAN design and determine whether local regions of a photograph-sketch pair are real or generated. 
 
 The generator can be represented as: 
 
+$$\hat{y} = G(x, s)$$
 
-
-Here, 𝑥is the input photograph, 𝑠is the selected style condition, and 𝑦/is the generated sketch. The style condition should be represented using a learned categorical embedding for the three FS2K style categories. The embedding must be incorporated into the generator and discriminator rather than being used only as an interface label. 
+Here, $x$ is the input photograph, $s$ is the selected style condition, and $\hat{y}$ is the generated sketch. The style condition should be represented using a learned categorical embedding for the three FS2K style categories. The embedding must be incorporated into the generator and discriminator rather than being used only as an interface label. 
 
 The discriminator receives the photograph, style condition, and either the real or generated sketch: 
 
-
+$$D(x, s, y) \quad \text{and} \quad D\big(x, s, G(x,s)\big)$$
 
 The discriminator should be trained to classify real paired sketches as real and generated sketches as fake. The generator should attempt to fool the discriminator while also remaining close to the paired ground-truth sketch. 
 
 The generator objective must combine adversarial and reconstruction losses: 
 
+$$\mathcal{L}_G = \mathcal{L}_{adv} + \lambda_{L1}\,\mathcal{L}_{L1}\big(y, G(x,s)\big)$$
 
-
-The discriminator and adversarial components may use binary cross-entropy with logits. A reasonable initial reconstruction weight is 𝜆)" = 100, as commonly used in paired image-to-image translation, but the final value must be investigated through Optuna. 
+The discriminator and adversarial components may use binary cross-entropy with logits. A reasonable initial reconstruction weight is $\lambda_{L1} = 100$, as commonly used in paired image-to-image translation, but the final value must be investigated through Optuna. 
 
 Optuna must be used to tune at least the generator and discriminator learning rates, batch size, base channel count, dropout rate, style-embedding dimension, and reconstruction-loss weight. Because GAN training is computationally demanding, the Optuna trials may use fewer epochs. The selected configuration must then be retrained for the complete training schedule. 
 

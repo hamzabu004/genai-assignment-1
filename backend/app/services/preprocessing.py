@@ -38,6 +38,14 @@ def image_to_tensor(img: Image.Image) -> np.ndarray:
     return arr.astype(np.float32)
 
 
+def image_to_unit_tensor(img: Image.Image) -> np.ndarray:
+    """Convert an RGB image to Task 1's unnormalized [0, 1] NCHW contract."""
+    if img.size != (settings.img_size, settings.img_size):
+        img = img.resize((settings.img_size, settings.img_size), Image.Resampling.BILINEAR)
+    arr = np.asarray(img.convert("RGB"), dtype=np.float32) / 255.0
+    return np.transpose(arr, (2, 0, 1))[None, ...].astype(np.float32)
+
+
 def load_image_to_tensor(file_bytes: bytes) -> np.ndarray:
     """RGB decode -> resize -> normalize -> NCHW float32, matches research pipeline exactly."""
     img = load_image(file_bytes)
@@ -63,6 +71,20 @@ def tensor_to_image(tensor: np.ndarray) -> Image.Image:
     return Image.fromarray(arr, mode="RGB")
 
 
+def unit_tensor_to_image(tensor: np.ndarray) -> Image.Image:
+    """Convert Task 1's [0, 1] NCHW or CHW output directly to RGB."""
+    arr = np.asarray(tensor, dtype=np.float32)
+    arr = arr[0] if arr.ndim == 4 else arr
+    if arr.ndim != 3:
+        raise ValueError(f"Expected CHW or NCHW image tensor; received shape {arr.shape}")
+    if arr.shape[0] == 1:
+        arr = np.repeat(arr, 3, axis=0)
+    if arr.shape[0] != 3:
+        raise ValueError(f"Expected 1 or 3 channels; received {arr.shape[0]}")
+    arr = np.transpose(np.clip(arr, 0.0, 1.0), (1, 2, 0))
+    return Image.fromarray(np.round(arr * 255.0).astype(np.uint8), mode="RGB")
+
+
 def image_to_base64_png(img: Image.Image) -> str:
     """Encodes a PIL Image to a base64 data URI string."""
     buf = io.BytesIO()
@@ -75,4 +97,3 @@ def tensor_to_base64_png(tensor: np.ndarray) -> str:
     """Denormalize NCHW float tensor -> base64 PNG data URI string."""
     img = tensor_to_image(tensor)
     return image_to_base64_png(img)
-

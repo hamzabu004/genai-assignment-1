@@ -12,6 +12,8 @@ onnxruntime==1.19.2
 # ROCm PyTorch build instead of onnxruntime for that model (see docs/device-notes.md)
 pillow==10.4.0
 numpy==1.26.4
+scipy>=1.13.0
+scikit-image>=0.22.0
 python-multipart==0.0.9
 pydantic==2.9.2
 pydantic-settings==2.5.2
