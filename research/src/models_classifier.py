@@ -9,7 +9,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from src.models_vae import _get_norm_layer, ConvVAE
+from src.models_dae import _get_norm_layer, ConvDAE
 
 
 class CorruptionClassifier(nn.Module):
@@ -98,9 +98,9 @@ class SoftMoERestorer(nn.Module):
     def __init__(
         self,
         gate: CorruptionClassifier,
-        specialist_salt: ConvVAE,
-        specialist_blur: ConvVAE,
-        specialist_occlusion: ConvVAE,
+        specialist_salt: ConvDAE,
+        specialist_blur: ConvDAE,
+        specialist_occlusion: ConvDAE,
         temperature: float = 1.0,
     ):
         super().__init__()
@@ -127,13 +127,13 @@ class SoftMoERestorer(nn.Module):
         out_clean = x
 
         # Branch 1: Salt & Pepper specialist
-        out_salt, _, _ = self.specialist_salt(x)
+        out_salt = self.specialist_salt(x)
 
         # Branch 2: Blur specialist
-        out_blur, _, _ = self.specialist_blur(x)
+        out_blur = self.specialist_blur(x)
 
         # Branch 3: Occlusion specialist
-        out_occl, _, _ = self.specialist_occlusion(x)
+        out_occl = self.specialist_occlusion(x)
 
         # Stack outputs: (B, 4, C, H, W)
         stacked = torch.stack([out_clean, out_salt, out_blur, out_occl], dim=1)

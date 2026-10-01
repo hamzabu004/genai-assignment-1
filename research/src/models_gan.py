@@ -11,12 +11,13 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from src.models_vae import _get_norm_layer
+from src.models_dae import _get_norm_layer
 
 
 class UNetBlock(nn.Module):
     """Basic conv block for U-Net encoder/decoder with normalization and activation."""
-    def __init__(self, in_c: int, out_c: int, down: bool = True, use_dropout: bool = False):
+    def __init__(self, in_c: int, out_c: int, down: bool = True, use_dropout: bool = False,
+                 dropout_rate: float = 0.2):
         super().__init__()
         self.down = down
         if down:
@@ -24,7 +25,7 @@ class UNetBlock(nn.Module):
                 nn.Conv2d(in_c, out_c, kernel_size=4, stride=2, padding=1, bias=False),
                 _get_norm_layer(out_c),
                 nn.LeakyReLU(0.2, inplace=True),
-                nn.Dropout2d(0.2) if use_dropout else nn.Identity(),
+                nn.Dropout2d(dropout_rate) if use_dropout and dropout_rate > 0 else nn.Identity(),
             )
         else:
             self.conv = nn.Sequential(
@@ -32,7 +33,7 @@ class UNetBlock(nn.Module):
                 nn.Conv2d(in_c, out_c, kernel_size=3, stride=1, padding=1, bias=False),
                 _get_norm_layer(out_c),
                 nn.ReLU(inplace=True),
-                nn.Dropout2d(0.2) if use_dropout else nn.Identity(),
+                nn.Dropout2d(dropout_rate) if use_dropout and dropout_rate > 0 else nn.Identity(),
             )
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
@@ -53,11 +54,13 @@ class UNetGenerator(nn.Module):
         base_channels: int = 64,
         embed_dim: int = 8,
         num_styles: int = 3,
+        dropout: float = 0.2,
     ):
         super().__init__()
         self.base_channels = base_channels
         self.embed_dim = embed_dim
         self.num_styles = num_styles
+        self.dropout = dropout
 
         # Style embedding
         self.style_embed = nn.Embedding(num_styles, embed_dim)
@@ -80,9 +83,9 @@ class UNetGenerator(nn.Module):
 
         # Decoder stages (with skip connections and style injection):
         # Bottleneck takes e5 (c5) + style feature map (embed_dim)
-        self.d5 = UNetBlock(c5 + embed_dim, c4, down=False, use_dropout=True)
+        self.d5 = UNetBlock(c5 + embed_dim, c4, down=False, use_dropout=True, dropout_rate=dropout)
         # Skip connection from e4: d5(c4) + e4(c4) = 2*c4
-        self.d4 = UNetBlock(c4 + c4, c3, down=False, use_dropout=True)
+        self.d4 = UNetBlock(c4 + c4, c3, down=False, use_dropout=True, dropout_rate=dropout)
         # Skip from e3: d4(c3) + e3(c3) = 2*c3
         self.d3 = UNetBlock(c3 + c3, c2, down=False)
         # Skip from e2: d3(c2) + e2(c2) = 2*c2
@@ -140,8 +143,11 @@ class PatchGANDiscriminator(nn.Module):
     ):
         super().__init__()
         self.num_styles = num_styles
+        self.style_embed_dim = 8
+        self.style_embed = nn.Embedding(num_styles, self.style_embed_dim)
+        self.style_proj = nn.Linear(self.style_embed_dim, self.style_embed_dim)
         # Total in_channels = photo (3) + sketch (3) + style one-hot (num_styles)
-        total_in = in_channels + num_styles
+        total_in = in_channels + self.style_embed_dim
 
         c1 = base_channels
         c2 = base_channels * 2
@@ -176,9 +182,9 @@ class PatchGANDiscriminator(nn.Module):
         self, photo: torch.Tensor, sketch: torch.Tensor, style_idx: torch.Tensor
     ) -> torch.Tensor:
         b, _, h, w = photo.shape
-        # Create one-hot style channel maps of shape (B, num_styles, H, W)
-        style_one_hot = F.one_hot(style_idx, num_classes=self.num_styles).float()
-        style_map = style_one_hot.view(b, self.num_styles, 1, 1).expand(-1, -1, h, w)
+        # Broadcast a learned style embedding as spatial conditioning channels.
+        style_embedding = self.style_proj(self.style_embed(style_idx))
+        style_map = style_embedding.view(b, self.style_embed_dim, 1, 1).expand(-1, -1, h, w)
 
         x = torch.cat([photo, sketch, style_map], dim=1)
         return self.net(x)

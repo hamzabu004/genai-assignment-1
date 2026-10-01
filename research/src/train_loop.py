@@ -1,7 +1,7 @@
 """
 Training and validation loops for all research tasks.
 Includes:
-- VAE training & validation (Tasks 1 and 2b)
+- DAE training & validation (Tasks 1 and 2b)
 - Classifier training & validation (Task 2a)
 - MoE joint training & validation (Task 3)
 - Conditional GAN training & validation (Task 4)
@@ -17,7 +17,7 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 
 from src.losses import (
-    vae_loss,
+    dae_loss,
     compute_ssim,
     moe_joint_loss,
     generator_loss,
@@ -37,21 +37,20 @@ def set_seed(seed: int = 42):
 
 
 # ============================================================================
-# Task 1 & 2b: VAE Training / Validation
+# Task 1 & 2b: DAE Training / Validation
 # ============================================================================
 
-def train_one_epoch_vae(
+def train_one_epoch_dae(
     model: nn.Module,
     loader: DataLoader,
     optimizer: torch.optim.Optimizer,
     device: torch.device,
     alpha: float = 0.8,
-    beta: float = 0.001,
     scaler: Optional[torch.amp.GradScaler] = None,
 ) -> Dict[str, float]:
     model.train()
-    total_loss, total_recon, total_kl, total_ssim = 0.0, 0.0, 0.0, 0.0
-    num_batches = len(loader)
+    total_loss, total_recon, total_ssim = 0.0, 0.0, 0.0
+    num_samples = 0
 
     for corrupted, clean in loader:
         corrupted = corrupted.to(device)
@@ -61,59 +60,64 @@ def train_one_epoch_vae(
 
         if scaler is not None and device.type == "cuda":
             with torch.amp.autocast(device_type="cuda"):
-                recon, mu, logvar = model(corrupted)
-                loss, r_val, k_val, s_val = vae_loss(recon, clean, mu, logvar, alpha=alpha, beta=beta)
+                recon = model(corrupted)
+                loss, r_val, _, s_val = dae_loss(recon, clean, alpha=alpha)
             scaler.scale(loss).backward()
             scaler.step(optimizer)
             scaler.update()
         else:
-            recon, mu, logvar = model(corrupted)
-            loss, r_val, k_val, s_val = vae_loss(recon, clean, mu, logvar, alpha=alpha, beta=beta)
+            recon = model(corrupted)
+            loss, r_val, _, s_val = dae_loss(recon, clean, alpha=alpha)
             loss.backward()
             optimizer.step()
 
-        total_loss += loss.item()
-        total_recon += r_val
-        total_kl += k_val
-        total_ssim += s_val
+        batch_size = clean.shape[0]
+        total_loss += loss.item() * batch_size
+        total_recon += r_val * batch_size
+        total_ssim += s_val * batch_size
+        num_samples += batch_size
+
+    if num_samples == 0:
+        raise ValueError("Cannot train a DAE with an empty data loader.")
 
     return {
-        "train_loss": total_loss / num_batches,
-        "recon_loss": total_recon / num_batches,
-        "kl_loss": total_kl / num_batches,
-        "ssim": total_ssim / num_batches,
+        "train_loss": total_loss / num_samples,
+        "recon_loss": total_recon / num_samples,
+        "ssim": total_ssim / num_samples,
     }
 
 
-def validate_vae(
+def validate_dae(
     model: nn.Module,
     loader: DataLoader,
     device: torch.device,
     alpha: float = 0.8,
-    beta: float = 0.001,
 ) -> Dict[str, float]:
     model.eval()
-    total_loss, total_recon, total_kl, total_ssim = 0.0, 0.0, 0.0, 0.0
-    num_batches = len(loader)
+    total_loss, total_recon, total_ssim = 0.0, 0.0, 0.0
+    num_samples = 0
 
     with torch.no_grad():
         for corrupted, clean in loader:
             corrupted = corrupted.to(device)
             clean = clean.to(device)
 
-            recon, mu, logvar = model(corrupted)
-            loss, r_val, k_val, s_val = vae_loss(recon, clean, mu, logvar, alpha=alpha, beta=beta)
+            recon = model(corrupted)
+            loss, r_val, _, s_val = dae_loss(recon, clean, alpha=alpha)
 
-            total_loss += loss.item()
-            total_recon += r_val
-            total_kl += k_val
-            total_ssim += s_val
+            batch_size = clean.shape[0]
+            total_loss += loss.item() * batch_size
+            total_recon += r_val * batch_size
+            total_ssim += s_val * batch_size
+            num_samples += batch_size
+
+    if num_samples == 0:
+        raise ValueError("Cannot validate a DAE with an empty data loader.")
 
     return {
-        "val_loss": total_loss / num_batches,
-        "val_recon": total_recon / num_batches,
-        "val_kl": total_kl / num_batches,
-        "val_ssim": total_ssim / num_batches,
+        "val_loss": total_loss / num_samples,
+        "val_recon": total_recon / num_samples,
+        "val_ssim": total_ssim / num_samples,
     }
 
 

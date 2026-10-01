@@ -51,7 +51,9 @@ WANDB_LOG_MODEL = os.getenv("WANDB_LOG_MODEL", "true").lower() in ("true", "1", 
 # Tasks 1, 2a, 2b, 3: Oxford-IIIT Pet
 PET_ROOT = DATASETS_ROOT / "oxford-iiit-pet"
 PET_IMAGES_DIR = PET_ROOT / "images"
-SPLIT_MANIFEST = RESEARCH_ROOT / "split_manifest.json"
+SPLIT_MANIFEST = RESEARCH_ROOT / "split_manifest_official.json"
+VAL_MANIFEST = RESEARCH_ROOT / "val_manifest_official.json"
+TEST_MANIFEST = RESEARCH_ROOT / "test_manifest_official.json"
 
 # Task 4: FS2K
 FS2K_ROOT = DATASETS_ROOT / "FS2K"

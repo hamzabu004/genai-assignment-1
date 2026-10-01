@@ -5,21 +5,21 @@
       "filename": "task1_universal_ae_best.pt",
       "task": "task1",
       "phase": "simple_best",
-      "val_loss": 0.229911,
-      "epoch": 10,
-      "device": "CPU",
-      "timestamp": "2026-09-30T09:37:22.903835Z",
-      "git_commit_hash": "7532a16"
+      "val_loss": 0.354101,
+      "epoch": 1,
+      "device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "timestamp": "2026-10-01T01:27:07.138417Z",
+      "git_commit_hash": "11267e0"
     },
     {
       "filename": "task1_universal_ae_latest.pt",
       "task": "task1",
       "phase": "simple",
-      "val_loss": 0.23041,
-      "epoch": 12,
-      "device": "CPU",
-      "timestamp": "2026-09-30T09:48:45.849784Z",
-      "git_commit_hash": "7532a16"
+      "val_loss": 0.442569,
+      "epoch": 6,
+      "device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "timestamp": "2026-10-01T01:27:50.513980Z",
+      "git_commit_hash": "11267e0"
     }
   ]
 }

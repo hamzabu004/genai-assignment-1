@@ -4,10 +4,10 @@ Use this as the architecture-decision reference for your report's "related resea
 
 ---
 
-## Task 1 — Universal Multi-Corruption Restoration (VAE)
+## Task 1 — Universal Multi-Corruption Restoration (DAE)
 
 ### Recommended architecture
-Symmetric convolutional VAE, moderate depth, at most one limited skip connection.
+Symmetric convolutional DAE, moderate depth, at most one limited skip connection.
 
 | Stage | Encoder | Decoder (mirrored) |
 |---|---|---|
@@ -28,10 +28,8 @@ Symmetric convolutional VAE, moderate depth, at most one limited skip connection
 - **Mao, Shen & Yang (2016)** — "Image Restoration Using Convolutional Auto-encoders with Symmetric Skip Connections" (RED-Net). Proposes a very deep, fully convolutional encoder-decoder for image restoration built from symmetric convolutional/deconvolutional layers. This is the direct architectural precedent for your Task 1 network shape.
 - Skip connections have a measurable, real effect on restoration quality: an ablation comparing a deep autoencoder with and without skip connections found the skip variant achieved significantly higher SSIM, since fine edge detail could bypass the compression bottleneck. This is your evidence *for* adding a limited skip — and also the reason it needs an explicit ablation in your report (with vs without), since the assignment requires this be investigated and justified rather than assumed.
 - **Suganuma, Ozawa & Okuno (2018)** — "Exploiting the Potential of Standard Convolutional Autoencoders for Image Restoration by Evolutionary Search." An evolutionary architecture search over plain convolutional autoencoders (standard conv layers, optional skip connections) found these simple networks matched or outperformed far more complex, deeply layered restoration networks with hand-designed losses and adversarial training. This supports keeping the architecture simple rather than over-engineering it.
-- **Prakash, Krull & Jug (2021)** — "Fully Unsupervised Diversity Denoising with Convolutional Variational Autoencoders" (DivNoising, ICLR). Frames denoising explicitly as a VAE problem, incorporating a noise model into the decoder, producing a distribution of plausible clean images rather than one deterministic output. Direct precedent for using a VAE (not a plain AE) for a denoising/restoration task.
-- **Soh & Cho** — "Variational Deep Image Restoration" (VDIR). Presents a variational inference framework and CNN structure for restoration that does *not* assume the degradation model is known in advance, achieving strong results across Gaussian denoising, real-world noise reduction, blind super-resolution, and JPEG artifact reduction within a single framework. This is the strongest direct precedent for your "universal, corruption-blind" requirement — one variational model handling multiple distinct degradation types without being told which one applies.
-- **Kingma & Welling (2014)** — "Auto-Encoding Variational Bayes." Foundational VAE paper — cite for the reparameterization trick and ELBO formulation underlying your loss.
-- **Higgins et al. (2017)** — "β-VAE: Learning Basic Visual Concepts with a Constrained Variational Framework." Cite when justifying your β (KL weight) search range and interpretation.
+- **Vincent et al. (2008)** — "Extracting and Composing Robust Features with Denoising Autoencoders". Foundational paper establishing that autoencoders trained to reconstruct clean inputs from corrupted versions learn robust, generalized representations. Direct precedent for the universal multi-corruption DAE.
+- **Gondara (2016)** — "Medical Image Denoising Using Convolutional Denoising Autoencoders". Demonstrates the efficacy of using fully convolutional architectures for DAEs in restoring images with noise.
 
 ---
 
@@ -51,10 +49,10 @@ Suggested starting shape: 4–5 conv blocks (32→64→128→256 channels, strid
 ## Task 2b — Specialist Restoration Autoencoders (salt-pepper / blur / occlusion)
 
 ### Recommended architecture
-Same base design as Task 1's VAE (Section above), with independently trained parameters per specialist. Since each specialist only has to handle one corruption type, you can justify a *smaller* bottleneck/latent dimension than the universal model if Optuna's shared architecture search finds it — a narrower, single-purpose restoration task typically needs less capacity than the universal blind case.
+Same base design as Task 1's DAE (Section above), with independently trained parameters per specialist. Since each specialist only has to handle one corruption type, you can justify a *smaller* bottleneck/latent dimension than the universal model if Optuna's shared architecture search finds it — a narrower, single-purpose restoration task typically needs less capacity than the universal blind case.
 
 ### Why (research support)
-- Same core citations as Task 1 (RED-Net, DivNoising, VDIR) apply — the difference is scope (single degradation vs blind multi-degradation), not fundamentally different architecture.
+- Same core citations as Task 1 (RED-Net, Vincent et al., Gondara) apply — the difference is scope (single degradation vs blind multi-degradation), not fundamentally different architecture.
 - **Ye et al. (2022)** — "Towards Efficient Single Image Dehazing and Desnowing" (DAN-Net). Proposes multiple compact, degradation-specific expert networks combined with one adaptive gating network, where each expert efficiently handles one specific degradation using a compact architecture. This is a direct precedent for training compact, independently specialized restoration networks rather than one large shared model — supports your Task 2 specialist design and previews the Task 3 gating structure.
 
 ---
@@ -86,12 +84,10 @@ U-Net generator with skip connections (full skips here are appropriate and expec
 
 ## Consolidated Reference List (for your IEEE report)
 
-1. Kingma, D. P., & Welling, M. (2014). *Auto-Encoding Variational Bayes.* ICLR.
-2. Higgins, I., Matthey, L., Pal, A., Burgess, C., Glorot, X., Botvinick, M., Mohamed, S., & Lerchner, A. (2017). *β-VAE: Learning Basic Visual Concepts with a Constrained Variational Framework.* ICLR.
 3. Mao, X., Shen, C., & Yang, Y. (2016). *Image Restoration Using Convolutional Auto-encoders with Symmetric Skip Connections.* arXiv:1606.08921.
 4. Suganuma, M., Ozawa, S., & Okuno, T. (2018). *Exploiting the Potential of Standard Convolutional Autoencoders for Image Restoration by Evolutionary Search.* arXiv:1803.00370.
-5. Prakash, M., Krull, A., & Jug, F. (2021). *Fully Unsupervised Diversity Denoising with Convolutional Variational Autoencoders.* ICLR (arXiv:2006.06072).
-6. Soh, J. W., & Cho, N. I. *Variational Deep Image Restoration.* (arXiv:2104.00965 / published version referred to as VDIR).
+1. Vincent, P., Larochelle, H., Bengio, Y., & Manzagol, P. A. (2008). *Extracting and composing robust features with denoising autoencoders.* ICML.
+2. Gondara, L. (2016). *Medical Image Denoising Using Convolutional Denoising Autoencoders.* ICDMW.
 7. Roy, P., Ghosh, S., Bhattacharya, S., & Pal, U. *Effects of Degradations on Deep Neural Network Architectures.* arXiv:1807.10108.
 8. Ye, T., et al. (2022). *Towards Efficient Single Image Dehazing and Desnowing* (DAN-Net).
 9. Dong, et al. *PhyDAE: Physics-Guided Degradation-Adaptive Expert Model for All-in-One Remote Sensing Image Restoration.*

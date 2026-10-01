@@ -19,8 +19,11 @@ import sys
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 from constants import (
+    RESEARCH_ROOT,
     PET_IMAGES_DIR,
     SPLIT_MANIFEST,
+    VAL_MANIFEST,
+    TEST_MANIFEST,
     FS2K_ROOT,
     FS2K_PHOTO_DIR,
     FS2K_SKETCH_DIR,
@@ -72,30 +75,34 @@ class PetDataset(Dataset):
         # Load or create split manifest
         self.paths = self._get_image_paths(mode, tiny_size)
 
+        self.val_manifest = None
+        self.test_manifest = None
+        if self.mode == "val":
+            val_path = VAL_MANIFEST
+            if val_path.exists():
+                import json
+                with open(val_path, "r") as f:
+                    self.val_manifest = json.load(f)
+        elif self.mode == "test":
+            test_path = TEST_MANIFEST
+            if test_path.exists():
+                import json
+                with open(test_path, "r") as f:
+                    self.test_manifest = json.load(f)
+
     def _get_image_paths(self, mode: str, tiny_size: int) -> List[Path]:
         if not PET_IMAGES_DIR.exists():
             raise FileNotFoundError(f"Pet images directory not found: {PET_IMAGES_DIR}")
 
-        # Check or build split_manifest.json
+        # Use the generated split based on Oxford's official lists.
         if SPLIT_MANIFEST.exists():
             with open(SPLIT_MANIFEST, "r") as f:
                 manifest = json.load(f)
         else:
-            all_jpgs = sorted([p.name for p in PET_IMAGES_DIR.glob("*.jpg")])
-            if not all_jpgs:
-                raise RuntimeError(f"No JPG images found in {PET_IMAGES_DIR}")
-            rng = random.Random(self.seed)
-            shuffled = list(all_jpgs)
-            rng.shuffle(shuffled)
-            n_train = int(0.8 * len(shuffled))
-            manifest = {
-                "seed": self.seed,
-                "train": shuffled[:n_train],
-                "val": shuffled[n_train:],
-            }
-            with open(SPLIT_MANIFEST, "w") as f:
-                json.dump(manifest, f, indent=2)
-            print(f"[PetDataset] Created {SPLIT_MANIFEST} with {len(manifest['train'])} train, {len(manifest['val'])} val.")
+            raise FileNotFoundError(
+                f"Official split manifest is missing: {SPLIT_MANIFEST}. "
+                "Run research/generate_official_manifests.py first."
+            )
 
         if mode == "train":
             names = manifest["train"]
@@ -103,6 +110,8 @@ class PetDataset(Dataset):
             names = manifest["val"]
         elif mode == "tiny":
             names = manifest["train"][:tiny_size]
+        elif mode == "test":
+            names = manifest["test"]
         else:
             raise ValueError(f"Unknown mode: {mode}. Expected 'train', 'val', or 'tiny'.")
 
@@ -116,16 +125,40 @@ class PetDataset(Dataset):
         with Image.open(path) as img:
             clean = self.transform(img.convert("RGB"))
 
-        # Determine corruption type
-        if self.corruption_mode in ("all", "label"):
-            # Uniform 25% choice
-            corruption_type = random.choice(self.CLASSES)
-        elif self.corruption_mode in self.CLASSES:
-            corruption_type = self.corruption_mode
-        else:
-            raise ValueError(f"Invalid corruption_mode: {self.corruption_mode}")
+        img_name = path.name
 
-        corrupted = apply_corruption(clean, corruption_type)
+        # Keep specialist validation on its requested corruption while making it reproducible.
+        if self.mode == "val" and self.corruption_mode not in ("all", "label"):
+            corruption_type = self.corruption_mode
+            corrupted = apply_corruption(
+                clean, corruption_type, rng=random.Random(self.seed + idx)
+            )
+        # Use the fixed validation manifest for universal and classifier evaluation.
+        elif self.mode == "val" and self.val_manifest and img_name in self.val_manifest:
+            params = self.val_manifest[img_name]
+            corruption_type = params["corruption_type"]
+            rng = random.Random(params["seed"])
+            corrupted = apply_corruption(clean, corruption_type, severity_params=params, rng=rng)
+        # Use manifest for testing if available
+        elif self.mode == "test" and self.test_manifest and img_name in self.test_manifest:
+            # For dataset iterating, we might just return the list of 10 tasks
+            # But the dataset API expects a single return.
+            # In a real test loop, the evaluator would iterate over tasks.
+            # We'll just return the first task for generic dataloader compatibility,
+            # or the user can parse the test_manifest directly in their test script.
+            params = self.test_manifest[img_name][0]
+            corruption_type = params["corruption_type"]
+            rng = random.Random(params["seed"])
+            corrupted = apply_corruption(clean, corruption_type, severity_params=params, rng=rng)
+        else:
+            # Training / dynamic behavior
+            if self.corruption_mode in ("all", "label"):
+                corruption_type = random.choice(self.CLASSES)
+            elif self.corruption_mode in self.CLASSES:
+                corruption_type = self.corruption_mode
+            else:
+                raise ValueError(f"Invalid corruption_mode: {self.corruption_mode}")
+            corrupted = apply_corruption(clean, corruption_type)
         label_idx = self.CLASS_TO_IDX[corruption_type]
 
         if self.corruption_mode == "label":

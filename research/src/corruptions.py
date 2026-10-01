@@ -47,9 +47,13 @@ def add_salt_pepper(
 
     out = x.clone()
     # Random mask for corrupted pixels
-    mask = torch.rand_like(out) < prob
+    generator = None
+    if rng is not None:
+        generator = torch.Generator(device=out.device)
+        generator.manual_seed(rng.randint(0, 2**31 - 1))
+    mask = torch.rand(out.shape, device=out.device, dtype=out.dtype, generator=generator) < prob
     # Equal chance of 0 (pepper) or 1 (salt)
-    salt_mask = torch.rand_like(out) < 0.5
+    salt_mask = torch.rand(out.shape, device=out.device, dtype=out.dtype, generator=generator) < 0.5
     out[mask & salt_mask] = 1.0
     out[mask & (~salt_mask)] = 0.0
     return out
@@ -108,22 +112,32 @@ def add_occlusion(
     is_batched = (out.ndim == 4)
     batch_tensors = out if is_batched else [out]
 
+    # If explicit masks are passed (from manifest), use them directly
+    explicit_masks = getattr(rng, 'explicit_masks', None) if rng else None
+
     for item in batch_tensors:
         c, h, w = item.shape[-3:]
-        total_pixels = h * w
-        target_pixels_per_rect = int((total_pixels * coverage) / num_rects)
 
-        for _ in range(num_rects):
-            # Sample aspect ratio between 0.5 and 2.0
-            aspect = rng.uniform(0.5, 2.0) if rng else random.uniform(0.5, 2.0)
-            rw = int(math.sqrt(target_pixels_per_rect * aspect))
-            rh = int(math.sqrt(target_pixels_per_rect / aspect))
-            rw = max(4, min(w - 2, rw))
-            rh = max(4, min(h - 2, rh))
+        if explicit_masks:
+            for m in explicit_masks:
+                top, left = m["top"], m["left"]
+                rh, rw = m["height"], m["width"]
+                item[:, top : top + rh, left : left + rw] = fill_value
+        else:
+            total_pixels = h * w
+            target_pixels_per_rect = int((total_pixels * coverage) / num_rects)
 
-            top = (rng.randint(0, h - rh) if rng else random.randint(0, h - rh)) if h > rh else 0
-            left = (rng.randint(0, w - rw) if rng else random.randint(0, w - rw)) if w > rw else 0
-            item[:, top : top + rh, left : left + rw] = fill_value
+            for _ in range(num_rects):
+                # Sample aspect ratio between 0.5 and 2.0
+                aspect = rng.uniform(0.5, 2.0) if rng else random.uniform(0.5, 2.0)
+                rw = int(math.sqrt(target_pixels_per_rect * aspect))
+                rh = int(math.sqrt(target_pixels_per_rect / aspect))
+                rw = max(4, min(w - 2, rw))
+                rh = max(4, min(h - 2, rh))
+
+                top = (rng.randint(0, h - rh) if rng else random.randint(0, h - rh)) if h > rh else 0
+                left = (rng.randint(0, w - rw) if rng else random.randint(0, w - rw)) if w > rw else 0
+                item[:, top : top + rh, left : left + rw] = fill_value
 
     return out
 
@@ -146,6 +160,14 @@ def apply_corruption(
     elif c == "blur":
         return add_blur(x, kernel_size=params.get("kernel_size"), sigma=params.get("sigma"), rng=rng)
     elif c == "occlusion":
+        if rng and "masks" in params:
+            rng.explicit_masks = params["masks"]
+        elif "masks" in params:
+            class DummyRNG:
+                pass
+            rng = DummyRNG()
+            rng.explicit_masks = params["masks"]
+
         return add_occlusion(
             x,
             num_rects=params.get("num_rects"),

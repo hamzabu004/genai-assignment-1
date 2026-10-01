@@ -1,9 +1,8 @@
 """
-Convolutional Variational Autoencoder (ConvVAE) for Tasks 1 and 2b.
+Convolutional Denoising Autoencoder (ConvDAE) for Tasks 1 and 2b.
 Architecture design follows Plan 5 & Plan 6:
 - 5-stage strided conv encoder downsampling 128x128 -> 4x4
 - GroupNorm instead of BatchNorm to handle variable/small batch sizes
-- Reparameterization trick: z = mu + eps * std
 - Decoder uses bilinear/nearest upsampling + Conv to eliminate checkerboard artifacts
 - Optional single skip connection at the highest-resolution stage for ablation (Plan 6 §1.6)
 - Sigmoid output activation for [0, 1] normalized pixel restoration
@@ -22,7 +21,7 @@ def _get_norm_layer(channels: int, num_groups: int = 8) -> nn.Module:
     return nn.GroupNorm(num_groups=num_groups, num_channels=channels)
 
 
-class ConvVAE(nn.Module):
+class ConvDAE(nn.Module):
     def __init__(
         self,
         in_channels: int = 3,
@@ -78,9 +77,8 @@ class ConvVAE(nn.Module):
         )
 
         self.flatten_dim = c5 * 4 * 4
-        self.fc_mu = nn.Linear(self.flatten_dim, latent_dim)
-        self.fc_logvar = nn.Linear(self.flatten_dim, latent_dim)
-
+        self.fc_z = nn.Linear(self.flatten_dim, latent_dim)
+        
         # --- Decoder (4x4 -> 128x128) ---
         self.fc_dec = nn.Linear(latent_dim, self.flatten_dim)
 
@@ -125,24 +123,16 @@ class ConvVAE(nn.Module):
             nn.Sigmoid(),  # Restores into [0, 1]
         )
 
-    def reparameterize(self, mu: torch.Tensor, logvar: torch.Tensor) -> torch.Tensor:
-        """Reparameterization trick: z = mu + std * eps"""
-        if self.training:
-            std = torch.exp(0.5 * logvar)
-            eps = torch.randn_like(std)
-            return mu + eps * std
-        return mu
 
-    def encode(self, x: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor, Optional[torch.Tensor]]:
+    def encode(self, x: torch.Tensor) -> Tuple[torch.Tensor, Optional[torch.Tensor]]:
         e1 = self.enc1(x)  # 64x64
         e2 = self.enc2(e1) # 32x32
         e3 = self.enc3(e2) # 16x16
         e4 = self.enc4(e3) # 8x8
         e5 = self.enc5(e4) # 4x4
         flat = torch.flatten(e5, start_dim=1)
-        mu = self.fc_mu(flat)
-        logvar = self.fc_logvar(flat)
-        return mu, logvar, (e1 if self.use_skip else None)
+        z = self.fc_z(flat)
+        return z, (e1 if self.use_skip else None)
 
     def decode(self, z: torch.Tensor, skip1: Optional[torch.Tensor] = None) -> torch.Tensor:
         d = self.fc_dec(z)
@@ -156,8 +146,7 @@ class ConvVAE(nn.Module):
         out = self.dec1(d)  # 128x128
         return out
 
-    def forward(self, x: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
-        mu, logvar, skip1 = self.encode(x)
-        z = self.reparameterize(mu, logvar)
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        z, skip1 = self.encode(x)
         recon = self.decode(z, skip1=skip1)
-        return recon, mu, logvar
+        return recon

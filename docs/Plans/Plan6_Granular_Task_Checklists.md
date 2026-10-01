@@ -4,7 +4,7 @@ This expands Plan 4 (generic simple→Optuna workflow) and Plan 5 (architecture 
 
 ---
 
-# TASK 1 — Universal Multi-Corruption Restoration (VAE)
+# TASK 1 — Universal Multi-Corruption Restoration (DAE)
 
 ## 1.1 Data
 - [ ] Dataloader samples one of 4 conditions per image per epoch, 25% each: clean / salt-pepper / blur / occlusion
@@ -127,7 +127,7 @@ This expands Plan 4 (generic simple→Optuna workflow) and Plan 5 (architecture 
 - [ ] Same clean-target images and same 80/20 split as Tasks 1 and 2a
 
 ## 2b.2 Shared Architecture Search (before training 3 separately)
-- [ ] Reuse Task 1's base VAE shape (Plan 5, Task 1 architecture) as the starting point
+- [ ] Reuse Task 1's base DAE shape (Plan 5, Task 1 architecture) as the starting point
 - [ ] Run ONE shared Optuna search (on salt-pepper data, or a combined/representative subset) to find a common architecture: learning rate, bottleneck size, channel config, batch size, α (L1/SSIM weight)
 - [ ] Consider a smaller latent dim than Task 1's universal model — a single-corruption specialist needs less capacity than blind multi-corruption restoration (Plan 5 rationale)
 - [ ] Lock the winning architecture as the shared template for all 3 specialists

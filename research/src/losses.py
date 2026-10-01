@@ -1,13 +1,13 @@
 """
 Loss functions for all research tasks.
 - SSIM and composite reconstruction loss (alpha * L1 + (1 - alpha) * (1 - SSIM))
-- VAE loss with KL divergence
+- DAE reconstruction loss (same composite, wrapped for API compat)
 - Mixture-of-Experts loss with classification and routing balance regularization
 - Conditional GAN losses (generator and PatchGAN discriminator)
 """
 
 import math
-from typing import Tuple, Optional
+from typing import Tuple, Optional, Dict
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -85,24 +85,17 @@ def reconstruction_loss(
     return loss, l1.item(), ssim_val.item()
 
 
-def vae_loss(
+def dae_loss(
     pred: torch.Tensor,
     target: torch.Tensor,
-    mu: torch.Tensor,
-    logvar: torch.Tensor,
     alpha: float = 0.8,
-    beta: float = 0.001,
 ) -> Tuple[torch.Tensor, float, float, float]:
     """
-    Full VAE loss = L_recon + beta * KL
-    KL = -0.5 * sum(1 + logvar - mu^2 - exp(logvar)) averaged over batch.
-    Returns: (total_loss, recon_val, kl_val, ssim_val)
+    DAE loss = L1 + SSIM composite.
+    Returns: (total_loss, l1_val, dummy_kl_val, ssim_val) for compat.
     """
-    recon, l1_val, ssim_val = reconstruction_loss(pred, target, alpha=alpha, data_range=1.0)
-    # Average KL divergence per sample
-    kl = -0.5 * torch.mean(torch.sum(1.0 + logvar - mu.pow(2) - logvar.exp(), dim=1))
-    total_loss = recon + beta * kl
-    return total_loss, recon.item(), kl.item(), ssim_val
+    total_loss, l1_val, ssim_val = reconstruction_loss(pred, target, alpha=alpha, data_range=1.0)
+    return total_loss, l1_val, 0.0, ssim_val
 
 
 def compute_balance_loss(routing_probs: torch.Tensor) -> torch.Tensor:

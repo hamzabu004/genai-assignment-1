@@ -1,10 +1,10 @@
-# Plan 4 — VAE Research Workflow: Simple Baseline → Optuna, Multi-Device
+# Plan 4 — DAE Research Workflow: Simple Baseline → Optuna, Multi-Device
 
-**Scope assumption (from your answer):** VAE applies wherever the assignment specifies "autoencoder" — i.e. **Task 1 (universal restoration)** and **Task 2's three specialists (salt-pepper, blur, occlusion)**. Task 3 reuses these trained experts + a gate (no new autoencoder to build), Task 4 is a GAN (not in scope here).
+**Scope assumption (from your answer):** DAE applies wherever the assignment specifies "autoencoder" — i.e. **Task 1 (universal restoration)** and **Task 2's three specialists (salt-pepper, blur, occlusion)**. Task 3 reuses these trained experts + a gate (no new autoencoder to build), Task 4 is a GAN (not in scope here).
 
 **Sync assumption:** GitHub push/pull for code (Google Drive ruled out — mounting blocked on University PC). Checkpoints handled separately from code (see Section 5) since large binaries don't belong in normal git history.
 
-**Important — report requirement:** The assignment's baseline loss (L1 + SSIM) doesn't include a KL term. Using a VAE instead of a plain autoencoder is an architecture decision you must justify with research in the report (why VAE > plain AE for this restoration task, what alternatives you considered, e.g. plain deterministic AE, denoising AE, VAE, VQ-VAE). Keep notes on this as you go — don't leave it for write-up time.
+**Important — report requirement:** The assignment's baseline loss (L1 + SSIM) doesn't include a bottleneck constraint. Using a DAE instead of a plain autoencoder is an architecture decision you must justify with research in the report (why DAE > plain AE for this restoration task, what alternatives you considered, e.g. plain deterministic AE, denoising AE, DAE, VAE, VQ-VAE). Keep notes on this as you go — don't leave it for write-up time.
 
 ---
 
@@ -16,13 +16,13 @@
     src/                    # shared, importable code (NOT duplicated per-notebook)
       datasets.py
       corruptions.py
-      models_vae.py
+      models_dae.py
       losses.py
       train_loop.py
       checkpoint_utils.py
     notebooks/
-      task1_vae_simple.ipynb
-      task1_vae_optuna.ipynb
+      task1_dae_simple.ipynb
+      task1_dae_optuna.ipynb
       task2_classifier.ipynb
       task2_specialist_salt_simple.ipynb
       task2_specialist_salt_optuna.ipynb
@@ -55,7 +55,7 @@
 
 ---
 
-## 2. Phase 1 — Simple VAE Baseline
+## 2. Phase 1 — Simple DAE Baseline
 
 ### Include
 - [ ] Fixed architecture: conv encoder (stride-downsampling) → `mu`, `logvar` heads → reparameterization (`z = mu + eps * std`) → conv/transpose-conv decoder
@@ -99,7 +99,7 @@
   - [ ] Encoder channel configuration
   - [ ] Dropout rate
   - [ ] α (L1 vs SSIM weight) — assignment requires this be tuned, not just assumed at 0.8
-  - [ ] β (KL weight) — extra hyperparameter introduced by your VAE choice, tune it since posterior collapse or over-regularization risk depends heavily on it
+  - [ ] β (KL weight) — extra hyperparameter introduced by your DAE choice, tune it since posterior collapse or over-regularization risk depends heavily on it
 - [ ] Use Optuna's default TPE sampler (efficient for this kind of mixed continuous/categorical space) — don't hand-roll grid search
 - [ ] Use a pruner (Median or Hyperband) to kill clearly bad trials early — important given limited/interruptible compute (Colab sessions especially)
 - [ ] Run each trial with **reduced epochs** relative to full training (Optuna trials should be cheap; you retrain the winner fully afterward — see below)
@@ -107,7 +107,7 @@
 - [ ] Save checkpoints for the **best trial only** (or top-k, e.g. top-3) — don't checkpoint every trial, it'll blow up storage fast
 - [ ] After the study completes: retrain the winning config for the **full training schedule** (not just the reduced-epoch trial run) — this final model is what gets exported to ONNX later
 - [ ] Record and include in the report: full search space definition, number of completed trials, best trial's params + value, an Optuna parameter-importance plot (`optuna.visualization.plot_param_importances`), and the optimization-history plot
-- [ ] After training, explicitly check for **posterior collapse**: confirm the KL term isn't ~0 throughout training (which would mean the decoder is ignoring the latent and it's degenerated into a near-deterministic AE) — note this check and its result in the report regardless of outcome
+- [ ] After training, explicitly check for **posterior collapse**: confirm the bottleneck constraint isn't ~0 throughout training (which would mean the decoder is ignoring the latent and it's degenerated into a near-deterministic AE) — note this check and its result in the report regardless of outcome
 
 ### Explicitly avoid
 - [ ] Don't tune everything at once on the first pass — start with the core list above; adding more dimensions multiplies the trials you need for a meaningful search
@@ -144,7 +144,7 @@ Since you're moving between devices rather than running in parallel, keep the Op
 
 ## 6. Notebook Hygiene
 
-- [ ] One notebook per task + phase (e.g. `task1_vae_simple.ipynb`, `task1_vae_optuna.ipynb`) rather than one giant notebook — keeps runs isolated and diffs manageable
+- [ ] One notebook per task + phase (e.g. `task1_dae_simple.ipynb`, `task1_dae_optuna.ipynb`) rather than one giant notebook — keeps runs isolated and diffs manageable
 - [ ] Notebooks stay thin: import from `src/` modules (dataset class, corruption functions, model definitions, loss functions, training loop) rather than redefining the same code inline in every notebook — this is what actually needs to work identically across devices, so keeping it in `.py` files (not notebook cells) makes it easier to test and sync via git
 - [ ] Standard notebook cell order: config/imports → device check → data loading → model definition (imported) → training function call (simple run **or** Optuna objective) → evaluation/visualization
 - [ ] Set random seeds at the top of every notebook
@@ -166,5 +166,5 @@ Since you're moving between devices rather than running in parallel, keep the Op
 
 - [ ] Final config was retrained to the **full** schedule, not left as the reduced-epoch Optuna trial run
 - [ ] Best checkpoint is loadable from a **fresh** session/device (test actual portability, don't assume from context)
-- [ ] Posterior-collapse check documented (KL term behavior over training) — include the result either way in the report
+- [ ] Posterior-collapse check documented (bottleneck constraint behavior over training) — include the result either way in the report
 - [ ] Checkpoint's model class version matches what the eventual ONNX export script expects (state_dict keys line up) — worth a quick load-test against the export script stub before considering the model "done"

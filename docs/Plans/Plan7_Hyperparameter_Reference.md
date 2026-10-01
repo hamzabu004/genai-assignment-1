@@ -6,7 +6,7 @@ Concrete baseline values + Optuna search ranges for all 4 tasks. Use this alongs
 
 ## Preprocessing ranges (fix this before anything else — differs by task)
 
-| | Tasks 1, 2a, 2b, 3 (VAE/AE/classifier) | Task 4 (GAN) |
+| | Tasks 1, 2a, 2b, 3 (DAE/AE/classifier) | Task 4 (GAN) |
 |---|---|---|
 | Pixel normalization | **[0, 1]** (`/255` only) | **[-1, 1]** (`/127.5 - 1`) |
 | Decoder/generator final activation | **sigmoid** | **tanh** |
@@ -16,7 +16,7 @@ Two separate preprocessing configs are needed — don't share one normalization 
 
 ---
 
-## Tasks 1 & 2b — Universal VAE + 3 Specialist Autoencoders
+## Tasks 1 & 2b — Universal DAE + 3 Specialist Autoencoders
 
 | Hyperparameter | Baseline value | Optuna range |
 |---|---|---|
@@ -26,7 +26,6 @@ Two separate preprocessing configs are needed — don't share one normalization 
 | Dropout | 0.1 | 0.0 – 0.3 |
 | Latent/bottleneck dim | 128 | {64, 128, 256} |
 | α (L1 vs SSIM weight) | 0.8 | 0.5 – 0.95 |
-| β (KL weight, VAE only) | 0.001 | log-uniform 1e-4 – 1e-1 |
 | Epochs — baseline sanity | 10–15 | — |
 | Epochs — Optuna trial | 15–25 (~20% of full) | — |
 | Epochs — full retrain | 60–100, early-stop patience ~10 on val loss | — |
