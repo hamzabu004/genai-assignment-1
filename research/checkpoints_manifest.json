@@ -5,21 +5,41 @@
       "filename": "task1_universal_ae_best.pt",
       "task": "task1",
       "phase": "simple_best",
-      "val_loss": 0.354101,
-      "epoch": 1,
+      "val_loss": 0.308525,
+      "epoch": 4,
       "device": "NVIDIA GeForce RTX 5060 Laptop GPU",
-      "timestamp": "2026-10-01T01:27:07.138417Z",
-      "git_commit_hash": "11267e0"
+      "timestamp": "2026-10-01T02:29:52.984081Z",
+      "git_commit_hash": "0d46f73"
     },
     {
       "filename": "task1_universal_ae_latest.pt",
       "task": "task1",
       "phase": "simple",
-      "val_loss": 0.442569,
-      "epoch": 6,
+      "val_loss": 0.316817,
+      "epoch": 15,
       "device": "NVIDIA GeForce RTX 5060 Laptop GPU",
-      "timestamp": "2026-10-01T01:27:50.513980Z",
-      "git_commit_hash": "11267e0"
+      "timestamp": "2026-10-01T02:32:20.569376Z",
+      "git_commit_hash": "0d46f73"
+    },
+    {
+      "filename": "task1_universal_ae_final_latest.pt",
+      "task": "task1",
+      "phase": "final",
+      "val_loss": 0.128031,
+      "epoch": 14,
+      "device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "timestamp": "2026-10-01T03:41:06.495763Z",
+      "git_commit_hash": "0d46f73"
+    },
+    {
+      "filename": "task1_universal_ae_final_best.pt",
+      "task": "task1",
+      "phase": "final_best",
+      "val_loss": 0.128031,
+      "epoch": 14,
+      "device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "timestamp": "2026-10-01T03:41:06.620076Z",
+      "git_commit_hash": "0d46f73"
     }
   ]
 }
