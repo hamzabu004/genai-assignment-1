@@ -62,6 +62,16 @@ def run_model(key: str, input_tensor: np.ndarray) -> list[np.ndarray]:
     return session.run(None, {input_name: np.asarray(input_tensor, dtype=np.float32)})
 
 
+def run_model_with_inputs(key: str, inputs: dict[str, np.ndarray]) -> list[np.ndarray]:
+    """Run a model that has more than one named input (for example Task 4 style conditioning)."""
+    session = get_session(key)
+    expected = {item.name for item in session.get_inputs()}
+    if set(inputs) != expected:
+        raise ValueError(f"Model '{key}' expects inputs {sorted(expected)}, received {sorted(inputs)}")
+    feed = {name: np.asarray(value) for name, value in inputs.items()}
+    return session.run(None, feed)
+
+
 def get_session(key: str) -> ort.InferenceSession:
     if key not in _SESSIONS:
         raise RuntimeError(f"Model '{key}' is not loaded. Check MODEL_DIR and model availability.")

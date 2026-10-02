@@ -40,6 +40,246 @@
       "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
       "timestamp": "2026-10-01T06:07:52.251010Z",
       "git_commit_hash": "ed0686c"
+    },
+    {
+      "filename": "task2_classifier_best.pt",
+      "task": "task2a",
+      "phase": "simple_best",
+      "val_loss": 0.056069,
+      "epoch": 18,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-01T15:13:42.719708Z",
+      "git_commit_hash": "61bc8b7"
+    },
+    {
+      "filename": "task2_classifier_latest.pt",
+      "task": "task2a",
+      "phase": "simple",
+      "val_loss": 0.08323,
+      "epoch": 20,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-01T15:13:54.687128Z",
+      "git_commit_hash": "61bc8b7"
+    },
+    {
+      "filename": "task2a_classifier_final_best.pt",
+      "task": "task2a",
+      "phase": "final_best",
+      "val_loss": 0.037689,
+      "epoch": 33,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-01T16:39:53.844751Z",
+      "git_commit_hash": "61bc8b7"
+    },
+    {
+      "filename": "task2a_classifier_final_latest.pt",
+      "task": "task2a",
+      "phase": "final",
+      "val_loss": 0.043032,
+      "epoch": 35,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-01T16:40:05.644745Z",
+      "git_commit_hash": "61bc8b7"
+    },
+    {
+      "filename": "task2b_specialist_salt_best.pt",
+      "task": "task2b_salt",
+      "phase": "simple_best",
+      "val_loss": 0.305402,
+      "epoch": 8,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-01T17:23:38.817499Z",
+      "git_commit_hash": "61bc8b7"
+    },
+    {
+      "filename": "task2b_specialist_salt_latest.pt",
+      "task": "task2b_salt",
+      "phase": "simple",
+      "val_loss": 0.310184,
+      "epoch": 15,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-01T17:24:27.449910Z",
+      "git_commit_hash": "61bc8b7"
+    },
+    {
+      "filename": "task2b_specialist_blur_best.pt",
+      "task": "task2b_blur",
+      "phase": "simple_best",
+      "val_loss": 0.306196,
+      "epoch": 12,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-01T17:26:02.635770Z",
+      "git_commit_hash": "61bc8b7"
+    },
+    {
+      "filename": "task2b_specialist_blur_latest.pt",
+      "task": "task2b_blur",
+      "phase": "simple",
+      "val_loss": 0.316335,
+      "epoch": 15,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-01T17:26:30.447802Z",
+      "git_commit_hash": "61bc8b7"
+    },
+    {
+      "filename": "task2b_specialist_occlusion_best.pt",
+      "task": "task2b_occlusion",
+      "phase": "simple_best",
+      "val_loss": 0.308416,
+      "epoch": 8,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-01T17:27:29.002082Z",
+      "git_commit_hash": "61bc8b7"
+    },
+    {
+      "filename": "task2b_specialist_occlusion_latest.pt",
+      "task": "task2b_occlusion",
+      "phase": "simple",
+      "val_loss": 0.326543,
+      "epoch": 15,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-01T17:28:23.650577Z",
+      "git_commit_hash": "61bc8b7"
+    },
+    {
+      "filename": "task2b_specialist_salt_final_best.pt",
+      "task": "task2b_salt",
+      "phase": "final_best",
+      "val_loss": 0.151279,
+      "epoch": 32,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-02T04:30:21.585651Z",
+      "git_commit_hash": "61bc8b7"
+    },
+    {
+      "filename": "task2b_specialist_salt_final_latest.pt",
+      "task": "task2b_salt",
+      "phase": "final",
+      "val_loss": 0.151426,
+      "epoch": 35,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-02T04:30:49.452798Z",
+      "git_commit_hash": "61bc8b7"
+    },
+    {
+      "filename": "task2b_specialist_blur_final_best.pt",
+      "task": "task2b_blur",
+      "phase": "final_best",
+      "val_loss": 0.145533,
+      "epoch": 34,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-02T04:38:15.703295Z",
+      "git_commit_hash": "61bc8b7"
+    },
+    {
+      "filename": "task2b_specialist_blur_final_latest.pt",
+      "task": "task2b_blur",
+      "phase": "final",
+      "val_loss": 0.149317,
+      "epoch": 35,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-02T04:38:34.877928Z",
+      "git_commit_hash": "61bc8b7"
+    },
+    {
+      "filename": "task4_generator_best.pt",
+      "task": "task4_gan",
+      "phase": "simple_best",
+      "val_loss": 0.182364,
+      "epoch": 20,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-02T04:39:46.585903Z",
+      "git_commit_hash": "61bc8b7"
+    },
+    {
+      "filename": "task4_generator_latest.pt",
+      "task": "task4_gan",
+      "phase": "simple",
+      "val_loss": 0.18626,
+      "epoch": 25,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-02T04:41:10.432024Z",
+      "git_commit_hash": "61bc8b7"
+    },
+    {
+      "filename": "task2b_specialist_occlusion_final_latest.pt",
+      "task": "task2b_occlusion",
+      "phase": "final",
+      "val_loss": 0.16916,
+      "epoch": 35,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-02T04:45:18.559090Z",
+      "git_commit_hash": "61bc8b7"
+    },
+    {
+      "filename": "task2b_specialist_occlusion_final_best.pt",
+      "task": "task2b_occlusion",
+      "phase": "final_best",
+      "val_loss": 0.16916,
+      "epoch": 35,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-02T04:45:18.710636Z",
+      "git_commit_hash": "61bc8b7"
+    },
+    {
+      "filename": "task3_soft_moe_latest.pt",
+      "task": "task3",
+      "phase": "simple",
+      "val_loss": 0.160063,
+      "epoch": 15,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-02T06:01:26.413399Z",
+      "git_commit_hash": "61bc8b7"
+    },
+    {
+      "filename": "task3_soft_moe_best.pt",
+      "task": "task3",
+      "phase": "simple_best",
+      "val_loss": 0.160063,
+      "epoch": 15,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-02T06:01:26.605234Z",
+      "git_commit_hash": "61bc8b7"
+    },
+    {
+      "filename": "task3_soft_moe_final_latest.pt",
+      "task": "task3",
+      "phase": "final",
+      "val_loss": 0.115984,
+      "epoch": 25,
+      "device": "cuda",
+      "timestamp": "2026-10-02T06:43:09.181912Z",
+      "git_commit_hash": "61bc8b7"
+    },
+    {
+      "filename": "task3_soft_moe_final_best.pt",
+      "task": "task3",
+      "phase": "final_best",
+      "val_loss": 0.115984,
+      "epoch": 25,
+      "device": "cuda",
+      "timestamp": "2026-10-02T06:43:09.349192Z",
+      "git_commit_hash": "61bc8b7"
+    },
+    {
+      "filename": "task4_generator_final_best.pt",
+      "task": "task4_gan",
+      "phase": "sharp_final_best",
+      "val_loss": 0.342283,
+      "epoch": 18,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-02T08:37:06.497466Z",
+      "git_commit_hash": "61bc8b7"
+    },
+    {
+      "filename": "task4_generator_final_latest.pt",
+      "task": "task4_gan",
+      "phase": "sharp_final",
+      "val_loss": 0.361942,
+      "epoch": 60,
+      "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "timestamp": "2026-10-02T08:40:57.531581Z",
+      "git_commit_hash": "61bc8b7"
     }
   ]
 }

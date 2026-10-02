@@ -1,0 +1,119 @@
+{
+  "models": [
+    {
+      "checkpoint": "task1_universal_ae_final_best.pt",
+      "onnx_model": "task1_universal_ae.onnx",
+      "bytes": 60444166,
+      "sha256": "ce30b7874c22afc54402827cbea1f6e9142914130ec61cc42fc0a23171552f02",
+      "max_abs_error": 4.172325134277344e-07,
+      "rtol": 0.0001,
+      "atol": 0.0001,
+      "inputs": [
+        "input"
+      ],
+      "outputs": [
+        "output"
+      ]
+    },
+    {
+      "checkpoint": "task2a_classifier_final_best.pt",
+      "onnx_model": "task2_classifier.onnx",
+      "bytes": 769623,
+      "sha256": "4342268961b35f9ec0be1d43e51269aeb0dc31545c89b19b526f8abb5677a8a3",
+      "max_abs_error": 9.5367431640625e-07,
+      "rtol": 0.0001,
+      "atol": 0.0001,
+      "inputs": [
+        "input"
+      ],
+      "outputs": [
+        "logits"
+      ]
+    },
+    {
+      "checkpoint": "task2b_specialist_salt_final_best.pt",
+      "onnx_model": "task2_specialist_salt.onnx",
+      "bytes": 60444166,
+      "sha256": "381aeea77dc10c306fcab64759899c4c2e577ab8effbd9a26e4daabb0a7fbc8d",
+      "max_abs_error": 3.8743019104003906e-07,
+      "rtol": 0.0001,
+      "atol": 0.0001,
+      "inputs": [
+        "input"
+      ],
+      "outputs": [
+        "output"
+      ]
+    },
+    {
+      "checkpoint": "task2b_specialist_blur_final_best.pt",
+      "onnx_model": "task2_specialist_blur.onnx",
+      "bytes": 60444166,
+      "sha256": "3b2ea481a594920a5fec6fa60fc4f8cb40a763880674acf59adf34593dbc6338",
+      "max_abs_error": 2.980232238769531e-07,
+      "rtol": 0.0001,
+      "atol": 0.0001,
+      "inputs": [
+        "input"
+      ],
+      "outputs": [
+        "output"
+      ]
+    },
+    {
+      "checkpoint": "task2b_specialist_occlusion_final_best.pt",
+      "onnx_model": "task2_specialist_occlusion.onnx",
+      "bytes": 60444166,
+      "sha256": "1ff2b8003a2e1471922601e8c2f6cc2d892f3abee93c8763bffc3a7a25c4cdeb",
+      "max_abs_error": 4.76837158203125e-07,
+      "rtol": 0.0001,
+      "atol": 0.0001,
+      "inputs": [
+        "input"
+      ],
+      "outputs": [
+        "output"
+      ]
+    },
+    {
+      "checkpoint": "task3_soft_moe_final_best.pt",
+      "onnx_model": "task3_soft_moe.onnx",
+      "bytes": 48369274,
+      "sha256": "1235b92840599512884a38413be79a4a992ab33f3dd61d86396e4a9e5848ae73",
+      "max_abs_error": 2.86102294921875e-06,
+      "rtol": 0.0001,
+      "atol": 0.0001,
+      "inputs": [
+        "input"
+      ],
+      "outputs": [
+        "output",
+        "routing_probs",
+        "gate_logits"
+      ]
+    },
+    {
+      "checkpoint": "task4_generator_final_best.pt",
+      "onnx_model": "task4_generator.onnx",
+      "bytes": 12720870,
+      "sha256": "dd8915e983b788a8d475a5d13e17fb0b233c03d33b7e56a8fcefb6a09639a401",
+      "max_abs_error": 2.1457672119140625e-06,
+      "rtol": 0.0001,
+      "atol": 0.0001,
+      "inputs": [
+        "photo",
+        "style_idx"
+      ],
+      "outputs": [
+        "output"
+      ],
+      "max_abs_error_by_style_id": [
+        2.1457672119140625e-06,
+        2.592802047729492e-06,
+        1.7881393432617188e-06
+      ]
+    }
+  ],
+  "count": 7,
+  "opset": 17
+}

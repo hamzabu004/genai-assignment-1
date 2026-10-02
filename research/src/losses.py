@@ -7,7 +7,7 @@ Loss functions for all research tasks.
 """
 
 import math
-from typing import Tuple, Optional, Dict
+from typing import Tuple, Optional, Dict, Sequence, Union
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -150,37 +150,92 @@ def moe_joint_loss(
     return total_loss, metrics
 
 
+def _logit_scales(logits: Union[torch.Tensor, Sequence[torch.Tensor]]) -> Tuple[torch.Tensor, ...]:
+    return tuple(logits) if isinstance(logits, (tuple, list)) else (logits,)
+
+
+def sobel_edge_loss(pred: torch.Tensor, target: torch.Tensor) -> torch.Tensor:
+    """L1 distance between grayscale Sobel gradients, scaled to a stable range."""
+    pred = pred.float()
+    target = target.float()
+    if pred.shape[1] == 3:
+        weights = pred.new_tensor([0.299, 0.587, 0.114]).view(1, 3, 1, 1)
+        pred = (pred * weights).sum(dim=1, keepdim=True)
+        target = (target * weights).sum(dim=1, keepdim=True)
+    kx = pred.new_tensor([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]]).view(1, 1, 3, 3) / 8.0
+    ky = kx.transpose(-1, -2)
+    pred_edges = torch.cat((F.conv2d(pred, kx, padding=1), F.conv2d(pred, ky, padding=1)), dim=1)
+    target_edges = torch.cat((F.conv2d(target, kx, padding=1), F.conv2d(target, ky, padding=1)), dim=1)
+    return F.l1_loss(pred_edges, target_edges)
+
+
+def gan_quality_metrics(pred: torch.Tensor, target: torch.Tensor) -> Dict[str, torch.Tensor]:
+    """Validation metrics for sketch fidelity and stroke sharpness in [-1, 1]."""
+    edge_error = sobel_edge_loss(pred, target)
+    if pred.shape[1] == 3:
+        weights = pred.new_tensor([0.299, 0.587, 0.114]).view(1, 3, 1, 1)
+        target_gray = (target.float() * weights).sum(dim=1, keepdim=True)
+    else:
+        target_gray = target.float()
+    kx = target_gray.new_tensor([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]]).view(1, 1, 3, 3) / 8.0
+    ky = kx.transpose(-1, -2)
+    target_edge_scale = (
+        F.conv2d(target_gray, kx, padding=1).abs().mean()
+        + F.conv2d(target_gray, ky, padding=1).abs().mean()
+    ).clamp_min(1e-6)
+    return {
+        "val_l1": F.l1_loss(pred, target),
+        "val_ssim": compute_ssim(pred, target, data_range=2.0),
+        "val_edge": edge_error,
+        "val_edge_normalized": edge_error / target_edge_scale,
+    }
+
+
 def generator_loss(
-    fake_logits: torch.Tensor,
+    fake_logits: Union[torch.Tensor, Sequence[torch.Tensor]],
     pred_sketch: torch.Tensor,
     target_sketch: torch.Tensor,
     lambda_l1: float = 100.0,
-) -> Tuple[torch.Tensor, float, float]:
+    lambda_edge: float = 15.0,
+    lambda_ssim: float = 5.0,
+) -> Tuple[torch.Tensor, Dict[str, float]]:
     """
-    Conditional GAN Generator loss (pix2pix style):
-    L_G = BCE_adv(fake_logits, 1) + lambda_l1 * L1(pred, target)
+    Conditional GAN loss with paired reconstruction, edge, and structure terms.
     """
-    adv_loss = F.binary_cross_entropy_with_logits(
-        fake_logits, torch.ones_like(fake_logits)
-    )
+    scales = _logit_scales(fake_logits)
+    adv_loss = torch.stack([
+        F.binary_cross_entropy_with_logits(logits, torch.ones_like(logits))
+        for logits in scales
+    ]).mean()
     l1_loss = F.l1_loss(pred_sketch, target_sketch)
-    g_loss = adv_loss + lambda_l1 * l1_loss
-    return g_loss, adv_loss.item(), l1_loss.item()
+    edge_loss = sobel_edge_loss(pred_sketch, target_sketch)
+    ssim_loss = 1.0 - compute_ssim(pred_sketch, target_sketch, data_range=2.0)
+    g_loss = adv_loss + lambda_l1 * l1_loss + lambda_edge * edge_loss + lambda_ssim * ssim_loss
+    return g_loss, {
+        "g_adv": adv_loss.item(),
+        "g_l1": l1_loss.item(),
+        "g_edge": edge_loss.item(),
+        "g_ssim_loss": ssim_loss.item(),
+    }
 
 
 def discriminator_loss(
-    real_logits: torch.Tensor,
-    fake_logits: torch.Tensor,
+    real_logits: Union[torch.Tensor, Sequence[torch.Tensor]],
+    fake_logits: Union[torch.Tensor, Sequence[torch.Tensor]],
 ) -> Tuple[torch.Tensor, float, float]:
     """
-    Conditional GAN Discriminator loss:
-    L_D = 0.5 * (BCE(real_logits, 1) + BCE(fake_logits, 0))
+    Conditional GAN Discriminator loss averaged across all output scales.
     """
-    d_real = F.binary_cross_entropy_with_logits(
-        real_logits, torch.ones_like(real_logits)
-    )
-    d_fake = F.binary_cross_entropy_with_logits(
-        fake_logits, torch.zeros_like(fake_logits)
-    )
+    real_scales, fake_scales = _logit_scales(real_logits), _logit_scales(fake_logits)
+    if len(real_scales) != len(fake_scales):
+        raise ValueError("Real and fake discriminator outputs must have the same number of scales.")
+    d_real = torch.stack([
+        F.binary_cross_entropy_with_logits(logits, torch.ones_like(logits))
+        for logits in real_scales
+    ]).mean()
+    d_fake = torch.stack([
+        F.binary_cross_entropy_with_logits(logits, torch.zeros_like(logits))
+        for logits in fake_scales
+    ]).mean()
     d_loss = 0.5 * (d_real + d_fake)
     return d_loss, d_real.item(), d_fake.item()

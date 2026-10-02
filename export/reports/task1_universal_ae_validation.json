@@ -1,0 +1,35 @@
+{
+  "checkpoint": "/home/zaifi/genai-assignment-1/research/checkpoints/task1_universal_ae_final_best.pt",
+  "onnx_model": "/home/zaifi/genai-assignment-1/backend/models/task1_universal_ae.onnx",
+  "validation_manifest": "/home/zaifi/genai-assignment-1/research/val_manifest_official.json",
+  "samples": 736,
+  "max_pytorch_onnx_abs_error": 1.0251998901367188e-05,
+  "parity_rtol": 0.0001,
+  "parity_atol": 0.0001,
+  "metrics_by_corruption": {
+    "blur": {
+      "mse": 0.012593343787240597,
+      "psnr_db": 19.499801919701394,
+      "ssim": 0.5239439137028844,
+      "count": 178
+    },
+    "clean": {
+      "mse": 0.012371146659585622,
+      "psnr_db": 19.548133834463652,
+      "ssim": 0.5254629392767213,
+      "count": 183
+    },
+    "occlusion": {
+      "mse": 0.015668751233570963,
+      "psnr_db": 18.571530244788345,
+      "ssim": 0.5088698191150111,
+      "count": 196
+    },
+    "salt_pepper": {
+      "mse": 0.012219166309005639,
+      "psnr_db": 19.567372998711782,
+      "ssim": 0.5117256131085604,
+      "count": 179
+    }
+  }
+}

@@ -4,9 +4,9 @@ from fastapi import APIRouter, UploadFile, File, Form, HTTPException
 from app.schemas.hard_routing import HardRoutingResponse
 from app.services.preprocessing import (
     load_image,
-    image_to_tensor,
-    tensor_to_image,
     image_to_base64_png,
+    image_to_unit_tensor,
+    unit_tensor_to_image,
 )
 from app.services.corruption import apply_corruption_to_image, VALID_CORRUPTIONS, SEVERITY_LEVELS
 from app.services.postprocessing import softmax, format_probabilities
@@ -77,7 +77,8 @@ async def hard_routing(
         raise HTTPException(status_code=400, detail=f"Error applying corruption: {str(exc)}")
 
     # 4. Execute Pipeline with timer: Classifier gating -> Argmax -> Expert dispatch
-    x = image_to_tensor(corrupted_img)
+    # Tasks 2a/2b were trained on [0, 1] tensors.
+    x = image_to_unit_tensor(corrupted_img)
 
     with timer() as t:
         if has_model("classifier"):
@@ -115,7 +116,7 @@ async def hard_routing(
 
     # 5. Format outputs
     class_probs: Dict[str, float] = format_probabilities(probs_arr, CLASSES)
-    restored_img = tensor_to_image(y)
+    restored_img = unit_tensor_to_image(y)
 
     return HardRoutingResponse(
         input_image=image_to_base64_png(clean_img),
@@ -126,4 +127,3 @@ async def hard_routing(
         selected_expert=selected_expert,
         inference_time_ms=inference_ms,
     )
-

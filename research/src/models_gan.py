@@ -6,7 +6,7 @@ Follows Plan 5 & Plan 6 specification:
 - PatchGANDiscriminator: 70x70 PatchGAN discriminator taking (photo, sketch, style_map).
 """
 
-from typing import Optional, Tuple
+from typing import Optional, Tuple, Any
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -40,11 +40,33 @@ class UNetBlock(nn.Module):
         return self.conv(x)
 
 
+class ResidualRefinementBlock(nn.Module):
+    """High-resolution residual feature refinement for crisp local strokes."""
+
+    def __init__(self, channels: int):
+        super().__init__()
+        self.block = nn.Sequential(
+            nn.Conv2d(channels, channels, kernel_size=3, padding=1, bias=False),
+            _get_norm_layer(channels),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(channels, channels, kernel_size=3, padding=1, bias=False),
+            _get_norm_layer(channels),
+        )
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        return F.relu(x + self.block(x), inplace=True)
+
+
 class UNetGenerator(nn.Module):
     """
     Style-conditioned U-Net Generator for photo-to-sketch synthesis.
     Input: photo (B, 3, 128, 128) + style_idx (B,) in {0, 1, 2}.
     Output: sketch (B, 3, 128, 128) in range [-1, 1].
+
+    Enhanced with:
+    - Multi-scale style modulation (FiLM scale-and-shift at decoder layers)
+    - Grayscale constraint (enforces R=G=B to eliminate chromatic aberration)
+    - Optional high-resolution residual refinement for sketch strokes
     """
 
     def __init__(
@@ -55,12 +77,18 @@ class UNetGenerator(nn.Module):
         embed_dim: int = 8,
         num_styles: int = 3,
         dropout: float = 0.2,
+        multi_scale_style: bool = False,
+        grayscale_constraint: bool = False,
+        residual_refinement: bool = False,
     ):
         super().__init__()
         self.base_channels = base_channels
         self.embed_dim = embed_dim
         self.num_styles = num_styles
         self.dropout = dropout
+        self.multi_scale_style = multi_scale_style
+        self.grayscale_constraint = grayscale_constraint
+        self.residual_refinement = residual_refinement
 
         # Style embedding
         self.style_embed = nn.Embedding(num_styles, embed_dim)
@@ -73,6 +101,12 @@ class UNetGenerator(nn.Module):
         c5 = base_channels * 8   # 512
 
         self.style_proj = nn.Linear(embed_dim, 4 * 4 * embed_dim)
+
+        # Optional multi-scale style modulation (Plan 5 §Task 4 FSGAN style-vector expansion)
+        if multi_scale_style:
+            self.style_mod_d4 = nn.Linear(embed_dim, c3 * 2)  # scale and shift for 16x16
+            self.style_mod_d3 = nn.Linear(embed_dim, c2 * 2)  # scale and shift for 32x32
+            self.style_mod_d2 = nn.Linear(embed_dim, c1 * 2)  # scale and shift for 64x64
 
         # Encoder stages: 128 -> 64 -> 32 -> 16 -> 8 -> 4
         self.e1 = nn.Conv2d(in_channels, c1, kernel_size=4, stride=2, padding=1)  # no norm on first
@@ -92,16 +126,21 @@ class UNetGenerator(nn.Module):
         self.d2 = UNetBlock(c2 + c2, c1, down=False)
 
         # Final stage: d2(c1) + e1(c1) -> out_channels, activation Tanh
-        self.final = nn.Sequential(
+        self.final_features = nn.Sequential(
             nn.Upsample(scale_factor=2, mode="bilinear", align_corners=False),
             nn.Conv2d(c1 + c1, c1, kernel_size=3, stride=1, padding=1),
             _get_norm_layer(c1),
             nn.ReLU(inplace=True),
-            nn.Conv2d(c1, out_channels, kernel_size=3, stride=1, padding=1),
-            nn.Tanh(),  # Maps to [-1, 1]
         )
+        self.refine = ResidualRefinementBlock(c1) if residual_refinement else nn.Identity()
+        self.output = nn.Sequential(nn.Conv2d(c1, out_channels, kernel_size=3, padding=1), nn.Tanh())
 
-    def forward(self, photo: torch.Tensor, style_idx: torch.Tensor) -> torch.Tensor:
+    def forward(
+        self,
+        photo: torch.Tensor,
+        style_idx: torch.Tensor,
+        apply_grayscale: Optional[bool] = None,
+    ) -> torch.Tensor:
         b = photo.shape[0]
 
         # Style embedding map: (B, embed_dim) -> (B, embed_dim, 4, 4)
@@ -121,9 +160,31 @@ class UNetGenerator(nn.Module):
         # Decoder with skip connections
         u5 = self.d5(bot)                       # 8x8
         u4 = self.d4(torch.cat([u5, x4], dim=1))# 16x16
+        if self.multi_scale_style and hasattr(self, "style_mod_d4"):
+            mod4 = self.style_mod_d4(s_emb).view(b, -1, 1, 1)
+            gamma4, beta4 = mod4.chunk(2, dim=1)
+            u4 = u4 * (1.0 + gamma4) + beta4
+
         u3 = self.d3(torch.cat([u4, x3], dim=1))# 32x32
+        if self.multi_scale_style and hasattr(self, "style_mod_d3"):
+            mod3 = self.style_mod_d3(s_emb).view(b, -1, 1, 1)
+            gamma3, beta3 = mod3.chunk(2, dim=1)
+            u3 = u3 * (1.0 + gamma3) + beta3
+
         u2 = self.d2(torch.cat([u3, x2], dim=1))# 64x64
-        out = self.final(torch.cat([u2, x1], dim=1))  # 128x128
+        if self.multi_scale_style and hasattr(self, "style_mod_d2"):
+            mod2 = self.style_mod_d2(s_emb).view(b, -1, 1, 1)
+            gamma2, beta2 = mod2.chunk(2, dim=1)
+            u2 = u2 * (1.0 + gamma2) + beta2
+
+        out = self.final_features(torch.cat([u2, x1], dim=1))  # 128x128
+        out = self.output(self.refine(out))
+
+        # Grayscale constraint: guarantees R=G=B to eliminate chromatic aberration
+        enforce_gray = self.grayscale_constraint if apply_grayscale is None else apply_grayscale
+        if enforce_gray and out.shape[1] == 3:
+            gray = 0.299 * out[:, 0:1] + 0.587 * out[:, 1:2] + 0.114 * out[:, 2:3]
+            out = gray.repeat(1, 3, 1, 1)
 
         return out
 
@@ -178,13 +239,96 @@ class PatchGANDiscriminator(nn.Module):
             nn.Conv2d(c4, 1, kernel_size=4, stride=1, padding=1),
         )
 
+        self.half_scale_net = nn.Sequential(
+            nn.Conv2d(total_in, c1, kernel_size=4, stride=2, padding=1),
+            nn.LeakyReLU(0.2, inplace=True),
+            nn.Conv2d(c1, c2, kernel_size=4, stride=2, padding=1, bias=False),
+            _get_norm_layer(c2),
+            nn.LeakyReLU(0.2, inplace=True),
+            nn.Conv2d(c2, c3, kernel_size=4, stride=2, padding=1, bias=False),
+            _get_norm_layer(c3),
+            nn.LeakyReLU(0.2, inplace=True),
+            nn.Conv2d(c3, c4, kernel_size=4, stride=1, padding=1, bias=False),
+            _get_norm_layer(c4),
+            nn.LeakyReLU(0.2, inplace=True),
+            nn.Conv2d(c4, 1, kernel_size=4, stride=1, padding=1),
+        )
+
     def forward(
         self, photo: torch.Tensor, sketch: torch.Tensor, style_idx: torch.Tensor
-    ) -> torch.Tensor:
+    ) -> Tuple[torch.Tensor, torch.Tensor]:
         b, _, h, w = photo.shape
         # Broadcast a learned style embedding as spatial conditioning channels.
         style_embedding = self.style_proj(self.style_embed(style_idx))
         style_map = style_embedding.view(b, self.style_embed_dim, 1, 1).expand(-1, -1, h, w)
 
         x = torch.cat([photo, sketch, style_map], dim=1)
-        return self.net(x)
+        half_photo = F.avg_pool2d(photo, kernel_size=2, stride=2)
+        half_sketch = F.avg_pool2d(sketch, kernel_size=2, stride=2)
+        half_style = style_embedding.view(b, self.style_embed_dim, 1, 1).expand(-1, -1, h // 2, w // 2)
+        half_x = torch.cat([half_photo, half_sketch, half_style], dim=1)
+        return self.net(x), self.half_scale_net(half_x)
+
+
+def postprocess_sketch(
+    sketch: Any,
+    contrast_factor: float = 1.30,
+    clip_dark: float = 0.08,
+    clip_light: float = 0.92,
+    sharpen: bool = True,
+) -> Any:
+    """
+    Post-processes a generated sketch:
+    1. Eliminates chromatic aberration / rainbow color fringing by converting to luminance grayscale.
+    2. Stretches contrast so paper is clean bright white and sketch strokes are deep black ink.
+    3. Optionally applies unsharp Laplacian kernel to sharpen fine line details.
+
+    Accepts:
+      - PyTorch Tensor in [-1, 1] of shape (B, 3, H, W) or (3, H, W)
+      - NumPy array in [0, 1] of shape (H, W, 3) or (H, W)
+    Returns:
+      Same type and shape as input (RGB 3-channel).
+    """
+    import numpy as np
+
+    if isinstance(sketch, torch.Tensor):
+        orig_shape = sketch.shape
+        t = sketch.clone()
+        if t.dim() == 3:
+            t = t.unsqueeze(0)
+        # Shift [-1, 1] -> [0, 1]
+        t = (t + 1.0) * 0.5
+        # Luminance grayscale: (B, 1, H, W)
+        gray = 0.299 * t[:, 0:1] + 0.587 * t[:, 1:2] + 0.114 * t[:, 2:3]
+
+        # Contrast stretch: dark lines -> black, paper -> white
+        stretched = torch.clamp((gray - clip_dark) / (clip_light - clip_dark), 0.0, 1.0)
+        enhanced = torch.clamp((stretched - 0.5) * contrast_factor + 0.5, 0.0, 1.0)
+
+        if sharpen:
+            # 3x3 unsharp Laplacian sharpening filter
+            kernel = torch.tensor(
+                [[0.0, -0.2, 0.0], [-0.2, 1.8, -0.2], [0.0, -0.2, 0.0]],
+                device=t.device,
+                dtype=t.dtype,
+            ).view(1, 1, 3, 3)
+            sharpened = torch.nn.functional.conv2d(enhanced, kernel, padding=1)
+            enhanced = torch.clamp(sharpened, 0.0, 1.0)
+
+        # Broadcast back to 3 identical RGB channels (guarantees zero chromatic aberration)
+        out_01 = enhanced.repeat(1, 3, 1, 1)
+        # Rescale back to [-1, 1]
+        out_tanh = out_01 * 2.0 - 1.0
+        return out_tanh.squeeze(0) if len(orig_shape) == 3 else out_tanh
+    else:
+        arr = np.asarray(sketch, dtype=np.float32)
+        is_3d = (arr.ndim == 3 and arr.shape[2] == 3)
+        if is_3d:
+            gray = 0.299 * arr[..., 0] + 0.587 * arr[..., 1] + 0.114 * arr[..., 2]
+        else:
+            gray = arr
+        stretched = np.clip((gray - clip_dark) / (clip_light - clip_dark), 0.0, 1.0)
+        enhanced = np.clip((stretched - 0.5) * contrast_factor + 0.5, 0.0, 1.0)
+        if is_3d:
+            return np.repeat(enhanced[..., np.newaxis], 3, axis=2)
+        return enhanced

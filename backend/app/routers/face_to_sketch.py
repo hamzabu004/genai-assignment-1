@@ -1,3 +1,4 @@
+import numpy as np
 from fastapi import APIRouter, UploadFile, File, Form, HTTPException
 from app.schemas.face_to_sketch import FaceToSketchResponse
 from app.services.preprocessing import (
@@ -8,7 +9,7 @@ from app.services.preprocessing import (
 )
 from app.services.onnx_runtime_manager import (
     has_model,
-    run_model,
+    run_model_with_inputs,
     fallback_face_to_sketch,
 )
 from app.utils.timing import timer
@@ -41,16 +42,22 @@ async def face_to_sketch(
             detail=f"Invalid style '{style}'. Must be one of: {list(VALID_STYLES)}",
         )
 
-    # 3. Model Inference with timer
+    # Task 4 was trained on [-1, 1] images and takes an integer style ID.
     x = image_to_tensor(face_img)
+    style_idx = VALID_STYLES.index(clean_style)
 
     with timer() as t:
         if has_model("generator"):
             try:
-                y = fallback_face_to_sketch(x, clean_style)
-            except Exception:
-                out = run_model("generator", x)
-                y = out[0]
+                outputs = run_model_with_inputs(
+                    "generator",
+                    {"photo": x, "style_idx": np.asarray([style_idx], dtype=np.int64)},
+                )
+                if not outputs:
+                    raise RuntimeError("Generator returned no outputs")
+                y = outputs[0]
+            except Exception as exc:
+                raise HTTPException(status_code=503, detail=f"Face-to-sketch ONNX inference failed: {exc}")
         else:
             y = fallback_face_to_sketch(x, clean_style)
 
@@ -65,4 +72,3 @@ async def face_to_sketch(
         style_used=clean_style,
         inference_time_ms=inference_ms,
     )
-

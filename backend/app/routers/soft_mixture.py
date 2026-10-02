@@ -4,9 +4,9 @@ from fastapi import APIRouter, UploadFile, File, Form, HTTPException
 from app.schemas.soft_mixture import SoftMixtureResponse
 from app.services.preprocessing import (
     load_image,
-    image_to_tensor,
-    tensor_to_image,
     image_to_base64_png,
+    image_to_unit_tensor,
+    unit_tensor_to_image,
 )
 from app.services.corruption import apply_corruption_to_image, VALID_CORRUPTIONS, SEVERITY_LEVELS
 from app.services.postprocessing import softmax, format_probabilities
@@ -71,7 +71,8 @@ async def soft_mixture(
         raise HTTPException(status_code=400, detail=f"Error applying corruption: {str(exc)}")
 
     # 4. Execute Soft MoE continuous blend with timer
-    x = image_to_tensor(corrupted_img)
+    # Tasks 2a/2b/3 were trained on [0, 1] tensors.
+    x = image_to_unit_tensor(corrupted_img)
 
     with timer() as t:
         # A. Determine routing weights (softmax attention distribution)
@@ -116,7 +117,7 @@ async def soft_mixture(
     inference_ms = round(t["ms"], 2)
 
     # 5. Format outputs
-    restored_img = tensor_to_image(y)
+    restored_img = unit_tensor_to_image(y)
 
     return SoftMixtureResponse(
         input_image=image_to_base64_png(clean_img),
@@ -126,4 +127,3 @@ async def soft_mixture(
         dominant_expert=dominant_expert,
         inference_time_ms=inference_ms,
     )
-

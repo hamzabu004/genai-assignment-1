@@ -1,15 +1,10 @@
-# task3_best_config.yaml
-# Populated after Optuna study completes in task3_moe_optuna.ipynb
-task: task3_soft_moe
-source_notebook: task3_moe_optuna.ipynb
-best_trial_number: null
-best_value: null
+best_trial_number: 12
+best_value: 0.13274746679741403
 params:
-  warmup_lr: 0.001
-  finetune_lr: 0.0001
-  batch_size: 32
-  temperature: 1.0
-  lambda1: 0.8
-  lambda2: 0.2
-  lambda3: 0.1
-  lambda4: 0.01
+  alpha: 0.9285357470946418
+  finetune_lr: 8.220541912014769e-05
+  lambda3: 0.2200887576550623
+  lambda4: 0.0021997647194798653
+  temperature: 1.9062398084778382
+source_notebook: task3_moe_optuna.ipynb
+task: task3_soft_moe

@@ -22,6 +22,7 @@ from src.losses import (
     moe_joint_loss,
     generator_loss,
     discriminator_loss,
+    gan_quality_metrics,
 )
 
 
@@ -320,19 +321,16 @@ def train_one_epoch_gan(
     opt_D: torch.optim.Optimizer,
     device: torch.device,
     lambda_l1: float = 100.0,
+    lambda_edge: float = 15.0,
+    lambda_ssim: float = 5.0,
     scaler_g: Optional[torch.amp.GradScaler] = None,
     scaler_d: Optional[torch.amp.GradScaler] = None,
 ) -> Dict[str, float]:
     G.train()
     D.train()
 
-    total_g_loss = 0.0
-    total_d_loss = 0.0
-    total_d_real = 0.0
-    total_d_fake = 0.0
-    total_g_adv = 0.0
-    total_g_l1 = 0.0
-    num_batches = len(loader)
+    totals = {key: 0.0 for key in ("g_loss", "d_loss", "d_real", "d_fake", "g_adv", "g_l1", "g_edge", "g_ssim_loss")}
+    total_samples = 0
 
     for photo, sketch, style in loader:
         photo = photo.to(device)
@@ -360,25 +358,25 @@ def train_one_epoch_gan(
         opt_G.zero_grad(set_to_none=True)
 
         fake_logits_for_g = D(photo, fake_sketch, style)
-        g_loss, g_adv, g_l1 = generator_loss(fake_logits_for_g, fake_sketch, sketch, lambda_l1=lambda_l1)
+        g_loss, g_metrics = generator_loss(
+            fake_logits_for_g, fake_sketch, sketch,
+            lambda_l1=lambda_l1, lambda_edge=lambda_edge, lambda_ssim=lambda_ssim,
+        )
         g_loss.backward()
         opt_G.step()
 
-        total_g_loss += g_loss.item()
-        total_d_loss += d_loss.item()
-        total_d_real += d_r
-        total_d_fake += d_f
-        total_g_adv += g_adv
-        total_g_l1 += g_l1
+        n = len(style)
+        total_samples += n
+        batch_values = {
+            "g_loss": g_loss.item(), "d_loss": d_loss.item(),
+            "d_real": d_r, "d_fake": d_f, **g_metrics,
+        }
+        for key, value in batch_values.items():
+            totals[key] += value * n
 
-    return {
-        "g_loss": total_g_loss / num_batches,
-        "d_loss": total_d_loss / num_batches,
-        "d_real": total_d_real / num_batches,
-        "d_fake": total_d_fake / num_batches,
-        "g_adv": total_g_adv / num_batches,
-        "g_l1": total_g_l1 / num_batches,
-    }
+    if total_samples == 0:
+        raise ValueError("Cannot train a GAN with an empty data loader.")
+    return {key: value / total_samples for key, value in totals.items()}
 
 
 def validate_gan(
@@ -387,8 +385,8 @@ def validate_gan(
     device: torch.device,
 ) -> Dict[str, float]:
     G.eval()
-    total_l1 = 0.0
-    num_batches = len(loader)
+    totals = {"val_l1": 0.0, "val_ssim": 0.0, "val_edge": 0.0, "val_edge_normalized": 0.0}
+    total_samples = 0
 
     with torch.no_grad():
         for photo, sketch, style in loader:
@@ -397,7 +395,18 @@ def validate_gan(
             style = style.to(device)
 
             fake_sketch = G(photo, style)
-            l1 = nn.functional.l1_loss(fake_sketch, sketch)
-            total_l1 += l1.item()
+            metrics = gan_quality_metrics(fake_sketch, sketch)
+            n = len(style)
+            total_samples += n
+            for key, value in metrics.items():
+                totals[key] += value.item() * n
 
-    return {"val_l1": total_l1 / num_batches}
+    if total_samples == 0:
+        raise ValueError("Cannot validate a GAN with an empty data loader.")
+    metrics = {key: value / total_samples for key, value in totals.items()}
+    metrics["val_score"] = (
+        0.4 * metrics["val_l1"]
+        + 0.3 * (1.0 - metrics["val_ssim"])
+        + 0.3 * metrics["val_edge_normalized"]
+    )
+    return metrics
