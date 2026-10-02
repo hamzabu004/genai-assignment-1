@@ -64,13 +64,27 @@ class Settings(BaseSettings):
     def resolved_validation_manifest_path(self) -> str:
         if os.path.isfile(self.validation_manifest_path):
             return self.validation_manifest_path
+        bundled_manifest = "/app/bundled_validation/val_manifest_official.json"
+        if os.path.isfile(bundled_manifest):
+            return bundled_manifest
         backend_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
         return os.path.join(os.path.dirname(backend_dir), "research", "val_manifest_official.json")
 
     @property
     def resolved_validation_image_dir(self) -> str:
         if os.path.isdir(self.validation_image_dir):
-            return self.validation_image_dir
+            try:
+                if any(os.scandir(self.validation_image_dir)):
+                    return self.validation_image_dir
+            except OSError:
+                pass
+        bundled_images = "/app/bundled_validation/images"
+        if os.path.isdir(bundled_images):
+            try:
+                if any(os.scandir(bundled_images)):
+                    return bundled_images
+            except OSError:
+                pass
         backend_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
         return os.path.join(
             os.path.dirname(backend_dir), "research", "datasets", "oxford-iiit-pet", "images"
