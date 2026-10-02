@@ -68,14 +68,20 @@ def main() -> None:
                 digest = hashlib.sha256(source.read_bytes()).hexdigest()
                 if digest != expected[filename]:
                     raise SystemExit(f"SHA-256 mismatch for {filename}; refusing to install this artifact.")
-        staging = Path(temp_dir) / "staged"
-        staging.mkdir()
-        for filename in MODEL_FILES:
-            shutil.copy2(download_dir / filename, staging / filename)
-        for filename in MODEL_FILES:
-            (staging / filename).replace(target_dir / filename)
-        if manifest_path.is_file():
-            shutil.copy2(manifest_path, target_dir / "final_best_onnx_validation.json")
+        # Stage beside the destination: /tmp and the model directory may live on
+        # different filesystems, where Path.replace() fails with EXDEV.
+        with tempfile.TemporaryDirectory(prefix="onnx-staged-", dir=target_dir) as staging_dir:
+            staging = Path(staging_dir)
+            for filename in MODEL_FILES:
+                shutil.copy2(download_dir / filename, staging / filename)
+            if manifest_path.is_file():
+                shutil.copy2(manifest_path, staging / "final_best_onnx_validation.json")
+
+            for filename in MODEL_FILES:
+                (staging / filename).replace(target_dir / filename)
+            staged_manifest = staging / "final_best_onnx_validation.json"
+            if staged_manifest.is_file():
+                staged_manifest.replace(target_dir / staged_manifest.name)
     print(f"Fetched {artifact_path} into {target_dir}")
 
 
