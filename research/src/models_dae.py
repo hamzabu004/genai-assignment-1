@@ -167,3 +167,116 @@ class ConvDAE(nn.Module):
         z, skip1 = self.encode(x)
         recon = self.decode(z, skip1=skip1)
         return recon
+
+
+class FlexibleConvDAE(nn.Module):
+    """
+    Flexible Convolutional Denoising Autoencoder configurable for:
+    - 2 to 6 stages downsampling (128x128 down to 32x32, 16x16, 8x8, 4x4, or 2x2).
+    - With skip connections (U-Net style intermediate skip pathways) or without skip connections (bottleneck compression).
+    - Optional fully-connected latent projection or direct convolutional bottleneck.
+    """
+    def __init__(
+        self,
+        in_channels: int = 3,
+        base_channels: int = 32,
+        num_stages: int = 4,
+        use_skip: bool = True,
+        latent_dim: Optional[int] = None,
+        dropout: float = 0.0,
+    ):
+        super().__init__()
+        assert 2 <= num_stages <= 6, f"num_stages must be in [2, 6], got {num_stages}"
+        self.in_channels = in_channels
+        self.base_channels = base_channels
+        self.num_stages = num_stages
+        self.use_skip = use_skip
+        self.latent_dim = latent_dim
+        self.dropout = dropout
+
+        max_channels = base_channels * 8
+        self.stage_channels = [min(base_channels * (2**i), max_channels) for i in range(num_stages)]
+
+        # Encoder: Stage 0 .. Stage (num_stages - 1)
+        self.encoders = nn.ModuleList()
+        curr_in = in_channels
+        for i, curr_out in enumerate(self.stage_channels):
+            self.encoders.append(
+                nn.Sequential(
+                    nn.Conv2d(curr_in, curr_out, kernel_size=4, stride=2, padding=1),
+                    _get_norm_layer(curr_out),
+                    nn.LeakyReLU(0.2, inplace=True),
+                    nn.Dropout2d(dropout) if (dropout > 0 and i < 2) else nn.Identity(),
+                )
+            )
+            curr_in = curr_out
+
+        # Bottleneck
+        bottleneck_c = self.stage_channels[-1]
+        bottleneck_res = 128 // (2 ** num_stages)
+        self.bottleneck_shape = (bottleneck_c, bottleneck_res, bottleneck_res)
+        self.flatten_dim = bottleneck_c * bottleneck_res * bottleneck_res
+
+        if latent_dim is not None:
+            self.fc_enc = nn.Linear(self.flatten_dim, latent_dim)
+            self.fc_dec = nn.Linear(latent_dim, self.flatten_dim)
+        else:
+            self.fc_enc = None
+            self.fc_dec = None
+
+        # Decoder stages: maps from stage (num_stages-1) down to 1
+        self.decoders = nn.ModuleList()
+        for k in reversed(range(1, num_stages)):
+            in_c = self.stage_channels[k]
+            skip_c = self.stage_channels[k-1] if use_skip else 0
+            conv_in = in_c + skip_c
+            target_out = self.stage_channels[k-1]
+            self.decoders.append(
+                nn.Sequential(
+                    nn.Conv2d(conv_in, target_out, kernel_size=3, padding=1),
+                    _get_norm_layer(target_out),
+                    nn.LeakyReLU(0.2, inplace=True),
+                )
+            )
+
+        # Final reconstruction stage (maps 64x64 -> 128x128 -> in_channels)
+        c0 = self.stage_channels[0]
+        self.final_dec = nn.Sequential(
+            nn.Conv2d(c0, c0, kernel_size=3, padding=1),
+            _get_norm_layer(c0),
+            nn.LeakyReLU(0.2, inplace=True),
+            nn.Conv2d(c0, in_channels, kernel_size=3, padding=1),
+            nn.Sigmoid(),
+        )
+
+    def encode(self, x: torch.Tensor) -> Tuple[torch.Tensor, list]:
+        feats = []
+        curr = x
+        for enc in self.encoders:
+            curr = enc(curr)
+            feats.append(curr)
+        return curr, feats
+
+    def decode(self, bottleneck: torch.Tensor, skips: Optional[list] = None) -> torch.Tensor:
+        if self.fc_enc is not None:
+            flat = torch.flatten(bottleneck, 1)
+            z = self.fc_enc(flat)
+            curr = self.fc_dec(z).view(-1, *self.bottleneck_shape)
+        else:
+            curr = bottleneck
+
+        for i, dec_block in enumerate(self.decoders):
+            k = self.num_stages - 1 - i
+            curr = F.interpolate(curr, scale_factor=2, mode="bilinear", align_corners=False)
+            if self.use_skip and skips is not None and (k - 1) >= 0:
+                curr = torch.cat([curr, skips[k-1]], dim=1)
+            curr = dec_block(curr)
+
+        curr = F.interpolate(curr, scale_factor=2, mode="bilinear", align_corners=False)
+        out = self.final_dec(curr)
+        return out
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        bottleneck, skips = self.encode(x)
+        return self.decode(bottleneck, skips=skips if self.use_skip else None)
+

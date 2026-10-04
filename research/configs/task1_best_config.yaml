@@ -1,11 +1,12 @@
-best_trial_number: 12
-best_value: 0.12649909989989322
-params:
-  alpha: 0.9490932855082602
-  base_channels: 64
-  batch_size: 16
-  dropout: 0.04150568796458498
-  latent_dim: 256
-  lr: 0.00042372506675049767
-source_notebook: task1_dae_optuna.ipynb
+best_params:
+  alpha: 0.9407267707170348
+  base_channels: 32
+  batch_size: 32
+  dropout: 0.09327856884913875
+  latent_dim: 512
+  lr: 0.0004588653521383504
+  num_stages: 5
+  use_latent: true
+  use_skip: true
 task: task1_universal_dae
+timestamp: '2026-10-04 12:30:35'
