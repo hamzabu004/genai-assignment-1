@@ -1,9 +1,0 @@
-best_val_loss: 0.10869921095993208
-params:
-  alpha: 0.9471441383762044
-  base_channels: 64
-  batch_size: 32
-  dropout: 0.026025700426524835
-  latent_dim: 256
-  lr: 0.00010676565989378756
-task: task2b_specialist_occlusion

@@ -1,9 +1,0 @@
-best_accuracy: 0.9904891304347826
-best_trial_number: 18
-params:
-  base_channels: 16
-  batch_size: 64
-  dropout: 0.001969787061167662
-  lr: 0.0006152290064858183
-  weight_decay: 0.00017497671189681938
-task: task2a_corruption_classifier
