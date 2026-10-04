@@ -1,0 +1,83 @@
+{
+  "best_params": {
+    "lr": 0.00014300986217182773,
+    "batch_size": 16,
+    "latent_dim": 512,
+    "base_channels": 32,
+    "dropout": 0.1685246986758562,
+    "alpha": 0.9345451793282892
+  },
+  "best_validation_objective": 0.11198621696752051,
+  "metrics": [
+    {
+      "corruption": "blur",
+      "severity": "high",
+      "PSNR": 19.167653196089987,
+      "SSIM": 0.4594909139657807,
+      "n": 3669
+    },
+    {
+      "corruption": "blur",
+      "severity": "low",
+      "PSNR": 19.118121185884974,
+      "SSIM": 0.4616589372681642,
+      "n": 3669
+    },
+    {
+      "corruption": "blur",
+      "severity": "medium",
+      "PSNR": 19.15667624017399,
+      "SSIM": 0.4612331194419827,
+      "n": 3669
+    },
+    {
+      "corruption": "clean",
+      "severity": "none",
+      "PSNR": 19.087391338935824,
+      "SSIM": 0.4616720472622646,
+      "n": 3669
+    },
+    {
+      "corruption": "occlusion",
+      "severity": "high",
+      "PSNR": 17.36305404313743,
+      "SSIM": 0.42451674872935713,
+      "n": 3669
+    },
+    {
+      "corruption": "occlusion",
+      "severity": "low",
+      "PSNR": 18.435906315213753,
+      "SSIM": 0.4493764889487196,
+      "n": 3669
+    },
+    {
+      "corruption": "occlusion",
+      "severity": "medium",
+      "PSNR": 17.99307923825114,
+      "SSIM": 0.4389291905571343,
+      "n": 3669
+    },
+    {
+      "corruption": "salt",
+      "severity": "high",
+      "PSNR": 18.959159923853942,
+      "SSIM": 0.45787014380913726,
+      "n": 3669
+    },
+    {
+      "corruption": "salt",
+      "severity": "low",
+      "PSNR": 19.09954273346563,
+      "SSIM": 0.46150891583958126,
+      "n": 3669
+    },
+    {
+      "corruption": "salt",
+      "severity": "medium",
+      "PSNR": 19.067402188022186,
+      "SSIM": 0.4606846587620239,
+      "n": 3669
+    }
+  ]
+}
