@@ -1,0 +1,944 @@
+[
+  {
+    "image_id": "photo1/image0288",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0288.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0288.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0216",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0216.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0216.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0225",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0225.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0225.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0170",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0170.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0170.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0214",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0214.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0214.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0219",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0219.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0219.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0162",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0162.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0162.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image1334",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image1334.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch1334.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0355",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0355.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0355.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0391",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0391.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0391.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0394",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0394.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0394.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0184",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0184.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0184.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0292",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0292.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0292.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0227",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0227.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0227.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0334",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0334.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0334.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image1385",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image1385.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch1385.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0192",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0192.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0192.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image1319",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image1319.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch1319.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0357",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0357.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0357.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0304",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0304.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0304.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0324",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0324.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0324.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0340",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0340.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0340.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0351",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0351.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0351.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image1327",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image1327.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch1327.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0209",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0209.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0209.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0261",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0261.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0261.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0338",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0338.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0338.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0331",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0331.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0331.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image1356",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image1356.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch1356.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0325",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0325.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0325.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0208",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0208.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0208.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image1348",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image1348.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch1348.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0220",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0220.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0220.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0307",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0307.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0307.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0142",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0142.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0142.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0386",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0386.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0386.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0354",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0354.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0354.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0344",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0344.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0344.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0290",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0290.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0290.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0210",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0210.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0210.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0360",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0360.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0360.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0141",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0141.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0141.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image1335",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image1335.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch1335.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0401",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0401.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0401.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0154",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0154.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0154.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image1395",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image1395.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch1395.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0203",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0203.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0203.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image1340",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image1340.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch1340.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0278",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0278.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0278.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0243",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0243.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0243.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0125",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0125.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0125.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0190",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0190.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0190.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0295",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0295.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0295.jpg",
+    "style": 0
+  },
+  {
+    "image_id": "photo1/image0448",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0448.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0448.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0610",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0610.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0610.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0567",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0567.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0567.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0684",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0684.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0684.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0529",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0529.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0529.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0785",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0785.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0785.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0542",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0542.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0542.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0407",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0407.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0407.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0665",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0665.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0665.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0570",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0570.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0570.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0419",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0419.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0419.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0624",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0624.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0624.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0526",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0526.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0526.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0704",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0704.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0704.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0420",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0420.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0420.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0453",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0453.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0453.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0417",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0417.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0417.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0714",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0714.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0714.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0486",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0486.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0486.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0612",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0612.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0612.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0695",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0695.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0695.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0434",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0434.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0434.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0571",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0571.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0571.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0446",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0446.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0446.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0683",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0683.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0683.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0558",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0558.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0558.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0696",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0696.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0696.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0639",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0639.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0639.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0616",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0616.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0616.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0724",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0724.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0724.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0741",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0741.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0741.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0743",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0743.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0743.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0409",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0409.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0409.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0635",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0635.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0635.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0498",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0498.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0498.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0585",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0585.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0585.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0458",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0458.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0458.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0601",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0601.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0601.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0515",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0515.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0515.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0631",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0631.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0631.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0431",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0431.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0431.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0584",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0584.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0584.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0467",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0467.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0467.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0753",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0753.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0753.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0583",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0583.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0583.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0532",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0532.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0532.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0620",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0620.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0620.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0539",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0539.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0539.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0518",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0518.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0518.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0418",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0418.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0418.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0739",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0739.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0739.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo1/image0534",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo1/image0534.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch1/sketch0534.jpg",
+    "style": 1
+  },
+  {
+    "image_id": "photo3/image0100",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0100.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0100.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0433",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0433.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0433.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0171",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0171.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0171.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0410",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0410.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0410.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0031",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0031.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0031.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo2/image0050",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo2/image0050.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch2/sketch0050.png",
+    "style": 2
+  },
+  {
+    "image_id": "photo2/image0055",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo2/image0055.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch2/sketch0055.png",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0462",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0462.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0462.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0140",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0140.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0140.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0390",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0390.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0390.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0195",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0195.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0195.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0196",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0196.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0196.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0199",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0199.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0199.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo2/image0071",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo2/image0071.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch2/sketch0071.png",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0010",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0010.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0010.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo2/image0040",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo2/image0040.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch2/sketch0040.png",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0091",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0091.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0091.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo2/image0030",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo2/image0030.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch2/sketch0030.png",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0086",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0086.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0086.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo2/image0005",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo2/image0005.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch2/sketch0005.png",
+    "style": 2
+  },
+  {
+    "image_id": "photo2/image0018",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo2/image0018.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch2/sketch0018.png",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0458",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0458.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0458.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo2/image0074",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo2/image0074.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch2/sketch0074.png",
+    "style": 2
+  },
+  {
+    "image_id": "photo2/image0002",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo2/image0002.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch2/sketch0002.png",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0028",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0028.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0028.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo2/image0065",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo2/image0065.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch2/sketch0065.png",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0008",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0008.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0008.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo2/image0027",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo2/image0027.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch2/sketch0027.png",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0024",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0024.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0024.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0041",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0041.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0041.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo2/image0088",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo2/image0088.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch2/sketch0088.png",
+    "style": 2
+  },
+  {
+    "image_id": "photo2/image0013",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo2/image0013.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch2/sketch0013.png",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0084",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0084.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0084.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0108",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0108.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0108.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0001",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0001.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0001.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0033",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0033.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0033.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0381",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0381.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0381.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo2/image0086",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo2/image0086.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch2/sketch0086.png",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0133",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0133.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0133.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0426",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0426.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0426.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo2/image0052",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo2/image0052.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch2/sketch0052.png",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0464",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0464.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0464.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0435",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0435.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0435.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0011",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0011.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0011.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0472",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0472.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0472.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0079",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0079.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0079.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0096",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0096.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0096.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0044",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0044.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0044.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0121",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0121.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0121.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0020",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0020.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0020.jpg",
+    "style": 2
+  },
+  {
+    "image_id": "photo2/image0034",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo2/image0034.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch2/sketch0034.png",
+    "style": 2
+  },
+  {
+    "image_id": "photo3/image0401",
+    "photo_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/photo/photo3/image0401.jpg",
+    "sketch_path": "/run/media/hmz-gul/01DB003D88B96CA0/Semesters-Data/sem-7/Gen-AI/genai-assignment/research/datasets/FS2K/sketch/sketch3/sketch0401.jpg",
+    "style": 2
+  }
+]
