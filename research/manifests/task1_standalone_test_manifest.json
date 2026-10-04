@@ -1,0 +1,6978 @@
+{
+  "Abyssinian_201.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 42
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 42
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 43
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 44
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 42
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 43
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 44
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 42,
+      "masks": [
+        {
+          "top": 3,
+          "left": 35,
+          "height": 33,
+          "width": 48
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 43,
+      "masks": [
+        {
+          "top": 18,
+          "left": 59,
+          "height": 54,
+          "width": 30
+        },
+        {
+          "top": 89,
+          "left": 12,
+          "height": 39,
+          "width": 41
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 44,
+      "masks": [
+        {
+          "top": 69,
+          "left": 14,
+          "height": 41,
+          "width": 46
+        },
+        {
+          "top": 28,
+          "left": 37,
+          "height": 49,
+          "width": 38
+        },
+        {
+          "top": 14,
+          "left": 72,
+          "height": 59,
+          "width": 32
+        }
+      ]
+    }
+  ],
+  "Abyssinian_202.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 43
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 73
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 74
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 75
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 73
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 74
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 75
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 73,
+      "masks": [
+        {
+          "top": 64,
+          "left": 61,
+          "height": 42,
+          "width": 38
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 74,
+      "masks": [
+        {
+          "top": 65,
+          "left": 14,
+          "height": 30,
+          "width": 54
+        },
+        {
+          "top": 39,
+          "left": 23,
+          "height": 40,
+          "width": 40
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 75,
+      "masks": [
+        {
+          "top": 55,
+          "left": 58,
+          "height": 40,
+          "width": 47
+        },
+        {
+          "top": 65,
+          "left": 86,
+          "height": 58,
+          "width": 32
+        },
+        {
+          "top": 60,
+          "left": 44,
+          "height": 32,
+          "width": 58
+        }
+      ]
+    }
+  ],
+  "Abyssinian_204.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 44
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 104
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 105
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 106
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 104
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 105
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 106
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 104,
+      "masks": [
+        {
+          "top": 25,
+          "left": 29,
+          "height": 29,
+          "width": 56
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 105,
+      "masks": [
+        {
+          "top": 44,
+          "left": 74,
+          "height": 30,
+          "width": 54
+        },
+        {
+          "top": 0,
+          "left": 39,
+          "height": 31,
+          "width": 52
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 106,
+      "masks": [
+        {
+          "top": 61,
+          "left": 2,
+          "height": 34,
+          "width": 54
+        },
+        {
+          "top": 67,
+          "left": 60,
+          "height": 37,
+          "width": 50
+        },
+        {
+          "top": 33,
+          "left": 8,
+          "height": 57,
+          "width": 33
+        }
+      ]
+    }
+  ],
+  "Abyssinian_205.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 45
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 135
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 136
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 137
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 135
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 136
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 137
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 135,
+      "masks": [
+        {
+          "top": 80,
+          "left": 74,
+          "height": 33,
+          "width": 49
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 136,
+      "masks": [
+        {
+          "top": 67,
+          "left": 7,
+          "height": 34,
+          "width": 47
+        },
+        {
+          "top": 25,
+          "left": 54,
+          "height": 37,
+          "width": 43
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 137,
+      "masks": [
+        {
+          "top": 52,
+          "left": 41,
+          "height": 56,
+          "width": 34
+        },
+        {
+          "top": 29,
+          "left": 62,
+          "height": 31,
+          "width": 61
+        },
+        {
+          "top": 51,
+          "left": 65,
+          "height": 43,
+          "width": 44
+        }
+      ]
+    }
+  ],
+  "Abyssinian_206.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 46
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 166
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 167
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 168
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 166
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 167
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 168
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 166,
+      "masks": [
+        {
+          "top": 77,
+          "left": 52,
+          "height": 46,
+          "width": 35
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 167,
+      "masks": [
+        {
+          "top": 11,
+          "left": 42,
+          "height": 44,
+          "width": 37
+        },
+        {
+          "top": 10,
+          "left": 66,
+          "height": 37,
+          "width": 43
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 168,
+      "masks": [
+        {
+          "top": 66,
+          "left": 47,
+          "height": 34,
+          "width": 55
+        },
+        {
+          "top": 28,
+          "left": 68,
+          "height": 42,
+          "width": 45
+        },
+        {
+          "top": 69,
+          "left": 65,
+          "height": 49,
+          "width": 38
+        }
+      ]
+    }
+  ],
+  "Abyssinian_207.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 47
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 197
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 198
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 199
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 197
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 198
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 199
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 197,
+      "masks": [
+        {
+          "top": 16,
+          "left": 20,
+          "height": 35,
+          "width": 46
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 198,
+      "masks": [
+        {
+          "top": 61,
+          "left": 12,
+          "height": 53,
+          "width": 30
+        },
+        {
+          "top": 61,
+          "left": 58,
+          "height": 32,
+          "width": 49
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 199,
+      "masks": [
+        {
+          "top": 50,
+          "left": 35,
+          "height": 43,
+          "width": 44
+        },
+        {
+          "top": 39,
+          "left": 1,
+          "height": 35,
+          "width": 53
+        },
+        {
+          "top": 65,
+          "left": 44,
+          "height": 39,
+          "width": 48
+        }
+      ]
+    }
+  ],
+  "Abyssinian_20.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 48
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 228
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 229
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 230
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 228
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 229
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 230
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 228,
+      "masks": [
+        {
+          "top": 89,
+          "left": 28,
+          "height": 29,
+          "width": 55
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 229,
+      "masks": [
+        {
+          "top": 28,
+          "left": 68,
+          "height": 35,
+          "width": 46
+        },
+        {
+          "top": 33,
+          "left": 80,
+          "height": 37,
+          "width": 43
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 230,
+      "masks": [
+        {
+          "top": 38,
+          "left": 68,
+          "height": 35,
+          "width": 54
+        },
+        {
+          "top": 55,
+          "left": 3,
+          "height": 60,
+          "width": 31
+        },
+        {
+          "top": 61,
+          "left": 52,
+          "height": 39,
+          "width": 48
+        }
+      ]
+    }
+  ],
+  "Abyssinian_210.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 49
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 259
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 260
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 261
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 259
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 260
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 261
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 259,
+      "masks": [
+        {
+          "top": 70,
+          "left": 11,
+          "height": 54,
+          "width": 30
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 260,
+      "masks": [
+        {
+          "top": 52,
+          "left": 72,
+          "height": 44,
+          "width": 36
+        },
+        {
+          "top": 27,
+          "left": 7,
+          "height": 34,
+          "width": 47
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 261,
+      "masks": [
+        {
+          "top": 3,
+          "left": 22,
+          "height": 40,
+          "width": 46
+        },
+        {
+          "top": 69,
+          "left": 33,
+          "height": 31,
+          "width": 60
+        },
+        {
+          "top": 85,
+          "left": 33,
+          "height": 33,
+          "width": 56
+        }
+      ]
+    }
+  ],
+  "Abyssinian_212.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 50
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 290
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 291
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 292
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 290
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 291
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 292
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 290,
+      "masks": [
+        {
+          "top": 43,
+          "left": 62,
+          "height": 35,
+          "width": 46
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 291,
+      "masks": [
+        {
+          "top": 93,
+          "left": 64,
+          "height": 33,
+          "width": 49
+        },
+        {
+          "top": 49,
+          "left": 69,
+          "height": 30,
+          "width": 53
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 292,
+      "masks": [
+        {
+          "top": 37,
+          "left": 19,
+          "height": 34,
+          "width": 56
+        },
+        {
+          "top": 41,
+          "left": 24,
+          "height": 35,
+          "width": 53
+        },
+        {
+          "top": 71,
+          "left": 41,
+          "height": 31,
+          "width": 60
+        }
+      ]
+    }
+  ],
+  "Abyssinian_213.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 51
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 321
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 322
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 323
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 321
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 322
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 323
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 321,
+      "masks": [
+        {
+          "top": 16,
+          "left": 47,
+          "height": 42,
+          "width": 38
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 322,
+      "masks": [
+        {
+          "top": 53,
+          "left": 19,
+          "height": 30,
+          "width": 54
+        },
+        {
+          "top": 36,
+          "left": 40,
+          "height": 52,
+          "width": 31
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 323,
+      "masks": [
+        {
+          "top": 92,
+          "left": 14,
+          "height": 34,
+          "width": 55
+        },
+        {
+          "top": 39,
+          "left": 6,
+          "height": 52,
+          "width": 36
+        },
+        {
+          "top": 85,
+          "left": 56,
+          "height": 38,
+          "width": 50
+        }
+      ]
+    }
+  ],
+  "Abyssinian_215.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 52
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 352
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 353
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 354
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 352
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 353
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 354
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 352,
+      "masks": [
+        {
+          "top": 18,
+          "left": 8,
+          "height": 29,
+          "width": 54
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 353,
+      "masks": [
+        {
+          "top": 48,
+          "left": 92,
+          "height": 50,
+          "width": 32
+        },
+        {
+          "top": 63,
+          "left": 51,
+          "height": 50,
+          "width": 32
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 354,
+      "masks": [
+        {
+          "top": 11,
+          "left": 85,
+          "height": 48,
+          "width": 39
+        },
+        {
+          "top": 19,
+          "left": 0,
+          "height": 54,
+          "width": 35
+        },
+        {
+          "top": 29,
+          "left": 80,
+          "height": 53,
+          "width": 35
+        }
+      ]
+    }
+  ],
+  "Abyssinian_216.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 53
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 383
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 384
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 385
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 383
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 384
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 385
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 383,
+      "masks": [
+        {
+          "top": 67,
+          "left": 51,
+          "height": 35,
+          "width": 45
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 384,
+      "masks": [
+        {
+          "top": 49,
+          "left": 6,
+          "height": 33,
+          "width": 49
+        },
+        {
+          "top": 94,
+          "left": 3,
+          "height": 31,
+          "width": 52
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 385,
+      "masks": [
+        {
+          "top": 63,
+          "left": 50,
+          "height": 31,
+          "width": 60
+        },
+        {
+          "top": 2,
+          "left": 48,
+          "height": 38,
+          "width": 49
+        },
+        {
+          "top": 48,
+          "left": 47,
+          "height": 48,
+          "width": 39
+        }
+      ]
+    }
+  ],
+  "Abyssinian_217.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 54
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 414
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 415
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 416
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 414
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 415
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 416
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 414,
+      "masks": [
+        {
+          "top": 44,
+          "left": 77,
+          "height": 38,
+          "width": 43
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 415,
+      "masks": [
+        {
+          "top": 31,
+          "left": 35,
+          "height": 31,
+          "width": 52
+        },
+        {
+          "top": 71,
+          "left": 17,
+          "height": 45,
+          "width": 36
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 416,
+      "masks": [
+        {
+          "top": 0,
+          "left": 64,
+          "height": 46,
+          "width": 41
+        },
+        {
+          "top": 84,
+          "left": 75,
+          "height": 37,
+          "width": 51
+        },
+        {
+          "top": 40,
+          "left": 56,
+          "height": 45,
+          "width": 42
+        }
+      ]
+    }
+  ],
+  "Abyssinian_219.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 55
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 445
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 446
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 447
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 445
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 446
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 447
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 445,
+      "masks": [
+        {
+          "top": 31,
+          "left": 10,
+          "height": 35,
+          "width": 46
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 446,
+      "masks": [
+        {
+          "top": 97,
+          "left": 69,
+          "height": 31,
+          "width": 52
+        },
+        {
+          "top": 79,
+          "left": 27,
+          "height": 32,
+          "width": 49
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 447,
+      "masks": [
+        {
+          "top": 67,
+          "left": 1,
+          "height": 41,
+          "width": 46
+        },
+        {
+          "top": 52,
+          "left": 16,
+          "height": 37,
+          "width": 51
+        },
+        {
+          "top": 48,
+          "left": 15,
+          "height": 41,
+          "width": 45
+        }
+      ]
+    }
+  ],
+  "Abyssinian_21.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 56
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 476
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 477
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 478
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 476
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 477
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 478
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 476,
+      "masks": [
+        {
+          "top": 75,
+          "left": 35,
+          "height": 36,
+          "width": 45
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 477,
+      "masks": [
+        {
+          "top": 6,
+          "left": 38,
+          "height": 33,
+          "width": 48
+        },
+        {
+          "top": 71,
+          "left": 74,
+          "height": 32,
+          "width": 50
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 478,
+      "masks": [
+        {
+          "top": 19,
+          "left": 14,
+          "height": 31,
+          "width": 60
+        },
+        {
+          "top": 37,
+          "left": 50,
+          "height": 38,
+          "width": 49
+        },
+        {
+          "top": 72,
+          "left": 71,
+          "height": 44,
+          "width": 43
+        }
+      ]
+    }
+  ],
+  "Abyssinian_220.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 57
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 507
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 508
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 509
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 507
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 508
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 509
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 507,
+      "masks": [
+        {
+          "top": 79,
+          "left": 73,
+          "height": 36,
+          "width": 44
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 508,
+      "masks": [
+        {
+          "top": 84,
+          "left": 53,
+          "height": 35,
+          "width": 46
+        },
+        {
+          "top": 12,
+          "left": 33,
+          "height": 36,
+          "width": 45
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 509,
+      "masks": [
+        {
+          "top": 53,
+          "left": 26,
+          "height": 35,
+          "width": 54
+        },
+        {
+          "top": 89,
+          "left": 17,
+          "height": 31,
+          "width": 60
+        },
+        {
+          "top": 34,
+          "left": 71,
+          "height": 52,
+          "width": 36
+        }
+      ]
+    }
+  ],
+  "Abyssinian_221.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 58
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 538
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 539
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 540
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 538
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 539
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 540
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 538,
+      "masks": [
+        {
+          "top": 6,
+          "left": 51,
+          "height": 42,
+          "width": 38
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 539,
+      "masks": [
+        {
+          "top": 71,
+          "left": 5,
+          "height": 41,
+          "width": 39
+        },
+        {
+          "top": 88,
+          "left": 47,
+          "height": 30,
+          "width": 53
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 540,
+      "masks": [
+        {
+          "top": 85,
+          "left": 47,
+          "height": 36,
+          "width": 52
+        },
+        {
+          "top": 40,
+          "left": 77,
+          "height": 59,
+          "width": 32
+        },
+        {
+          "top": 51,
+          "left": 11,
+          "height": 40,
+          "width": 47
+        }
+      ]
+    }
+  ],
+  "Abyssinian_223.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 59
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 569
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 570
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 571
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 569
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 570
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 571
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 569,
+      "masks": [
+        {
+          "top": 68,
+          "left": 7,
+          "height": 33,
+          "width": 48
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 570,
+      "masks": [
+        {
+          "top": 1,
+          "left": 42,
+          "height": 51,
+          "width": 31
+        },
+        {
+          "top": 33,
+          "left": 42,
+          "height": 53,
+          "width": 30
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 571,
+      "masks": [
+        {
+          "top": 14,
+          "left": 79,
+          "height": 51,
+          "width": 37
+        },
+        {
+          "top": 6,
+          "left": 16,
+          "height": 33,
+          "width": 56
+        },
+        {
+          "top": 22,
+          "left": 67,
+          "height": 57,
+          "width": 33
+        }
+      ]
+    }
+  ],
+  "Abyssinian_224.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 60
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 600
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 601
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 602
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 600
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 601
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 602
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 600,
+      "masks": [
+        {
+          "top": 44,
+          "left": 56,
+          "height": 29,
+          "width": 55
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 601,
+      "masks": [
+        {
+          "top": 72,
+          "left": 69,
+          "height": 45,
+          "width": 35
+        },
+        {
+          "top": 13,
+          "left": 59,
+          "height": 31,
+          "width": 51
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 602,
+      "masks": [
+        {
+          "top": 42,
+          "left": 67,
+          "height": 41,
+          "width": 45
+        },
+        {
+          "top": 59,
+          "left": 61,
+          "height": 34,
+          "width": 55
+        },
+        {
+          "top": 13,
+          "left": 69,
+          "height": 42,
+          "width": 45
+        }
+      ]
+    }
+  ],
+  "Abyssinian_225.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 61
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 631
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 632
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 633
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 631
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 632
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 633
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 631,
+      "masks": [
+        {
+          "top": 43,
+          "left": 26,
+          "height": 31,
+          "width": 52
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 632,
+      "masks": [
+        {
+          "top": 68,
+          "left": 4,
+          "height": 39,
+          "width": 41
+        },
+        {
+          "top": 0,
+          "left": 38,
+          "height": 30,
+          "width": 54
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 633,
+      "masks": [
+        {
+          "top": 6,
+          "left": 44,
+          "height": 58,
+          "width": 32
+        },
+        {
+          "top": 1,
+          "left": 46,
+          "height": 60,
+          "width": 31
+        },
+        {
+          "top": 22,
+          "left": 64,
+          "height": 49,
+          "width": 38
+        }
+      ]
+    }
+  ],
+  "Abyssinian_226.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 62
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 662
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 663
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 664
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 662
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 663
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 664
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 662,
+      "masks": [
+        {
+          "top": 3,
+          "left": 30,
+          "height": 33,
+          "width": 48
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 663,
+      "masks": [
+        {
+          "top": 78,
+          "left": 15,
+          "height": 29,
+          "width": 54
+        },
+        {
+          "top": 83,
+          "left": 66,
+          "height": 37,
+          "width": 43
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 664,
+      "masks": [
+        {
+          "top": 65,
+          "left": 60,
+          "height": 33,
+          "width": 56
+        },
+        {
+          "top": 95,
+          "left": 17,
+          "height": 31,
+          "width": 60
+        },
+        {
+          "top": 16,
+          "left": 51,
+          "height": 41,
+          "width": 46
+        }
+      ]
+    }
+  ],
+  "Abyssinian_228.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 63
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 693
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 694
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 695
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 693
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 694
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 695
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 693,
+      "masks": [
+        {
+          "top": 74,
+          "left": 84,
+          "height": 36,
+          "width": 44
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 694,
+      "masks": [
+        {
+          "top": 35,
+          "left": 12,
+          "height": 32,
+          "width": 50
+        },
+        {
+          "top": 54,
+          "left": 37,
+          "height": 37,
+          "width": 43
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 695,
+      "masks": [
+        {
+          "top": 31,
+          "left": 68,
+          "height": 43,
+          "width": 43
+        },
+        {
+          "top": 70,
+          "left": 54,
+          "height": 32,
+          "width": 58
+        },
+        {
+          "top": 39,
+          "left": 19,
+          "height": 34,
+          "width": 55
+        }
+      ]
+    }
+  ],
+  "Abyssinian_22.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 64
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 724
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 725
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 726
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 724
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 725
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 726
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 724,
+      "masks": [
+        {
+          "top": 37,
+          "left": 5,
+          "height": 30,
+          "width": 54
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 725,
+      "masks": [
+        {
+          "top": 6,
+          "left": 0,
+          "height": 51,
+          "width": 32
+        },
+        {
+          "top": 41,
+          "left": 70,
+          "height": 35,
+          "width": 46
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 726,
+      "masks": [
+        {
+          "top": 45,
+          "left": 52,
+          "height": 46,
+          "width": 41
+        },
+        {
+          "top": 50,
+          "left": 81,
+          "height": 55,
+          "width": 34
+        },
+        {
+          "top": 10,
+          "left": 61,
+          "height": 33,
+          "width": 57
+        }
+      ]
+    }
+  ],
+  "Abyssinian_230.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 65
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 755
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 756
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 757
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 755
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 756
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 757
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 755,
+      "masks": [
+        {
+          "top": 51,
+          "left": 42,
+          "height": 30,
+          "width": 54
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 756,
+      "masks": [
+        {
+          "top": 34,
+          "left": 79,
+          "height": 37,
+          "width": 44
+        },
+        {
+          "top": 47,
+          "left": 13,
+          "height": 30,
+          "width": 54
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 757,
+      "masks": [
+        {
+          "top": 23,
+          "left": 58,
+          "height": 41,
+          "width": 45
+        },
+        {
+          "top": 36,
+          "left": 53,
+          "height": 49,
+          "width": 38
+        },
+        {
+          "top": 22,
+          "left": 33,
+          "height": 31,
+          "width": 60
+        }
+      ]
+    }
+  ],
+  "Abyssinian_232.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 66
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 786
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 787
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 788
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 786
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 787
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 788
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 786,
+      "masks": [
+        {
+          "top": 6,
+          "left": 35,
+          "height": 30,
+          "width": 52
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 787,
+      "masks": [
+        {
+          "top": 80,
+          "left": 63,
+          "height": 41,
+          "width": 39
+        },
+        {
+          "top": 78,
+          "left": 11,
+          "height": 47,
+          "width": 34
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 788,
+      "masks": [
+        {
+          "top": 1,
+          "left": 45,
+          "height": 37,
+          "width": 51
+        },
+        {
+          "top": 17,
+          "left": 67,
+          "height": 49,
+          "width": 38
+        },
+        {
+          "top": 20,
+          "left": 40,
+          "height": 48,
+          "width": 39
+        }
+      ]
+    }
+  ],
+  "Abyssinian_24.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 67
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 817
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 818
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 819
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 817
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 818
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 819
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 817,
+      "masks": [
+        {
+          "top": 40,
+          "left": 44,
+          "height": 48,
+          "width": 33
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 818,
+      "masks": [
+        {
+          "top": 40,
+          "left": 68,
+          "height": 36,
+          "width": 44
+        },
+        {
+          "top": 9,
+          "left": 68,
+          "height": 36,
+          "width": 44
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 819,
+      "masks": [
+        {
+          "top": 21,
+          "left": 16,
+          "height": 42,
+          "width": 44
+        },
+        {
+          "top": 16,
+          "left": 36,
+          "height": 45,
+          "width": 42
+        },
+        {
+          "top": 43,
+          "left": 38,
+          "height": 37,
+          "width": 51
+        }
+      ]
+    }
+  ],
+  "Abyssinian_25.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 68
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 848
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 849
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 850
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 848
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 849
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 850
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 848,
+      "masks": [
+        {
+          "top": 53,
+          "left": 13,
+          "height": 30,
+          "width": 53
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 849,
+      "masks": [
+        {
+          "top": 6,
+          "left": 84,
+          "height": 56,
+          "width": 28
+        },
+        {
+          "top": 42,
+          "left": 2,
+          "height": 42,
+          "width": 38
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 850,
+      "masks": [
+        {
+          "top": 63,
+          "left": 57,
+          "height": 33,
+          "width": 57
+        },
+        {
+          "top": 56,
+          "left": 14,
+          "height": 54,
+          "width": 34
+        },
+        {
+          "top": 10,
+          "left": 6,
+          "height": 45,
+          "width": 42
+        }
+      ]
+    }
+  ],
+  "Abyssinian_26.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 69
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 879
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 880
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 881
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 879
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 880
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 881
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 879,
+      "masks": [
+        {
+          "top": 68,
+          "left": 46,
+          "height": 51,
+          "width": 31
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 880,
+      "masks": [
+        {
+          "top": 11,
+          "left": 32,
+          "height": 28,
+          "width": 57
+        },
+        {
+          "top": 85,
+          "left": 24,
+          "height": 28,
+          "width": 56
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 881,
+      "masks": [
+        {
+          "top": 21,
+          "left": 57,
+          "height": 35,
+          "width": 53
+        },
+        {
+          "top": 92,
+          "left": 17,
+          "height": 36,
+          "width": 53
+        },
+        {
+          "top": 51,
+          "left": 71,
+          "height": 35,
+          "width": 53
+        }
+      ]
+    }
+  ],
+  "Abyssinian_27.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 70
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 910
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 911
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 912
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 910
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 911
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 912
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 910,
+      "masks": [
+        {
+          "top": 57,
+          "left": 11,
+          "height": 33,
+          "width": 48
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 911,
+      "masks": [
+        {
+          "top": 91,
+          "left": 50,
+          "height": 37,
+          "width": 44
+        },
+        {
+          "top": 22,
+          "left": 66,
+          "height": 48,
+          "width": 33
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 912,
+      "masks": [
+        {
+          "top": 39,
+          "left": 24,
+          "height": 38,
+          "width": 49
+        },
+        {
+          "top": 81,
+          "left": 20,
+          "height": 37,
+          "width": 50
+        },
+        {
+          "top": 3,
+          "left": 4,
+          "height": 38,
+          "width": 49
+        }
+      ]
+    }
+  ],
+  "Abyssinian_29.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 71
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 941
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 942
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 943
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 941
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 942
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 943
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 941,
+      "masks": [
+        {
+          "top": 68,
+          "left": 50,
+          "height": 39,
+          "width": 41
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 942,
+      "masks": [
+        {
+          "top": 27,
+          "left": 27,
+          "height": 28,
+          "width": 56
+        },
+        {
+          "top": 33,
+          "left": 62,
+          "height": 34,
+          "width": 48
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 943,
+      "masks": [
+        {
+          "top": 68,
+          "left": 16,
+          "height": 38,
+          "width": 50
+        },
+        {
+          "top": 22,
+          "left": 56,
+          "height": 35,
+          "width": 54
+        },
+        {
+          "top": 39,
+          "left": 35,
+          "height": 40,
+          "width": 47
+        }
+      ]
+    }
+  ],
+  "Abyssinian_2.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 72
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 972
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 973
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 974
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 972
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 973
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 974
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 972,
+      "masks": [
+        {
+          "top": 68,
+          "left": 52,
+          "height": 32,
+          "width": 51
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 973,
+      "masks": [
+        {
+          "top": 6,
+          "left": 53,
+          "height": 47,
+          "width": 34
+        },
+        {
+          "top": 35,
+          "left": 73,
+          "height": 32,
+          "width": 50
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 974,
+      "masks": [
+        {
+          "top": 42,
+          "left": 65,
+          "height": 32,
+          "width": 59
+        },
+        {
+          "top": 78,
+          "left": 74,
+          "height": 36,
+          "width": 51
+        },
+        {
+          "top": 1,
+          "left": 50,
+          "height": 35,
+          "width": 54
+        }
+      ]
+    }
+  ],
+  "Abyssinian_30.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 73
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1003
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1004
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1005
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1003
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1004
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1005
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1003,
+      "masks": [
+        {
+          "top": 46,
+          "left": 28,
+          "height": 36,
+          "width": 45
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1004,
+      "masks": [
+        {
+          "top": 78,
+          "left": 69,
+          "height": 38,
+          "width": 43
+        },
+        {
+          "top": 65,
+          "left": 24,
+          "height": 32,
+          "width": 50
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1005,
+      "masks": [
+        {
+          "top": 51,
+          "left": 68,
+          "height": 39,
+          "width": 48
+        },
+        {
+          "top": 73,
+          "left": 81,
+          "height": 41,
+          "width": 46
+        },
+        {
+          "top": 45,
+          "left": 22,
+          "height": 30,
+          "width": 61
+        }
+      ]
+    }
+  ],
+  "Abyssinian_31.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 74
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1034
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1035
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1036
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1034
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1035
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1036
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1034,
+      "masks": [
+        {
+          "top": 80,
+          "left": 11,
+          "height": 30,
+          "width": 53
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1035,
+      "masks": [
+        {
+          "top": 56,
+          "left": 17,
+          "height": 31,
+          "width": 51
+        },
+        {
+          "top": 9,
+          "left": 6,
+          "height": 42,
+          "width": 38
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1036,
+      "masks": [
+        {
+          "top": 84,
+          "left": 11,
+          "height": 41,
+          "width": 46
+        },
+        {
+          "top": 4,
+          "left": 9,
+          "height": 34,
+          "width": 54
+        },
+        {
+          "top": 18,
+          "left": 0,
+          "height": 42,
+          "width": 44
+        }
+      ]
+    }
+  ],
+  "Abyssinian_32.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 75
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1065
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1066
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1067
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1065
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1066
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1067
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1065,
+      "masks": [
+        {
+          "top": 15,
+          "left": 47,
+          "height": 29,
+          "width": 54
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1066,
+      "masks": [
+        {
+          "top": 67,
+          "left": 58,
+          "height": 29,
+          "width": 54
+        },
+        {
+          "top": 85,
+          "left": 65,
+          "height": 34,
+          "width": 47
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1067,
+      "masks": [
+        {
+          "top": 49,
+          "left": 22,
+          "height": 60,
+          "width": 31
+        },
+        {
+          "top": 71,
+          "left": 40,
+          "height": 44,
+          "width": 42
+        },
+        {
+          "top": 64,
+          "left": 16,
+          "height": 39,
+          "width": 48
+        }
+      ]
+    }
+  ],
+  "Abyssinian_33.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 76
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1096
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1097
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1098
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1096
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1097
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1098
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1096,
+      "masks": [
+        {
+          "top": 15,
+          "left": 53,
+          "height": 33,
+          "width": 48
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1097,
+      "masks": [
+        {
+          "top": 2,
+          "left": 55,
+          "height": 35,
+          "width": 45
+        },
+        {
+          "top": 63,
+          "left": 69,
+          "height": 33,
+          "width": 48
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1098,
+      "masks": [
+        {
+          "top": 67,
+          "left": 38,
+          "height": 49,
+          "width": 38
+        },
+        {
+          "top": 69,
+          "left": 66,
+          "height": 37,
+          "width": 50
+        },
+        {
+          "top": 10,
+          "left": 81,
+          "height": 40,
+          "width": 46
+        }
+      ]
+    }
+  ],
+  "Abyssinian_36.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 77
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1127
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1128
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1129
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1127
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1128
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1129
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1127,
+      "masks": [
+        {
+          "top": 32,
+          "left": 12,
+          "height": 36,
+          "width": 45
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1128,
+      "masks": [
+        {
+          "top": 16,
+          "left": 54,
+          "height": 51,
+          "width": 31
+        },
+        {
+          "top": 74,
+          "left": 55,
+          "height": 49,
+          "width": 33
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1129,
+      "masks": [
+        {
+          "top": 62,
+          "left": 39,
+          "height": 32,
+          "width": 59
+        },
+        {
+          "top": 79,
+          "left": 6,
+          "height": 32,
+          "width": 58
+        },
+        {
+          "top": 17,
+          "left": 76,
+          "height": 46,
+          "width": 40
+        }
+      ]
+    }
+  ],
+  "Abyssinian_37.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 78
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1158
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1159
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1160
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1158
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1159
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1160
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1158,
+      "masks": [
+        {
+          "top": 9,
+          "left": 9,
+          "height": 31,
+          "width": 51
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1159,
+      "masks": [
+        {
+          "top": 82,
+          "left": 62,
+          "height": 45,
+          "width": 35
+        },
+        {
+          "top": 43,
+          "left": 78,
+          "height": 44,
+          "width": 36
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1160,
+      "masks": [
+        {
+          "top": 28,
+          "left": 58,
+          "height": 40,
+          "width": 47
+        },
+        {
+          "top": 73,
+          "left": 47,
+          "height": 41,
+          "width": 45
+        },
+        {
+          "top": 1,
+          "left": 27,
+          "height": 31,
+          "width": 60
+        }
+      ]
+    }
+  ],
+  "Abyssinian_3.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 79
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1189
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1190
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1191
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1189
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1190
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1191
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1189,
+      "masks": [
+        {
+          "top": 67,
+          "left": 43,
+          "height": 34,
+          "width": 47
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1190,
+      "masks": [
+        {
+          "top": 66,
+          "left": 69,
+          "height": 37,
+          "width": 43
+        },
+        {
+          "top": 7,
+          "left": 42,
+          "height": 28,
+          "width": 57
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1191,
+      "masks": [
+        {
+          "top": 36,
+          "left": 43,
+          "height": 41,
+          "width": 46
+        },
+        {
+          "top": 10,
+          "left": 14,
+          "height": 35,
+          "width": 54
+        },
+        {
+          "top": 29,
+          "left": 48,
+          "height": 60,
+          "width": 31
+        }
+      ]
+    }
+  ],
+  "Abyssinian_40.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 80
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1220
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1221
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1222
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1220
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1221
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1222
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1220,
+      "masks": [
+        {
+          "top": 81,
+          "left": 39,
+          "height": 42,
+          "width": 38
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1221,
+      "masks": [
+        {
+          "top": 53,
+          "left": 34,
+          "height": 52,
+          "width": 31
+        },
+        {
+          "top": 13,
+          "left": 75,
+          "height": 34,
+          "width": 48
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1222,
+      "masks": [
+        {
+          "top": 52,
+          "left": 74,
+          "height": 37,
+          "width": 50
+        },
+        {
+          "top": 40,
+          "left": 73,
+          "height": 34,
+          "width": 54
+        },
+        {
+          "top": 36,
+          "left": 68,
+          "height": 39,
+          "width": 48
+        }
+      ]
+    }
+  ],
+  "Abyssinian_43.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 81
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1251
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1252
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1253
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1251
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1252
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1253
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1251,
+      "masks": [
+        {
+          "top": 1,
+          "left": 40,
+          "height": 32,
+          "width": 50
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1252,
+      "masks": [
+        {
+          "top": 38,
+          "left": 76,
+          "height": 31,
+          "width": 52
+        },
+        {
+          "top": 90,
+          "left": 44,
+          "height": 36,
+          "width": 44
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1253,
+      "masks": [
+        {
+          "top": 86,
+          "left": 22,
+          "height": 34,
+          "width": 55
+        },
+        {
+          "top": 0,
+          "left": 61,
+          "height": 40,
+          "width": 46
+        },
+        {
+          "top": 7,
+          "left": 3,
+          "height": 43,
+          "width": 44
+        }
+      ]
+    }
+  ],
+  "Abyssinian_44.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 82
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1282
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1283
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1284
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1282
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1283
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1284
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1282,
+      "masks": [
+        {
+          "top": 25,
+          "left": 26,
+          "height": 53,
+          "width": 30
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1283,
+      "masks": [
+        {
+          "top": 1,
+          "left": 48,
+          "height": 40,
+          "width": 40
+        },
+        {
+          "top": 56,
+          "left": 15,
+          "height": 31,
+          "width": 51
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1284,
+      "masks": [
+        {
+          "top": 61,
+          "left": 19,
+          "height": 39,
+          "width": 48
+        },
+        {
+          "top": 32,
+          "left": 8,
+          "height": 50,
+          "width": 38
+        },
+        {
+          "top": 50,
+          "left": 12,
+          "height": 56,
+          "width": 33
+        }
+      ]
+    }
+  ],
+  "Abyssinian_45.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 83
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1313
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1314
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1315
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1313
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1314
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1315
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1313,
+      "masks": [
+        {
+          "top": 54,
+          "left": 26,
+          "height": 30,
+          "width": 54
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1314,
+      "masks": [
+        {
+          "top": 53,
+          "left": 71,
+          "height": 38,
+          "width": 42
+        },
+        {
+          "top": 52,
+          "left": 24,
+          "height": 30,
+          "width": 53
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1315,
+      "masks": [
+        {
+          "top": 49,
+          "left": 27,
+          "height": 41,
+          "width": 45
+        },
+        {
+          "top": 55,
+          "left": 1,
+          "height": 46,
+          "width": 41
+        },
+        {
+          "top": 62,
+          "left": 68,
+          "height": 31,
+          "width": 60
+        }
+      ]
+    }
+  ],
+  "Abyssinian_46.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 84
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1344
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1345
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1346
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1344
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1345
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1346
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1344,
+      "masks": [
+        {
+          "top": 49,
+          "left": 28,
+          "height": 38,
+          "width": 42
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1345,
+      "masks": [
+        {
+          "top": 57,
+          "left": 66,
+          "height": 50,
+          "width": 32
+        },
+        {
+          "top": 27,
+          "left": 42,
+          "height": 33,
+          "width": 48
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1346,
+      "masks": [
+        {
+          "top": 17,
+          "left": 8,
+          "height": 44,
+          "width": 42
+        },
+        {
+          "top": 50,
+          "left": 47,
+          "height": 53,
+          "width": 35
+        },
+        {
+          "top": 26,
+          "left": 70,
+          "height": 46,
+          "width": 41
+        }
+      ]
+    }
+  ],
+  "Abyssinian_47.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 85
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1375
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1376
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1377
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1375
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1376
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1377
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1375,
+      "masks": [
+        {
+          "top": 6,
+          "left": 75,
+          "height": 52,
+          "width": 31
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1376,
+      "masks": [
+        {
+          "top": 34,
+          "left": 61,
+          "height": 36,
+          "width": 44
+        },
+        {
+          "top": 41,
+          "left": 63,
+          "height": 32,
+          "width": 50
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1377,
+      "masks": [
+        {
+          "top": 0,
+          "left": 61,
+          "height": 51,
+          "width": 37
+        },
+        {
+          "top": 63,
+          "left": 55,
+          "height": 54,
+          "width": 35
+        },
+        {
+          "top": 18,
+          "left": 55,
+          "height": 48,
+          "width": 39
+        }
+      ]
+    }
+  ],
+  "Abyssinian_48.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 86
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1406
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1407
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1408
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1406
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1407
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1408
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1406,
+      "masks": [
+        {
+          "top": 68,
+          "left": 60,
+          "height": 29,
+          "width": 55
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1407,
+      "masks": [
+        {
+          "top": 59,
+          "left": 12,
+          "height": 50,
+          "width": 32
+        },
+        {
+          "top": 73,
+          "left": 31,
+          "height": 30,
+          "width": 53
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1408,
+      "masks": [
+        {
+          "top": 14,
+          "left": 15,
+          "height": 39,
+          "width": 48
+        },
+        {
+          "top": 14,
+          "left": 43,
+          "height": 43,
+          "width": 43
+        },
+        {
+          "top": 67,
+          "left": 74,
+          "height": 36,
+          "width": 52
+        }
+      ]
+    }
+  ],
+  "Abyssinian_49.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 87
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1437
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1438
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1439
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1437
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1438
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1439
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1437,
+      "masks": [
+        {
+          "top": 75,
+          "left": 30,
+          "height": 44,
+          "width": 36
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1438,
+      "masks": [
+        {
+          "top": 95,
+          "left": 60,
+          "height": 29,
+          "width": 56
+        },
+        {
+          "top": 74,
+          "left": 54,
+          "height": 30,
+          "width": 54
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1439,
+      "masks": [
+        {
+          "top": 19,
+          "left": 30,
+          "height": 39,
+          "width": 48
+        },
+        {
+          "top": 90,
+          "left": 44,
+          "height": 34,
+          "width": 54
+        },
+        {
+          "top": 67,
+          "left": 56,
+          "height": 32,
+          "width": 58
+        }
+      ]
+    }
+  ],
+  "Abyssinian_4.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 88
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1468
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1469
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1470
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1468
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1469
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1470
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1468,
+      "masks": [
+        {
+          "top": 87,
+          "left": 22,
+          "height": 30,
+          "width": 53
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1469,
+      "masks": [
+        {
+          "top": 20,
+          "left": 63,
+          "height": 53,
+          "width": 30
+        },
+        {
+          "top": 33,
+          "left": 12,
+          "height": 36,
+          "width": 44
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1470,
+      "masks": [
+        {
+          "top": 50,
+          "left": 16,
+          "height": 30,
+          "width": 61
+        },
+        {
+          "top": 86,
+          "left": 29,
+          "height": 34,
+          "width": 54
+        },
+        {
+          "top": 66,
+          "left": 61,
+          "height": 33,
+          "width": 57
+        }
+      ]
+    }
+  ],
+  "Abyssinian_50.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 89
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1499
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1500
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1501
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1499
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1500
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1501
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1499,
+      "masks": [
+        {
+          "top": 22,
+          "left": 47,
+          "height": 39,
+          "width": 41
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1500,
+      "masks": [
+        {
+          "top": 53,
+          "left": 43,
+          "height": 41,
+          "width": 39
+        },
+        {
+          "top": 47,
+          "left": 40,
+          "height": 51,
+          "width": 32
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1501,
+      "masks": [
+        {
+          "top": 54,
+          "left": 21,
+          "height": 36,
+          "width": 52
+        },
+        {
+          "top": 36,
+          "left": 40,
+          "height": 57,
+          "width": 33
+        },
+        {
+          "top": 84,
+          "left": 33,
+          "height": 32,
+          "width": 59
+        }
+      ]
+    }
+  ],
+  "Abyssinian_51.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 90
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1530
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1531
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1532
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1530
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1531
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1532
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1530,
+      "masks": [
+        {
+          "top": 34,
+          "left": 34,
+          "height": 54,
+          "width": 30
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1531,
+      "masks": [
+        {
+          "top": 26,
+          "left": 57,
+          "height": 32,
+          "width": 50
+        },
+        {
+          "top": 83,
+          "left": 30,
+          "height": 29,
+          "width": 54
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1532,
+      "masks": [
+        {
+          "top": 22,
+          "left": 37,
+          "height": 32,
+          "width": 58
+        },
+        {
+          "top": 11,
+          "left": 82,
+          "height": 45,
+          "width": 42
+        },
+        {
+          "top": 49,
+          "left": 13,
+          "height": 41,
+          "width": 45
+        }
+      ]
+    }
+  ],
+  "Abyssinian_52.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 91
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1561
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1562
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1563
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1561
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1562
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1563
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1561,
+      "masks": [
+        {
+          "top": 96,
+          "left": 50,
+          "height": 31,
+          "width": 51
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1562,
+      "masks": [
+        {
+          "top": 50,
+          "left": 26,
+          "height": 40,
+          "width": 40
+        },
+        {
+          "top": 71,
+          "left": 18,
+          "height": 34,
+          "width": 47
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1563,
+      "masks": [
+        {
+          "top": 40,
+          "left": 46,
+          "height": 32,
+          "width": 59
+        },
+        {
+          "top": 1,
+          "left": 52,
+          "height": 44,
+          "width": 42
+        },
+        {
+          "top": 74,
+          "left": 28,
+          "height": 32,
+          "width": 58
+        }
+      ]
+    }
+  ],
+  "Abyssinian_54.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 92
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1592
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1593
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1594
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1592
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1593
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1594
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1592,
+      "masks": [
+        {
+          "top": 25,
+          "left": 31,
+          "height": 39,
+          "width": 41
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1593,
+      "masks": [
+        {
+          "top": 84,
+          "left": 40,
+          "height": 37,
+          "width": 43
+        },
+        {
+          "top": 63,
+          "left": 51,
+          "height": 31,
+          "width": 52
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1594,
+      "masks": [
+        {
+          "top": 20,
+          "left": 4,
+          "height": 32,
+          "width": 59
+        },
+        {
+          "top": 36,
+          "left": 36,
+          "height": 55,
+          "width": 34
+        },
+        {
+          "top": 11,
+          "left": 57,
+          "height": 36,
+          "width": 52
+        }
+      ]
+    }
+  ],
+  "Abyssinian_55.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 93
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1623
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1624
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1625
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1623
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1624
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1625
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1623,
+      "masks": [
+        {
+          "top": 17,
+          "left": 49,
+          "height": 29,
+          "width": 54
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1624,
+      "masks": [
+        {
+          "top": 1,
+          "left": 61,
+          "height": 43,
+          "width": 37
+        },
+        {
+          "top": 68,
+          "left": 64,
+          "height": 41,
+          "width": 39
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1625,
+      "masks": [
+        {
+          "top": 70,
+          "left": 41,
+          "height": 43,
+          "width": 43
+        },
+        {
+          "top": 58,
+          "left": 26,
+          "height": 35,
+          "width": 53
+        },
+        {
+          "top": 50,
+          "left": 88,
+          "height": 51,
+          "width": 37
+        }
+      ]
+    }
+  ],
+  "Abyssinian_56.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 94
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1654
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1655
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1656
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1654
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1655
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1656
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1654,
+      "masks": [
+        {
+          "top": 10,
+          "left": 31,
+          "height": 43,
+          "width": 37
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1655,
+      "masks": [
+        {
+          "top": 24,
+          "left": 45,
+          "height": 36,
+          "width": 45
+        },
+        {
+          "top": 21,
+          "left": 18,
+          "height": 31,
+          "width": 51
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1656,
+      "masks": [
+        {
+          "top": 62,
+          "left": 65,
+          "height": 31,
+          "width": 61
+        },
+        {
+          "top": 30,
+          "left": 31,
+          "height": 36,
+          "width": 51
+        },
+        {
+          "top": 5,
+          "left": 60,
+          "height": 33,
+          "width": 56
+        }
+      ]
+    }
+  ],
+  "Abyssinian_57.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 95
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1685
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1686
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1687
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1685
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1686
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1687
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1685,
+      "masks": [
+        {
+          "top": 83,
+          "left": 43,
+          "height": 35,
+          "width": 46
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1686,
+      "masks": [
+        {
+          "top": 3,
+          "left": 63,
+          "height": 44,
+          "width": 36
+        },
+        {
+          "top": 56,
+          "left": 73,
+          "height": 42,
+          "width": 38
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1687,
+      "masks": [
+        {
+          "top": 9,
+          "left": 30,
+          "height": 35,
+          "width": 53
+        },
+        {
+          "top": 46,
+          "left": 70,
+          "height": 42,
+          "width": 45
+        },
+        {
+          "top": 9,
+          "left": 9,
+          "height": 49,
+          "width": 38
+        }
+      ]
+    }
+  ],
+  "Abyssinian_58.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 96
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1716
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1717
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1718
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1716
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1717
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1718
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1716,
+      "masks": [
+        {
+          "top": 12,
+          "left": 22,
+          "height": 56,
+          "width": 29
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1717,
+      "masks": [
+        {
+          "top": 29,
+          "left": 27,
+          "height": 31,
+          "width": 52
+        },
+        {
+          "top": 68,
+          "left": 28,
+          "height": 49,
+          "width": 33
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1718,
+      "masks": [
+        {
+          "top": 69,
+          "left": 23,
+          "height": 41,
+          "width": 46
+        },
+        {
+          "top": 36,
+          "left": 94,
+          "height": 56,
+          "width": 33
+        },
+        {
+          "top": 32,
+          "left": 72,
+          "height": 35,
+          "width": 53
+        }
+      ]
+    }
+  ],
+  "Abyssinian_5.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 97
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1747
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1748
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1749
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1747
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1748
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1749
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1747,
+      "masks": [
+        {
+          "top": 62,
+          "left": 18,
+          "height": 37,
+          "width": 44
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1748,
+      "masks": [
+        {
+          "top": 49,
+          "left": 62,
+          "height": 29,
+          "width": 56
+        },
+        {
+          "top": 15,
+          "left": 30,
+          "height": 31,
+          "width": 51
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1749,
+      "masks": [
+        {
+          "top": 31,
+          "left": 66,
+          "height": 33,
+          "width": 56
+        },
+        {
+          "top": 48,
+          "left": 4,
+          "height": 31,
+          "width": 60
+        },
+        {
+          "top": 35,
+          "left": 62,
+          "height": 45,
+          "width": 41
+        }
+      ]
+    }
+  ],
+  "Abyssinian_60.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 98
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1778
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1779
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1780
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1778
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1779
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1780
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1778,
+      "masks": [
+        {
+          "top": 16,
+          "left": 18,
+          "height": 30,
+          "width": 53
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1779,
+      "masks": [
+        {
+          "top": 6,
+          "left": 83,
+          "height": 36,
+          "width": 45
+        },
+        {
+          "top": 62,
+          "left": 77,
+          "height": 34,
+          "width": 47
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1780,
+      "masks": [
+        {
+          "top": 40,
+          "left": 59,
+          "height": 38,
+          "width": 49
+        },
+        {
+          "top": 23,
+          "left": 76,
+          "height": 41,
+          "width": 46
+        },
+        {
+          "top": 14,
+          "left": 35,
+          "height": 49,
+          "width": 38
+        }
+      ]
+    }
+  ],
+  "Abyssinian_61.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 99
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1809
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1810
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1811
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1809
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1810
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1811
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1809,
+      "masks": [
+        {
+          "top": 37,
+          "left": 70,
+          "height": 31,
+          "width": 51
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1810,
+      "masks": [
+        {
+          "top": 0,
+          "left": 19,
+          "height": 51,
+          "width": 31
+        },
+        {
+          "top": 16,
+          "left": 80,
+          "height": 47,
+          "width": 34
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1811,
+      "masks": [
+        {
+          "top": 91,
+          "left": 66,
+          "height": 37,
+          "width": 50
+        },
+        {
+          "top": 23,
+          "left": 17,
+          "height": 38,
+          "width": 49
+        },
+        {
+          "top": 88,
+          "left": 4,
+          "height": 39,
+          "width": 48
+        }
+      ]
+    }
+  ],
+  "Abyssinian_62.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 100
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1840
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1841
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1842
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1840
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1841
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1842
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1840,
+      "masks": [
+        {
+          "top": 6,
+          "left": 52,
+          "height": 30,
+          "width": 52
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1841,
+      "masks": [
+        {
+          "top": 20,
+          "left": 28,
+          "height": 33,
+          "width": 48
+        },
+        {
+          "top": 28,
+          "left": 21,
+          "height": 30,
+          "width": 54
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1842,
+      "masks": [
+        {
+          "top": 65,
+          "left": 16,
+          "height": 50,
+          "width": 37
+        },
+        {
+          "top": 7,
+          "left": 43,
+          "height": 39,
+          "width": 48
+        },
+        {
+          "top": 4,
+          "left": 6,
+          "height": 32,
+          "width": 59
+        }
+      ]
+    }
+  ],
+  "Abyssinian_63.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 101
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1871
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1872
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1873
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1871
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1872
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1873
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1871,
+      "masks": [
+        {
+          "top": 9,
+          "left": 15,
+          "height": 36,
+          "width": 44
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1872,
+      "masks": [
+        {
+          "top": 36,
+          "left": 61,
+          "height": 42,
+          "width": 38
+        },
+        {
+          "top": 68,
+          "left": 42,
+          "height": 41,
+          "width": 39
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1873,
+      "masks": [
+        {
+          "top": 90,
+          "left": 1,
+          "height": 33,
+          "width": 56
+        },
+        {
+          "top": 6,
+          "left": 0,
+          "height": 36,
+          "width": 52
+        },
+        {
+          "top": 52,
+          "left": 81,
+          "height": 39,
+          "width": 47
+        }
+      ]
+    }
+  ],
+  "Abyssinian_65.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 102
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1902
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1903
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1904
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1902
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1903
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1904
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1902,
+      "masks": [
+        {
+          "top": 63,
+          "left": 65,
+          "height": 54,
+          "width": 29
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1903,
+      "masks": [
+        {
+          "top": 23,
+          "left": 37,
+          "height": 32,
+          "width": 50
+        },
+        {
+          "top": 3,
+          "left": 93,
+          "height": 46,
+          "width": 35
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1904,
+      "masks": [
+        {
+          "top": 16,
+          "left": 20,
+          "height": 39,
+          "width": 48
+        },
+        {
+          "top": 16,
+          "left": 4,
+          "height": 35,
+          "width": 53
+        },
+        {
+          "top": 91,
+          "left": 22,
+          "height": 31,
+          "width": 59
+        }
+      ]
+    }
+  ],
+  "Abyssinian_66.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 103
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1933
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1934
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1935
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1933
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1934
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1935
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1933,
+      "masks": [
+        {
+          "top": 45,
+          "left": 84,
+          "height": 40,
+          "width": 40
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1934,
+      "masks": [
+        {
+          "top": 52,
+          "left": 5,
+          "height": 42,
+          "width": 38
+        },
+        {
+          "top": 47,
+          "left": 5,
+          "height": 31,
+          "width": 52
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1935,
+      "masks": [
+        {
+          "top": 65,
+          "left": 91,
+          "height": 51,
+          "width": 37
+        },
+        {
+          "top": 51,
+          "left": 85,
+          "height": 59,
+          "width": 32
+        },
+        {
+          "top": 51,
+          "left": 27,
+          "height": 36,
+          "width": 51
+        }
+      ]
+    }
+  ],
+  "Abyssinian_67.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 104
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1964
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1965
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1966
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1964
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1965
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1966
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1964,
+      "masks": [
+        {
+          "top": 77,
+          "left": 22,
+          "height": 33,
+          "width": 48
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1965,
+      "masks": [
+        {
+          "top": 42,
+          "left": 44,
+          "height": 33,
+          "width": 48
+        },
+        {
+          "top": 72,
+          "left": 69,
+          "height": 31,
+          "width": 51
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1966,
+      "masks": [
+        {
+          "top": 4,
+          "left": 60,
+          "height": 32,
+          "width": 59
+        },
+        {
+          "top": 26,
+          "left": 2,
+          "height": 37,
+          "width": 50
+        },
+        {
+          "top": 46,
+          "left": 53,
+          "height": 34,
+          "width": 54
+        }
+      ]
+    }
+  ],
+  "Abyssinian_68.jpg": [
+    {
+      "corruption_type": "clean",
+      "severity": "none",
+      "seed": 105
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "low",
+      "prob": 0.03,
+      "seed": 1995
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "medium",
+      "prob": 0.08,
+      "seed": 1996
+    },
+    {
+      "corruption_type": "salt",
+      "severity": "high",
+      "prob": 0.15,
+      "seed": 1997
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "low",
+      "kernel_size": 3,
+      "sigma": 0.7,
+      "seed": 1995
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "medium",
+      "kernel_size": 5,
+      "sigma": 1.5,
+      "seed": 1996
+    },
+    {
+      "corruption_type": "blur",
+      "severity": "high",
+      "kernel_size": 7,
+      "sigma": 2.5,
+      "seed": 1997
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "low",
+      "num_rects": 1,
+      "coverage": 0.1,
+      "seed": 1995,
+      "masks": [
+        {
+          "top": 58,
+          "left": 22,
+          "height": 32,
+          "width": 50
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "medium",
+      "num_rects": 2,
+      "coverage": 0.2,
+      "seed": 1996,
+      "masks": [
+        {
+          "top": 71,
+          "left": 58,
+          "height": 34,
+          "width": 47
+        },
+        {
+          "top": 71,
+          "left": 38,
+          "height": 31,
+          "width": 51
+        }
+      ]
+    },
+    {
+      "corruption_type": "occlusion",
+      "severity": "high",
+      "num_rects": 3,
+      "coverage": 0.35,
+      "seed": 1997,
+      "masks": [
+        {
+          "top": 30,
+          "left": 8,
+          "height": 34,
+          "width": 56
+        },
+        {
+          "top": 28,
+          "left": 49,
+          "height": 47,
+          "width": 39
+        },
+        {
+          "top": 56,
+          "left": 31,
+          "height": 34,
+          "width": 56
+        }
+      ]
+    }
+  ]
+}

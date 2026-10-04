@@ -187,6 +187,7 @@ export default function HardRoutingPage() {
               previewUrl={previewUrl}
               onFileSelect={handleFileSelect}
               onClear={handleClear}
+              presets={[]}
               className="h-full"
             />
           </div>

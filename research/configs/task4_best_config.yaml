@@ -1,0 +1,16 @@
+task: task4_style_conditioned_cgan
+dataset: FS2K
+selection_metric: 0.5*val_l1 + 0.5*(1-val_ssim)
+params:
+  g_lr: 0.00014
+  d_lr: 2.8e-05
+  batch_size: 8
+  base_channels: 32
+  dropout: 0.1
+  embed_dim: 16
+  lambda_l1: 100.0
+architecture:
+  generator: style-conditioned U-Net
+  multi_scale_style: true
+  grayscale_constraint: true
+  discriminator: dual-scale PatchGAN

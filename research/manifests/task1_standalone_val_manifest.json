@@ -1,0 +1,677 @@
+{
+  "Birman_128.jpg": {
+    "corruption_type": "clean",
+    "severity": "train",
+    "seed": 606084115
+  },
+  "Bombay_164.jpg": {
+    "corruption_type": "occlusion",
+    "severity": "train",
+    "seed": 1951167770,
+    "num_rects": 1,
+    "coverage": 0.25765538495419815,
+    "masks": [
+      {
+        "top": 0,
+        "left": 9,
+        "height": 58,
+        "width": 72
+      }
+    ]
+  },
+  "Ragdoll_115.jpg": {
+    "corruption_type": "clean",
+    "severity": "train",
+    "seed": 2112904358
+  },
+  "Russian_Blue_130.jpg": {
+    "corruption_type": "blur",
+    "severity": "train",
+    "seed": 1302101305,
+    "kernel_size": 7,
+    "sigma": 1.7442325984961047
+  },
+  "newfoundland_115.jpg": {
+    "corruption_type": "blur",
+    "severity": "train",
+    "seed": 893096734,
+    "kernel_size": 3,
+    "sigma": 2.169415610643284
+  },
+  "leonberger_113.jpg": {
+    "corruption_type": "occlusion",
+    "severity": "train",
+    "seed": 442273902,
+    "num_rects": 2,
+    "coverage": 0.22279707916387803,
+    "masks": [
+      {
+        "top": 60,
+        "left": 67,
+        "height": 31,
+        "width": 58
+      },
+      {
+        "top": 31,
+        "left": 66,
+        "height": 39,
+        "width": 46
+      }
+    ]
+  },
+  "Persian_128.jpg": {
+    "corruption_type": "occlusion",
+    "severity": "train",
+    "seed": 167405975,
+    "num_rects": 2,
+    "coverage": 0.2536569713031025,
+    "masks": [
+      {
+        "top": 73,
+        "left": 5,
+        "height": 32,
+        "width": 63
+      },
+      {
+        "top": 2,
+        "left": 32,
+        "height": 39,
+        "width": 53
+      }
+    ]
+  },
+  "miniature_pinscher_17.jpg": {
+    "corruption_type": "occlusion",
+    "severity": "train",
+    "seed": 340725126,
+    "num_rects": 2,
+    "coverage": 0.28473475165519624,
+    "masks": [
+      {
+        "top": 16,
+        "left": 40,
+        "height": 57,
+        "width": 40
+      },
+      {
+        "top": 86,
+        "left": 2,
+        "height": 38,
+        "width": 61
+      }
+    ]
+  },
+  "Birman_116.jpg": {
+    "corruption_type": "clean",
+    "severity": "train",
+    "seed": 1887320467
+  },
+  "yorkshire_terrier_105.jpg": {
+    "corruption_type": "clean",
+    "severity": "train",
+    "seed": 337462452
+  },
+  "newfoundland_126.jpg": {
+    "corruption_type": "clean",
+    "severity": "train",
+    "seed": 569952869
+  },
+  "leonberger_130.jpg": {
+    "corruption_type": "blur",
+    "severity": "train",
+    "seed": 991696,
+    "kernel_size": 3,
+    "sigma": 0.5189139323339309
+  },
+  "german_shorthaired_175.jpg": {
+    "corruption_type": "blur",
+    "severity": "train",
+    "seed": 115495228,
+    "kernel_size": 5,
+    "sigma": 0.6189868505164633
+  },
+  "american_pit_bull_terrier_180.jpg": {
+    "corruption_type": "salt",
+    "severity": "train",
+    "seed": 233734013,
+    "prob": 0.07533204912495312
+  },
+  "Bengal_182.jpg": {
+    "corruption_type": "blur",
+    "severity": "train",
+    "seed": 1859166550,
+    "kernel_size": 3,
+    "sigma": 1.375898488547257
+  },
+  "newfoundland_136.jpg": {
+    "corruption_type": "occlusion",
+    "severity": "train",
+    "seed": 2030553338,
+    "num_rects": 3,
+    "coverage": 0.25674230661642694,
+    "masks": [
+      {
+        "top": 46,
+        "left": 15,
+        "height": 38,
+        "width": 36
+      },
+      {
+        "top": 23,
+        "left": 62,
+        "height": 40,
+        "width": 34
+      },
+      {
+        "top": 18,
+        "left": 69,
+        "height": 27,
+        "width": 50
+      }
+    ]
+  },
+  "great_pyrenees_16.jpg": {
+    "corruption_type": "clean",
+    "severity": "train",
+    "seed": 462258438
+  },
+  "Maine_Coon_117.jpg": {
+    "corruption_type": "clean",
+    "severity": "train",
+    "seed": 448549224
+  },
+  "miniature_pinscher_114.jpg": {
+    "corruption_type": "blur",
+    "severity": "train",
+    "seed": 1388147330,
+    "kernel_size": 5,
+    "sigma": 1.993777986777812
+  },
+  "yorkshire_terrier_143.jpg": {
+    "corruption_type": "salt",
+    "severity": "train",
+    "seed": 713376411,
+    "prob": 0.0886822908841032
+  },
+  "american_bulldog_201.jpg": {
+    "corruption_type": "salt",
+    "severity": "train",
+    "seed": 815456070,
+    "prob": 0.10215529896368047
+  },
+  "english_setter_105.jpg": {
+    "corruption_type": "blur",
+    "severity": "train",
+    "seed": 1834944845,
+    "kernel_size": 7,
+    "sigma": 2.490159932424729
+  },
+  "yorkshire_terrier_128.jpg": {
+    "corruption_type": "salt",
+    "severity": "train",
+    "seed": 819019625,
+    "prob": 0.06730654887124055
+  },
+  "pomeranian_15.jpg": {
+    "corruption_type": "blur",
+    "severity": "train",
+    "seed": 905489170,
+    "kernel_size": 7,
+    "sigma": 1.8929483584417668
+  },
+  "wheaten_terrier_101.jpg": {
+    "corruption_type": "clean",
+    "severity": "train",
+    "seed": 2003562207
+  },
+  "beagle_169.jpg": {
+    "corruption_type": "blur",
+    "severity": "train",
+    "seed": 497572163,
+    "kernel_size": 3,
+    "sigma": 2.341246103660626
+  },
+  "pug_148.jpg": {
+    "corruption_type": "clean",
+    "severity": "train",
+    "seed": 1349491527
+  },
+  "english_setter_168.jpg": {
+    "corruption_type": "occlusion",
+    "severity": "train",
+    "seed": 99295217,
+    "num_rects": 2,
+    "coverage": 0.14920464962033764,
+    "masks": [
+      {
+        "top": 69,
+        "left": 27,
+        "height": 39,
+        "width": 31
+      },
+      {
+        "top": 34,
+        "left": 77,
+        "height": 40,
+        "width": 30
+      }
+    ]
+  },
+  "yorkshire_terrier_115.jpg": {
+    "corruption_type": "clean",
+    "severity": "train",
+    "seed": 988714070
+  },
+  "Ragdoll_104.jpg": {
+    "corruption_type": "occlusion",
+    "severity": "train",
+    "seed": 1441079948,
+    "num_rects": 2,
+    "coverage": 0.13338786011503528,
+    "masks": [
+      {
+        "top": 92,
+        "left": 56,
+        "height": 30,
+        "width": 36
+      },
+      {
+        "top": 33,
+        "left": 49,
+        "height": 26,
+        "width": 41
+      }
+    ]
+  },
+  "Egyptian_Mau_197.jpg": {
+    "corruption_type": "blur",
+    "severity": "train",
+    "seed": 497190865,
+    "kernel_size": 3,
+    "sigma": 0.9930333732325933
+  },
+  "boxer_188.jpg": {
+    "corruption_type": "clean",
+    "severity": "train",
+    "seed": 1469496051
+  },
+  "samoyed_155.jpg": {
+    "corruption_type": "occlusion",
+    "severity": "train",
+    "seed": 476816137,
+    "num_rects": 3,
+    "coverage": 0.13153768622090356,
+    "masks": [
+      {
+        "top": 53,
+        "left": 22,
+        "height": 22,
+        "width": 32
+      },
+      {
+        "top": 22,
+        "left": 91,
+        "height": 19,
+        "width": 37
+      },
+      {
+        "top": 30,
+        "left": 81,
+        "height": 20,
+        "width": 35
+      }
+    ]
+  },
+  "japanese_chin_190.jpg": {
+    "corruption_type": "salt",
+    "severity": "train",
+    "seed": 659424265,
+    "prob": 0.09099944031227235
+  },
+  "american_bulldog_153.jpg": {
+    "corruption_type": "salt",
+    "severity": "train",
+    "seed": 130786696,
+    "prob": 0.03734848123044199
+  },
+  "chihuahua_143.jpg": {
+    "corruption_type": "blur",
+    "severity": "train",
+    "seed": 1481676557,
+    "kernel_size": 3,
+    "sigma": 1.3878486782741748
+  },
+  "Abyssinian_16.jpg": {
+    "corruption_type": "occlusion",
+    "severity": "train",
+    "seed": 327550296,
+    "num_rects": 3,
+    "coverage": 0.20917097284168423,
+    "masks": [
+      {
+        "top": 69,
+        "left": 17,
+        "height": 34,
+        "width": 32
+      },
+      {
+        "top": 22,
+        "left": 6,
+        "height": 47,
+        "width": 23
+      },
+      {
+        "top": 15,
+        "left": 43,
+        "height": 27,
+        "width": 42
+      }
+    ]
+  },
+  "British_Shorthair_156.jpg": {
+    "corruption_type": "occlusion",
+    "severity": "train",
+    "seed": 1163962339,
+    "num_rects": 2,
+    "coverage": 0.11062168949974865,
+    "masks": [
+      {
+        "top": 26,
+        "left": 55,
+        "height": 28,
+        "width": 31
+      },
+      {
+        "top": 102,
+        "left": 76,
+        "height": 26,
+        "width": 34
+      }
+    ]
+  },
+  "Maine_Coon_129.jpg": {
+    "corruption_type": "salt",
+    "severity": "train",
+    "seed": 1063525077,
+    "prob": 0.11005469927795557
+  },
+  "boxer_182.jpg": {
+    "corruption_type": "blur",
+    "severity": "train",
+    "seed": 1867116795,
+    "kernel_size": 7,
+    "sigma": 1.3118263376800994
+  },
+  "samoyed_159.jpg": {
+    "corruption_type": "blur",
+    "severity": "train",
+    "seed": 2023968810,
+    "kernel_size": 3,
+    "sigma": 2.4400728504053575
+  },
+  "american_bulldog_152.jpg": {
+    "corruption_type": "salt",
+    "severity": "train",
+    "seed": 1616365272,
+    "prob": 0.04799130885587142
+  },
+  "Bengal_169.jpg": {
+    "corruption_type": "salt",
+    "severity": "train",
+    "seed": 980374233,
+    "prob": 0.0841088346510332
+  },
+  "Maine_Coon_171.jpg": {
+    "corruption_type": "occlusion",
+    "severity": "train",
+    "seed": 1084444274,
+    "num_rects": 2,
+    "coverage": 0.24329511550244434,
+    "masks": [
+      {
+        "top": 1,
+        "left": 7,
+        "height": 54,
+        "width": 36
+      },
+      {
+        "top": 19,
+        "left": 43,
+        "height": 57,
+        "width": 34
+      }
+    ]
+  },
+  "german_shorthaired_122.jpg": {
+    "corruption_type": "blur",
+    "severity": "train",
+    "seed": 2127053848,
+    "kernel_size": 5,
+    "sigma": 1.4656065110257315
+  },
+  "keeshond_100.jpg": {
+    "corruption_type": "blur",
+    "severity": "train",
+    "seed": 642923962,
+    "kernel_size": 5,
+    "sigma": 2.468024713318234
+  },
+  "staffordshire_bull_terrier_141.jpg": {
+    "corruption_type": "occlusion",
+    "severity": "train",
+    "seed": 1041465311,
+    "num_rects": 3,
+    "coverage": 0.3328738778441114,
+    "masks": [
+      {
+        "top": 39,
+        "left": 58,
+        "height": 37,
+        "width": 48
+      },
+      {
+        "top": 17,
+        "left": 56,
+        "height": 40,
+        "width": 45
+      },
+      {
+        "top": 18,
+        "left": 67,
+        "height": 54,
+        "width": 33
+      }
+    ]
+  },
+  "boxer_134.jpg": {
+    "corruption_type": "clean",
+    "severity": "train",
+    "seed": 1857331035
+  },
+  "Abyssinian_120.jpg": {
+    "corruption_type": "clean",
+    "severity": "train",
+    "seed": 1534576939
+  },
+  "leonberger_174.jpg": {
+    "corruption_type": "occlusion",
+    "severity": "train",
+    "seed": 115876046,
+    "num_rects": 1,
+    "coverage": 0.1883777579719661,
+    "masks": [
+      {
+        "top": 28,
+        "left": 7,
+        "height": 65,
+        "width": 47
+      }
+    ]
+  },
+  "japanese_chin_148.jpg": {
+    "corruption_type": "blur",
+    "severity": "train",
+    "seed": 808772565,
+    "kernel_size": 3,
+    "sigma": 2.3679748946136074
+  },
+  "english_cocker_spaniel_108.jpg": {
+    "corruption_type": "salt",
+    "severity": "train",
+    "seed": 743520483,
+    "prob": 0.10459761014277175
+  },
+  "Maine_Coon_103.jpg": {
+    "corruption_type": "occlusion",
+    "severity": "train",
+    "seed": 361590347,
+    "num_rects": 2,
+    "coverage": 0.16290848577987094,
+    "masks": [
+      {
+        "top": 33,
+        "left": 19,
+        "height": 42,
+        "width": 31
+      },
+      {
+        "top": 40,
+        "left": 64,
+        "height": 31,
+        "width": 42
+      }
+    ]
+  },
+  "Siamese_148.jpg": {
+    "corruption_type": "occlusion",
+    "severity": "train",
+    "seed": 1360558024,
+    "num_rects": 3,
+    "coverage": 0.20034597949115424,
+    "masks": [
+      {
+        "top": 68,
+        "left": 44,
+        "height": 26,
+        "width": 41
+      },
+      {
+        "top": 74,
+        "left": 50,
+        "height": 38,
+        "width": 28
+      },
+      {
+        "top": 95,
+        "left": 64,
+        "height": 29,
+        "width": 37
+      }
+    ]
+  },
+  "basset_hound_171.jpg": {
+    "corruption_type": "blur",
+    "severity": "train",
+    "seed": 1097765357,
+    "kernel_size": 7,
+    "sigma": 1.3271143352357537
+  },
+  "shiba_inu_124.jpg": {
+    "corruption_type": "blur",
+    "severity": "train",
+    "seed": 1493620801,
+    "kernel_size": 7,
+    "sigma": 1.8184952732534705
+  },
+  "Maine_Coon_174.jpg": {
+    "corruption_type": "occlusion",
+    "severity": "train",
+    "seed": 7149928,
+    "num_rects": 3,
+    "coverage": 0.28148911609935107,
+    "masks": [
+      {
+        "top": 76,
+        "left": 19,
+        "height": 34,
+        "width": 44
+      },
+      {
+        "top": 32,
+        "left": 39,
+        "height": 45,
+        "width": 33
+      },
+      {
+        "top": 65,
+        "left": 41,
+        "height": 27,
+        "width": 55
+      }
+    ]
+  },
+  "scottish_terrier_155.jpg": {
+    "corruption_type": "clean",
+    "severity": "train",
+    "seed": 1492643959
+  },
+  "havanese_100.jpg": {
+    "corruption_type": "blur",
+    "severity": "train",
+    "seed": 1896987592,
+    "kernel_size": 5,
+    "sigma": 1.3335760843696483
+  },
+  "chihuahua_159.jpg": {
+    "corruption_type": "blur",
+    "severity": "train",
+    "seed": 1654475014,
+    "kernel_size": 5,
+    "sigma": 0.7452930449594928
+  },
+  "german_shorthaired_186.jpg": {
+    "corruption_type": "clean",
+    "severity": "train",
+    "seed": 1824768741
+  },
+  "staffordshire_bull_terrier_101.jpg": {
+    "corruption_type": "salt",
+    "severity": "train",
+    "seed": 77815547,
+    "prob": 0.029481228566310632
+  },
+  "Abyssinian_166.jpg": {
+    "corruption_type": "blur",
+    "severity": "train",
+    "seed": 873641847,
+    "kernel_size": 3,
+    "sigma": 1.725218359268988
+  },
+  "Bengal_144.jpg": {
+    "corruption_type": "occlusion",
+    "severity": "train",
+    "seed": 2057479130,
+    "num_rects": 3,
+    "coverage": 0.15038601316365832,
+    "masks": [
+      {
+        "top": 53,
+        "left": 82,
+        "height": 22,
+        "width": 36
+      },
+      {
+        "top": 100,
+        "left": 52,
+        "height": 25,
+        "width": 32
+      },
+      {
+        "top": 28,
+        "left": 36,
+        "height": 37,
+        "width": 21
+      }
+    ]
+  }
+}

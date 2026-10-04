@@ -10,6 +10,9 @@ import onnxruntime as ort
 from scipy.ndimage import gaussian_filter, median_filter
 
 from app.core.config import settings
+from app.core.logging import get_logger
+
+logger = get_logger("app.services.onnx_runtime_manager")
 
 _SESSIONS: dict[str, ort.InferenceSession] = {}
 
@@ -37,8 +40,13 @@ def _resolve_providers() -> list[str]:
     return chosen or ["CPUExecutionProvider"]
 
 
+def get_model_filename(key: str) -> str:
+    """Return the expected ONNX filename for a model key."""
+    return MODEL_FILES.get(key, f"{key}.onnx")
+
+
 def load_all_models() -> list[str]:
-    """Load every present ONNX model; missing optional tasks remain unloaded."""
+    """Load every present ONNX model; missing or invalid models remain unloaded without crashing."""
     loaded: list[str] = []
     providers = _resolve_providers()
     model_dir = settings.resolved_model_dir
@@ -47,8 +55,12 @@ def load_all_models() -> list[str]:
         if not os.path.isfile(path):
             _SESSIONS.pop(key, None)
             continue
-        _SESSIONS[key] = ort.InferenceSession(path, providers=providers)
-        loaded.append(key)
+        try:
+            _SESSIONS[key] = ort.InferenceSession(path, providers=providers)
+            loaded.append(key)
+        except Exception as exc:
+            logger.warning(f"Could not load model session for {key} ({filename}): {exc}")
+            _SESSIONS.pop(key, None)
     return loaded
 
 

@@ -10,7 +10,6 @@ from app.services.preprocessing import (
 from app.services.onnx_runtime_manager import (
     has_model,
     run_model_with_inputs,
-    fallback_face_to_sketch,
 )
 from app.utils.timing import timer
 
@@ -47,19 +46,23 @@ async def face_to_sketch(
     style_idx = VALID_STYLES.index(clean_style)
 
     with timer() as t:
-        if has_model("generator"):
-            try:
-                outputs = run_model_with_inputs(
-                    "generator",
-                    {"photo": x, "style_idx": np.asarray([style_idx], dtype=np.int64)},
-                )
-                if not outputs:
-                    raise RuntimeError("Generator returned no outputs")
-                y = outputs[0]
-            except Exception as exc:
-                raise HTTPException(status_code=503, detail=f"Face-to-sketch ONNX inference failed: {exc}")
-        else:
-            y = fallback_face_to_sketch(x, clean_style)
+        if not has_model("generator"):
+            raise HTTPException(
+                status_code=503,
+                detail="Model file not available: task4_generator.onnx. Please place the model in backend/models.",
+            )
+        try:
+            outputs = run_model_with_inputs(
+                "generator",
+                {"photo": x, "style_idx": np.asarray([style_idx], dtype=np.int64)},
+            )
+            if not outputs:
+                raise RuntimeError("Generator returned no outputs")
+            y = outputs[0]
+        except HTTPException:
+            raise
+        except Exception as exc:
+            raise HTTPException(status_code=503, detail=f"Face-to-sketch ONNX inference failed: {exc}")
 
     inference_ms = round(t["ms"], 2)
 

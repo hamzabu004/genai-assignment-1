@@ -78,7 +78,7 @@ def _run_universal(
     if not has_model("universal_ae"):
         raise HTTPException(
             status_code=503,
-            detail="Universal ONNX model is not loaded. Place task1_universal_ae.onnx in MODEL_DIR and restart the backend.",
+            detail="Model file not available: task1_universal_ae.onnx. ONNX model is not loaded. Please place the model in backend/models.",
         )
 
     x = image_to_unit_tensor(corrupted_img)

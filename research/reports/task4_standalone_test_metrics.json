@@ -1,0 +1,48 @@
+{
+  "styles": {
+    "style_1": {
+      "name": "Style 1 (Sketch)",
+      "sample_count": 619,
+      "raw_l1": 0.1508251066426468,
+      "raw_psnr": 15.308254612474334,
+      "raw_ssim": 0.5573102870838708,
+      "post_psnr": 14.904508797918266,
+      "post_ssim": 0.5644179066471599
+    },
+    "style_2": {
+      "name": "Style 2 (Caricature)",
+      "sample_count": 381,
+      "raw_l1": 0.2882166769639088,
+      "raw_psnr": 9.806335227695977,
+      "raw_ssim": 0.28272215271089957,
+      "post_psnr": 9.521580646044313,
+      "post_ssim": 0.2584975230021114
+    },
+    "style_3": {
+      "name": "Style 3 (Painting/Manga)",
+      "sample_count": 46,
+      "raw_l1": 0.17771838184284128,
+      "raw_psnr": 14.180583539216414,
+      "raw_ssim": 0.5479050790486129,
+      "post_psnr": 14.280426108318826,
+      "post_ssim": 0.529898143980814
+    }
+  },
+  "overall": {
+    "test_samples": 1046,
+    "raw_l1": 0.20205195076464466,
+    "raw_psnr": 13.254617753037987,
+    "raw_ssim": 0.4568793896022992,
+    "post_psnr": 12.91636020366822,
+    "post_ssim": 0.4514699379555582
+  },
+  "best_hyperparameters": {
+    "g_lr": 0.00014,
+    "d_lr": 2.8e-05,
+    "batch_size": 8,
+    "base_channels": 32,
+    "dropout": 0.1,
+    "embed_dim": 16,
+    "lambda_l1": 100.0
+  }
+}

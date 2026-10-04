@@ -13,10 +13,6 @@ from app.services.postprocessing import softmax, format_probabilities
 from app.services.onnx_runtime_manager import (
     has_model,
     run_model,
-    fallback_classify_degradation,
-    fallback_denoise_median,
-    fallback_unsharp_mask,
-    fallback_inpaint_occlusion,
 )
 from app.utils.timing import timer
 
@@ -75,44 +71,43 @@ async def soft_mixture(
     x = image_to_unit_tensor(corrupted_img)
 
     with timer() as t:
-        # A. Determine routing weights (softmax attention distribution)
-        if has_model("classifier"):
-            c_logits = run_model("classifier", x)[0]
-            weights_arr = softmax(c_logits).flatten()
-        else:
-            weights_arr, _ = fallback_classify_degradation(x)
-            weights_arr = weights_arr.flatten()
-
-        routing_weights: Dict[str, float] = format_probabilities(weights_arr, EXPERT_KEYS)
-        dominant_expert = max(routing_weights.items(), key=lambda kv: kv[1])[0]
-
-        # B. Blend expert latent outputs continuously
         if has_model("soft_moe"):
             moe_outs = run_model("soft_moe", x)
             y = moe_outs[0]
-        else:
+            if len(moe_outs) > 1 and moe_outs[1] is not None:
+                weights_arr = np.asarray(moe_outs[1], dtype=np.float32).flatten()
+            elif has_model("classifier"):
+                c_logits = run_model("classifier", x)[0]
+                weights_arr = softmax(c_logits).flatten()
+            else:
+                weights_arr = np.array([0.25, 0.25, 0.25, 0.25], dtype=np.float32)
+        elif (
+            has_model("classifier")
+            and has_model("specialist_salt")
+            and has_model("specialist_blur")
+            and has_model("specialist_occlusion")
+        ):
+            c_logits = run_model("classifier", x)[0]
+            weights_arr = softmax(c_logits).flatten()
+            routing_weights = format_probabilities(weights_arr, EXPERT_KEYS)
             w_ident = routing_weights.get("identity", 0.25)
             w_salt = routing_weights.get("salt_pepper", 0.25)
             w_blur = routing_weights.get("blur", 0.25)
             w_occl = routing_weights.get("occlusion", 0.25)
 
-            y_salt = (
-                run_model("specialist_salt", x)[0]
-                if has_model("specialist_salt")
-                else fallback_denoise_median(x)
-            )
-            y_blur = (
-                run_model("specialist_blur", x)[0]
-                if has_model("specialist_blur")
-                else fallback_unsharp_mask(x)
-            )
-            y_occl = (
-                run_model("specialist_occlusion", x)[0]
-                if has_model("specialist_occlusion")
-                else fallback_inpaint_occlusion(x)
-            )
+            y_salt = run_model("specialist_salt", x)[0]
+            y_blur = run_model("specialist_blur", x)[0]
+            y_occl = run_model("specialist_occlusion", x)[0]
 
             y = (w_ident * x) + (w_salt * y_salt) + (w_blur * y_blur) + (w_occl * y_occl)
+        else:
+            raise HTTPException(
+                status_code=503,
+                detail="Model file not available: task3_soft_moe.onnx. Please place the model in backend/models.",
+            )
+
+        routing_weights: Dict[str, float] = format_probabilities(weights_arr, EXPERT_KEYS)
+        dominant_expert = max(routing_weights.items(), key=lambda kv: kv[1])[0]
 
     inference_ms = round(t["ms"], 2)
 

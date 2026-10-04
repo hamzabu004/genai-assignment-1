@@ -13,10 +13,6 @@ from app.services.postprocessing import softmax, format_probabilities
 from app.services.onnx_runtime_manager import (
     has_model,
     run_model,
-    fallback_classify_degradation,
-    fallback_denoise_median,
-    fallback_unsharp_mask,
-    fallback_inpaint_occlusion,
 )
 from app.utils.timing import timer
 
@@ -81,11 +77,14 @@ async def hard_routing(
     x = image_to_unit_tensor(corrupted_img)
 
     with timer() as t:
-        if has_model("classifier"):
-            logits = run_model("classifier", x)[0]
-            probs_arr = softmax(logits)
-        else:
-            probs_arr, _ = fallback_classify_degradation(x)
+        if not has_model("classifier"):
+            raise HTTPException(
+                status_code=503,
+                detail="Model file not available: task2_classifier.onnx. Please place the model in backend/models.",
+            )
+
+        logits = run_model("classifier", x)[0]
+        probs_arr = softmax(logits)
 
         pred_idx = int(np.argmax(probs_arr))
         predicted_class = CLASSES[pred_idx]
@@ -95,20 +94,26 @@ async def hard_routing(
         if predicted_class == "clean":
             y = x
         elif predicted_class == "salt_pepper":
-            if has_model("specialist_salt"):
-                y = run_model("specialist_salt", x)[0]
-            else:
-                y = fallback_denoise_median(x)
+            if not has_model("specialist_salt"):
+                raise HTTPException(
+                    status_code=503,
+                    detail="Model file not available: task2_specialist_salt.onnx. Please place the model in backend/models.",
+                )
+            y = run_model("specialist_salt", x)[0]
         elif predicted_class == "blur":
-            if has_model("specialist_blur"):
-                y = run_model("specialist_blur", x)[0]
-            else:
-                y = fallback_unsharp_mask(x)
+            if not has_model("specialist_blur"):
+                raise HTTPException(
+                    status_code=503,
+                    detail="Model file not available: task2_specialist_blur.onnx. Please place the model in backend/models.",
+                )
+            y = run_model("specialist_blur", x)[0]
         elif predicted_class == "occlusion":
-            if has_model("specialist_occlusion"):
-                y = run_model("specialist_occlusion", x)[0]
-            else:
-                y = fallback_inpaint_occlusion(x)
+            if not has_model("specialist_occlusion"):
+                raise HTTPException(
+                    status_code=503,
+                    detail="Model file not available: task2_specialist_occlusion.onnx. Please place the model in backend/models.",
+                )
+            y = run_model("specialist_occlusion", x)[0]
         else:
             y = x
 
